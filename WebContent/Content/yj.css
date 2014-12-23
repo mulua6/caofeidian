@@ -1,0 +1,288 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+@import url(nav.css);
+@import url(base.css);
+
+
+
+
+
+
+/*页面上在线*/
+.on-line{background:#FFF; height:290px;width:490px;-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius:10px;border:5px solid #215098; padding:0 10px;}
+
+.on-line .tit{ background:url(../images/on-line-ico.gif) no-repeat; border-bottom:1px solid #e3e3e3; font-size:14px; color:#999; color:#333; line-height:25px; height:30px; margin-bottom:10px; clear:both; margin-top:12px;}
+.on-line .tit h2{color:#036; float:left; width:80px;overflow:hidden; padding:0; margin:0; text-indent:40px;}
+.on-line .tit h2 a{color:#fe7001;height:17px;line-height:15px;}
+.on-line .linebtn li{ float:left; height:40px; width:25%;}
+.on-line .linezi { margin-left:15px;}
+.on-line .linezi dd{ font-family:"Microsoft YaHei","Apple LiGothic Medium","Arial","宋体","SimSun","SimHei";background:url(../images/on-line-ico2.jpg) no-repeat ;float:left; height:25px; width:17%;  font-size:14px; color:#03335b; margin-left:10px; overflow:hidden}
+.on-line .linezi dd a{ color:#03335b;  padding-left:25px; height:40px; display:block; }
+.on-line .linezi dd a:hover{ color:#ff8a00; font-weight:bold; background:url(../images/on-line-ico2.gif) no-repeat;}
+.on-line .linebtn1 li{font-family:"Microsoft YaHei","Apple LiGothic Medium","Arial","宋体","SimSun","SimHei"; float:left;width:122px; text-indent:25px;  text-align:center; font-size:15px; font-weight:bold; height:41px}
+.on-line .linebtn1 li a{background:url(../images/on-line-btn-lr0.gif) center no-repeat; height:40px; line-height:40px; display:block;color:#FFF; }
+.on-line .linebtn1 li a:hover{ background:url(../images/on-line-btn-lr.gif) center no-repeat; text-decoration:none}
+
+
+
+
+
+/*下面ONLINE*/
+#barra_fixa {background-image: url("../images/on-line.png");background-origin: padding-box;background-position: center bottom;background-repeat: repeat-x;background-size: auto auto;bottom: 0;height: 86px; position: fixed;width: 100%;z-index: 999;}
+#barra_fixa_conteudo {margin-bottom: 0;margin-left: auto;margin-right: auto;margin-top: 0; width: 1000px;}
+#barra_fixa_conteudo a {display: block; float: right; height: 100px;  margin-left: 38px;  margin-right:10px; /* 	border:1px solid #096;margin-top: 12px;*/width: 130px;}
+#barra_fixa_conteudo a span {display: none;}
+
+
+/*运价搜索*/
+
+.inquiry_l1 {width:575px; display:block; overflow:hidden; margin-right:5px;height:291px;float:left;	background:#FFF;-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius:10px;border:5px solid #cacaca; padding:0 20px;}
+
+.inquiry_tit {width:575px;height:45px;background:url(../images/inquiry_t1.jpg);background-repeat:no-repeat;border-bottom:1px solid #d8d8d8;}
+.inquiry_tit a {display:block;width:287px;height:45px;color:#adadad;	float:left;text-align:center;line-height:42px;font-weight:400;text-decoration:none;}
+.inquiry_tit a:hover {color:#0271c4;}
+.inquiry_tit .on { font-weight:bold;   color:#215098;border-bottom:#215098 3px solid;height:42px;
+	line-height:42px;z-index:30;display:block;box-shadow:2px 5px -2px #d0d0d0;}
+
+.inquiry_tit .in_te1 {font-size:16px;}
+.inquiry_tit .in_te2 {font-size:13px;margin-left:4px;}
+.inquiry_text { width:33%; height:45px; float:left; padding-top:0px;}
+.inquiry_text a {width:100%;display:block;height:20px;display:block;color:#adadad;border-right:#dddddd 1px solid;margin-top:13px;
+	font-family: "Apple LiGothic Medium", "Arial", sans-serif;text-align:center;line-height:20px;font-weight:400;text-decoration:none;}
+.inquiry_text a:hover {	display:block; color:#0270c3;margin-top:13px;text-align:center;	background:#FFF;font-weight:400;}
+
+.inquiry_form { clear:left;width:630px;height:235px;}
+.inquiry_1 {width:550px;height:80px;background:#fff;}
+.inquiry_bottom {width:100%;height:35px;line-height:35px;font-size:12px;text-indent:0px;}
+.inquiry_bottom a {	text-align:left;color:#215098;font-size:12px;padding:0 5px;}
+.inquiry_1 a {display:block;width:120px;height:30px;margin:0 auto;margin-top:20px;color:#fff;text-align:center;	text-decoration:none;
+line-height:28px;font-size:12px; float:left; background:url(../images/yj2.gif) 0 -1px no-repeat; margin-right:10px;
+}
+.inquiry_1 a:hover {display:block;background:url(../images/yj1.gif) 0 -1px no-repeat;	text-align:center;color:#fff;}
+.inquiry_1 .on { font-weight:bold;display:block;/*box-shadow:0px 2px 6px #003366 inset;*/border-radius:15px;text-align:center;	color:#fff;background:url(../images/yj1.gif) 0 -1px no-repeat;}
+
+.inquiry_2 ul li{ float:left; margin:5px 10px 5px 0; }
+.inquiry_tal1 td {height:50px;	width:33%;	line-height:40px;text-align:left;}
+.inquiry_tal2 {	width:520px;height:150px;margin:0 auto;	margin-top:20px;}
+.inquiry_tal2 td {height:40px;line-height:40px;text-align:left;}
+.inquiry_tal3 {width:450px;height:100px;margin:0 auto;margin-top:20px;}
+.inquiry_tal3 td {text-align:left;}
+
+.inquiry_form .txt-rightTitle{width: 160px; height: 20px; border: #f3f3f3 1px solid; padding-top: 4px;padding-bottom: 4px;padding-left: 8px; padding-right: 8px;  -moz-box-shadow: 0px 1px 3px #8d8d8d inset; -webkit-box-shadow: 0px 1px 3px #8d8d8d inset; box-shadow: 0px 1px 3px #8d8d8d inset;-moz-border-radius: 1px; -webkit-border-radius: 1px; border-radius: 1px; color: #bababa; font-size: 12px; font-family: Arial, "Microsoft YaHei";}
+
+.inquiry_form .txt-rightTitle-focus{ width: 160px; height: 20px; border: #f3f3f3 1px solid;padding-top: 4px;padding-bottom: 4px;padding-left: 8px;
+padding-right: 8px;-moz-box-shadow: 0px 1px 3px #0458a0 inset;-webkit-box-shadow: 0px 1px 3px #0458a0 inset;box-shadow: 0px 1px 3px #0458a0 inset;-moz-border-radius: 1px;-webkit-border-radius: 1px;border-radius: 1px;color: #000;font-size: 12px;font-family: Arial, "Microsoft YaHei";
+}
+
+.inquiry_form .txt-rightTitle-blur{width: 160px;height: 20px;border: #f3f3f3 1px solid;padding-top: 4px;padding-bottom: 4px;padding-left: 8px;
+padding-right: 8px;-moz-box-shadow: 0px 1px 3px #8d8d8d inset;-webkit-box-shadow: 0px 1px 3px #8d8d8d inset;box-shadow: 0px 1px 3px #8d8d8d inset;-moz-border-radius: 1px;-webkit-border-radius: 1px;border-radius: 1px;font-size: 12px;font-family: Arial, "Microsoft YaHei";}
+
+.inquiry_input {width: 140px; height: 20px;}
+.inquiry_input2 {width: 120px;height: 20px;}
+.btn_inquiry{width: 158px;height: 32px;border: none;background: url(../images/btn_bg5.jpg);background-repeat: no-repeat;color: #fff;cursor: pointer;font-size: 12px;letter-spacing:2px;}
+	
+.btn_inquirydw{width: 158px;height: 32px;border: none;background: url(../images/btn_bg5dw.jpg);background-repeat: no-repeat;color: #fff;
+font-size: 12px;letter-spacing:2px;}
+
+.note_inquiry {	font-size:12px; width:400px;line-height:30px;color:#2f2d2d;	letter-spacing:0px;}
+
+.inquiry_r1 {width:269px;height:280px;float:right;text-align:left;background:url(../images/inquiry_r1bg.jpg) repeat-x;border-radius:0px 5px 5px 0px;
+	
+	
+}
+
+
+
+/* 运价首页特价部分*/
+.tj{ width:1140px; margin:auto; border:1px solid #e2e3e5; border-bottom:0; border-top:0;margin-top:15px; box-shadow:0px 0px 8px #000; text-align:center; background:#5a8ebe;border:5px solid #215098; position:relative}
+.tj-hy,.tj-ky{ padding:10px;}
+.tj_tab{ height:30px; clear:both;  line-height:30px; margin:10px 10px 0 10px;color:#999;}
+
+.tj_tab ul{float:left;font-size:14px;font-family:"Microsoft YaHei","Apple LiGothic Medium","Arial","宋体","SimSun","SimHei"; margin-right:5px; _overflow:hidden;overflow:hidden;_zoom:1; position:absolute; left:10px; top:10px;  height: 34px; }
+.tj_tab ul li{ float:left; width:132px; color:#464646; cursor:pointer; text-align:center; background:#cadbea;  margin-right:20px; border-radius:5px 5px 0 0}
+.tj_tab ul li.tab-on{ background:#fff; width:132px; font-weight:bold; position:relative;z-index:111;}
+
+.tj_con{ background:#fff; margin:0 10px; color:#2F2D2D;}
+
+.tj_con  ul{ width:1060px; height:40px; margin-left:20px; clear:both; display:block; float:left; border-bottom:1px dotted #CCC}
+.tj_con  ul li{ float:left; padding:18px 0px 0px 0px; text-align:left  } 
+.tj_con .zi{ color:#2F2D2D;}
+.tj_con .zi1{ font-size:14px;  color:#ff6e04;  text-align:left; }
+.tj_con .zi2{ font-size:14px; font-weight:bold;  color:#0d5e84; }
+.tj_con .zi2 a{ font-size:14px; font-weight:bold;  color:#0d5e84 }
+
+
+
+
+/* 运价首页 运价切换部分*/
+
+.yj{ width:1150px; margin:auto; border:1px solid #e2e3e5; margin-top:15px; box-shadow:0px 0px 8px #ccc; text-align:center; }
+.yj-hy,.yj-ky{ padding:10px;}
+.yj_tab{ height:30px; line-height:30px; border-bottom:2px solid #215098; margin:15px; }
+.yj_tab h3{ float:left;color:#23448b; font-size:16px;}
+.yj_tab h3 a{color:#23448b;}
+.yj_tab ul{ float:right;font-size:12px;height:30px; margin-right:5px; _overflow:hidden}
+.yj_tab ul li{ float:left; width:52px; color:#464646; cursor:pointer; text-align:center; margin-top:1px;}
+
+
+.yj_tab ul li a{ color:#333; display:block}
+.yj_tab ul li a:visited{ color:#333; display:block}
+.yj_tab ul li a:hover{background:#215098; width:52px; color:#FFF;}
+.yj_tab ul li.tab-on{ background:#215098; display:block; width:52px; color:#FFF; position:relative;z-index:111;}
+.yj_tab ul li.tab-on a{ color:#fff;}
+
+/*.yj_tab ul li  a.tab-on{ background:#215098; width:52px; color:#FFF; position:relative;z-index:111;}*/
+
+
+/*空运知识*/
+
+#kyzs{width:350px; position:relative; float:left; margin-left:25px; _margin-left:20px}
+#kyzs dl{ border:1px solid #dbdbdb; border-top:2px solid #dbdbdb;}
+#kyzs dt{border-bottom:1px solid #dbdbdb;line-height:30px; height:30px;}
+#kyzs dt b{font-family:"Microsoft YaHei","Apple LiGothic Medium","Arial","宋体","SimSun","SimHei";  background:url(../images/tit_bg.png); font-size:16px; color:#FFF; text-indent:20px; display:block; position:absolute; top:-15px; left:-2px;  width:128px;line-height:38px; height:38px;}
+#kyzs dt a{ float:right; margin-right:8px;}
+#kyzs ul{ width:330px;margin:10px 0;}
+#kyzs li{background:url(../images/circle.gif) no-repeat 15px 10px; text-align:left; height:25px; line-height:25px; padding-left:30px; *height:21px; *line-height:21px; }
+#kyzs li a{ width:230px; height:25px; overflow:hidden; display:block; float:left;white-space:nowrap; text-overflow:ellipsis}
+#kyzs li span{ color:#666; float:right; margin-right:10px; width:20px;}
+#kyzs li em{ color:#F60; margin:0 2px;float:left}
+
+
+/*海运知识*/
+
+#hyzs{width:350px; position:relative; float:left; margin-left:25px; _margin-left:20px}
+#hyzs dl{ border:1px solid #dbdbdb; border-top:2px solid #dbdbdb;}
+#hyzs dt{border-bottom:1px solid #dbdbdb;line-height:30px; height:30px;}
+#hyzs dt b{font-family:"Microsoft YaHei","Apple LiGothic Medium","Arial","宋体","SimSun","SimHei";  background:url(../images/tit_bg.png); font-size:16px; color:#FFF; text-indent:20px; display:block; position:absolute; top:-15px; left:-2px;  width:128px;line-height:38px; height:38px;}
+#hyzs dt a{ float:right; margin-right:8px;}
+#hyzs ul{ width:330px;margin:10px 0;}
+#hyzs li{background:url(../images/circle.gif) no-repeat 15px 10px; text-align:left; height:25px; line-height:25px; padding-left:30px; *height:21px; *line-height:21px; }
+#hyzs li a{ width:230px; height:25px; overflow:hidden; display:block; float:left;white-space:nowrap; text-overflow:ellipsis}
+#hyzs li span{ color:#666; float:right; margin-right:10px; width:20px;}
+#hyzs li em{ color:#F60; margin:0 2px; float:left}
+
+
+
+/*行业资讯*/
+
+#hyzx{width:350px; position:relative; float:left; margin-left:25px; _margin-left:20px}
+#hyzx dl{ border:1px solid #dbdbdb; border-top:2px solid #dbdbdb;}
+#hyzx dt{border-bottom:1px solid #dbdbdb;line-height:30px; height:30px;}
+#hyzx dt b{font-family:"Microsoft YaHei","Apple LiGothic Medium","Arial","宋体","SimSun","SimHei";  background:url(../images/tit_bg.png); font-size:16px; color:#FFF; text-indent:20px; display:block; position:absolute; top:-15px; left:-2px;  width:128px;line-height:38px; height:38px;}
+#hyzx dt a{ float:right; margin-right:8px;}
+#hyzx ul{ width:330px;margin:10px 0;}
+#hyzx li{background:url(../images/circle.gif) no-repeat 15px 10px; text-align:left; height:25px; line-height:25px; padding-left:30px; *height:21px; *line-height:21px; }
+#hyzx li a{ width:230px; height:25px; overflow:hidden; display:block; float:left;white-space:nowrap; text-overflow:ellipsis}
+#hyzx li span{ color:#666; float:right; margin-right:10px; width:20px;}
+#hyzx li em{ color:#F60; margin:0 2px; float:left}
+
+/*无运价*/
+.noyj{ width:500px; margin:20px auto 0; line-height:35px; text-indent:26px; background:#fff;}
+.noyj i a{ color:#036;font-size:16px;}
+.noyj b{ color:#F60; font-size:16px;}
+.noyj i{ color:#036; font-style:normal; font-size:16px;}
+.lianxiren{width:300px;/*height:43px;*/ margin:0px auto; }
+.lianxiren1{width:62px;height:45px;float:left; display:block; background:url(..../images/yj/telbccl.jpg) no-repeat #069;}
+.lianxiren2{height:45px;float:left; line-height:45px; font-size:16px; padding:0 30px; display:block;background:#fff url(..../images/yj/telbccm.jpg) repeat-x;}
+.lianxiren3{width:10px;height:45px;float:left; display:block;background:url(..../images/yj/telbccr.jpg) no-repeat;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*海运运价 列表页------------------------------------------------------------*/
+.hyyj{ width:1150px; margin:auto; border:1px solid #e2e3e5; border-bottom:0; border-top:0;margin-top:15px; box-shadow:0px 0px 8px #ccc; text-align:center; /*border-radius: 0px 0px 35px 0px;*/ }
+.hy_tit{ border-radius:2px; border:1px solid #d4d4d4; background:url(../images/yj/tit_bg.jpg); height:42px;line-height:42px;}
+.hy_tit h1{ background:url(../images/yj/hy_tit.jpg) no-repeat; height:42px; float:left; width:173px; color:#23448b; font-size:16px; border-right:2px solid #23448b;}
+.hy_tit ul li { height:30px; line-height:30px; padding-top:5px; padding-left:10px; /*border:1px solid #999*/}
+.hy_tit ul li a{ width:230px; float:left;}
+/*海运信息*/
+.hy_xinxi{ clear:both; padding:30px 20px 0px 20px; text-align:left; clear:both}
+.hy_xinxi span{ float:right; color:#666}
+.hy_xinxi span a{ color:#036}
+
+/*海运列表*/
+.hy_con{ padding:10px; text-align:left;}
+.hy_con .listtit{ border:1px solid #e4e4e4; background:#efefef; font-size:16px; font-weight:bold;  height:50px; line-height:50px; clear:both}
+.hy_con .listtit ul li{ float:left; }
+.hy_con .listtit ul li span{ padding-left:20px;}
+.hy_con .listtit ul li a{ padding:5px;}
+.hy_con .listtit ul li a:hover{ padding:5px; background:#fff; text-decoration:none}
+.hy_con .listtit ul li .on{ padding:5px; background:#fff; text-decoration:none; border:1px solid #efefef;}
+.hy_con .list{background-color:#FFFFFF; border-bottom:#c6c5c5 solid 1px; height:95px; padding-top:10px; clear:both; position:relative;}
+.hy_con .list ul{ width:980px; margin-left:20px; clear:both; display:block; float:left}
+.hy_con .list ul li{ float:left; padding:18px 0px 0px 0px; } 
+.hy_con .list .zi1{ font-size:18px;  font-weight:bold; color:#ff6e04;  text-align:left; }
+.hy_con .list .zi2{ font-size:14px; font-weight:bold;  color:#0d5e84; }
+.hy_con .list .zi2 a{ font-size:14px; font-weight:bold;  color:#0d5e84; }
+.hy_con .list .zi3{ background:url(../images/yj/bz.jpg) no-repeat 0; padding-left:35px; width:490px; display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis}
+.hy_con .list .zixun{float:right; background:url(../images/on-line-ico2.gif) no-repeat 0px; text-indent:20px; font-size:14px; position:absolute; top:40px; right:20px; }
+.hy_con .list .zixun a{  /*color:#0891d9*/ color:#03335b;}
+.hy_con .list .zixun a:hover{font-weight:bold; color:#ff6e04;}
+
+
+
+
+
+
+
+/*空运运价 列表的页-------------------------------------------------------------------------*/
+.kyyj{ width:1150px; margin:auto; border:1px solid #e2e3e5; border-bottom:0; border-top:0;margin-top:15px; box-shadow:0px 0px 8px #ccc; text-align:center;/* border-radius: 0px 0px 35px 0px;*/ }
+.ky_tit{ border-radius:2px; border:1px solid #d4d4d4; background:url(../images/yj/tit_bg.jpg); height:42px;line-height:42px;}
+.ky_tit h1{ background:url(../images/yj/tj_icon_03.jpg) no-repeat; height:42px; float:left; width:173px; color:#bf0834; font-size:16px; border-right:2px solid #bf0834;}
+.ky_tit ul li { height:30px; line-height:30px; padding-top:5px; padding-left:10px; /*border:1px solid #999*/}
+.ky_tit ul li a{ width:230px; float:left;}
+/*空运信息*/
+.ky_xinxi{ clear:both; padding:30px 20px 0px 20px; text-align:left; clear:both}
+.ky_xinxi span{ float:right; color:#666}
+.ky_xinxi span a{ color:#036}
+
+/*空运列表*/
+.ky_con{ padding:10px; text-align:left;}
+.ky_con .listtit{ border:1px solid #e4e4e4; background:#efefef; font-size:16px; font-weight:bold;  height:50px; line-height:50px; clear:both}
+.ky_con .listtit ul li{ float:left; }
+.ky_con .listtit ul li span{ padding-left:20px;}
+.ky_con .listtit ul li a{ padding:5px;}
+.ky_con .listtit ul li a:hover{ padding:5px; background:#fff; text-decoration:none}
+.ky_con .listtit ul li .on{ padding:5px; background:#fff; text-decoration:none; border:1px solid #efefef;}
+.ky_con .list{background-color:#FFFFFF; border-bottom:#c6c5c5 solid 1px; height:95px; padding-top:10px; clear:both;position:relative;}
+.ky_con .list ul{ width:980px; margin-left:20px;}
+.ky_con .list ul li{ float:left; padding:18px 0px 0px 0px; } 
+.ky_con .list .zi1{ font-size:18px;  font-weight:bold; color:#ff6e04;  text-align:left; }
+.ky_con .list .zi2{ font-size:14px; font-weight:bold;  color:#0d5e84; }
+.ky_con .list .zi2 a{ font-size:14px; font-weight:bold;  color:#0d5e84; }
+.ky_con .list .zi3{ background:url(../images/yj/bz.jpg) no-repeat 0; padding-left:35px; width:490px; display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis}
+.ky_con .list .zixun{float:right; background:url(../images/on-line-ico2.gif) no-repeat 0px; text-indent:20px; font-size:14px; position:absolute; top:40px; right:20px;}
+.ky_con .list .zixun a{ /*color:#0891d9*/ color:#03335b;}
+.ky_con .list .zixun a:hover{ font-weight:bold; color:#ff6e04;}
+
+/*口岸动态*/
+
+#kadt{width:350px; position:relative; float:left; margin-left:25px;}
+#kadt dl{ border:1px solid #dbdbdb; border-top:2px solid #dbdbdb;}
+#kadt dt{border-bottom:1px solid #dbdbdb;line-height:30px; height:30px;}
+#kadt dt b{font-family:"Microsoft YaHei","Apple LiGothic Medium","Arial","宋体","SimSun","SimHei"; background:url(..../images/tit_bg.png); font-size:16px; color:#FFF; text-indent:20px; display:block; position:absolute; top:-15px; left:-2px;  width:128px;line-height:38px; height:38px;}
+#kadt dt a{ float:right; margin-right:8px;}
+#kadt ul{ width:330px;line-height:25px;margin:10px 0;}
+#kadt li{background:url(..../images/circle.gif) no-repeat 15px 10px;  height:25px; text-align:left; padding-left:30px;*height:21px; *line-height:21px;}
+
+#kadt li a{ width:210px; overflow:hidden; height:25px; display:block; float:left; white-space:nowrap; text-overflow:ellipsis}
+#kadt li span{ color:#666; float:right; margin-right:10px; width:35px;}
+#kadt li em{ color:#F60; margin-right:5px; float:left}
+#kadt li em a{color:#F60; width:35px;}

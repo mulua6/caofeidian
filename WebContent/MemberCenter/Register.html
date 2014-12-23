@@ -1,0 +1,751 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    
+    <title>注册-锦程国际物流</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/Content/base.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/nav.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/pos.css" />
+
+    <script src="/Scripts/jquery-1.7.1.js"></script>
+
+    
+    
+    <script src="/Scripts/JsonPort.js?149"></script>
+    <script src="/Scripts/JsonAirPort.js?149"></script>
+    <script src="/Scripts/JsonShipCompany.js?149"></script>
+    <script src="/Scripts/JsonAirLines.js?149"></script>
+
+    <script src="/Scripts/Index_BsPostion.js"></script>
+    <script src="/Scripts/Index_Postion.js"></script>
+    
+
+    <script type="text/javascript" src="/Scripts/jquery.hoverIntent.minified.js"></script>
+
+    <script src="/Scripts/Index.js"></script>
+
+    <script src="/Scripts/Index_Pub.js"></script>
+
+    
+    <link rel="stylesheet" type="text/css" href="/Content/login.css" />
+    <script type="text/javascript" src="/Scripts/memberCenter/register.js"></script>
+    <script type="text/javascript" src="/Scripts/toggle.js"></script>
+
+
+</head>
+
+<body>
+    <div class="top">
+        <div class="wrapper">
+            <p>
+                <a id="login_a" rel="nofollow" href="/MemberCenter/Login" target="_blank" style="display: none;">登录  </a>
+                <a id="register_a" rel="nofollow" href="/MemberCenter/Register" target="_blank" style="display: none;">注册</a>
+                <b id="loginSucc" style="display: none;"></b>
+                <a id="loginSucc_a" rel="nofollow" href="/MemberCenter/Exit" target="_blank" style="display: none;">[退出] </a>| 
+                <a target="_blank" href="/SpecialService/kjds/index.shtml">跨境电商物流服务</a>  | 
+                <a rel="nofollow" target="_self" href="http://www.jctrans.cn/cooperation/jmgs/">合作加盟</a>  | 
+                <a rel="nofollow" href="/MemberCenter/MemberCenter" target="_blank">会员中心</a> | 
+                <a rel="nofollow" href="/wap/intro.shtml" target="_blank">手机版</a> | 
+                <a href="http://www.jctrans.cn/english/" target="_blank">ENGLISH</a> | 
+                <a rel="nofollow" href="/russian/russia.shtml" target="_blank" rel="nofollow">RUSSIAN</a> | 
+                <a rel="nofollow" onclick="AddFavorite('http://www.jc56.com','锦程国际物流在线服务有限公司')">收藏锦程</a>  | 
+                <span>400-020-5556</span>
+            </p>
+        </div>
+    </div>
+    <div class="nav-index">
+        <div class="wrapper">
+            <div class="logo-news">
+                <a rel="nofollow" href="/">
+                    <img src="/images/index1_02.jpg" alt="" width="223" height="122" border="0" align="top" />
+                </a>
+            </div>
+            <div class="search">
+                <div class="search_box">
+                    <div style="display: block;" class="s-content" id="con_scontent_1">
+                        <ul>
+                            <li><span>
+                                <select name="select_yunjia" id="select_yunjia" class="kuang" onchange="search_Index()">
+                                    <option value="0">整&nbsp;箱</option>
+                                    <option value="1">拼&nbsp;箱</option>
+                                    <option value="2">空&nbsp;运</option>
+                                </select>
+                            </span></li>
+                            <li id="con_s_1_0">
+                                <em>起始港：</em>
+                                <span class="ipt-asy bord">
+                                    <input id="GPStartPort" name="GPStartPort" class="por_a" value="" vid="" vcountry="" type="text">
+                                </span>
+                                <em>目的港：</em>
+                                <span class="ipt-ayb">
+                                    <input id="GPEndPort" name="GPEndPort" class="por_a" value="" vid="" vcountry="" type="text">
+                                </span>
+                            </li>
+                            <li id="con_s_1_1" style="display: none">
+                                <em>起始港：</em>
+                                <span class="ipt-asy bord">
+                                    <input type="text" id="LCLStartPort" name="LCLStartPort" value="" vid="" vcountry="" class="por_a">
+                                </span>
+                                <em>目的港：</em>
+                                <span class="ipt-ayb">
+                                    <input type="text" id="LCLEndPort" name="LCLEndPort" value="" vid="" vcountry="" class="por_a">
+                                </span>
+                            </li>
+                            <li id="con_s_1_2" style="display: none">
+                                <em>起始地：</em>
+                                <span class="ipt-asy bord">
+                                    <input id="AirStartPort" name="AirStartPort" class="por_a" value="" vid="" vcountry="" type="text">
+                                </span>
+                                <em>目的地：</em>
+                                <span class="ipt-ayb">
+                                    <input id="AirEndPort" name="AirEndPort" class="por_a" value="" vid="" vcountry="" type="text">
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <input id="btnSearch" type="button" value="搜 索" onclick="GPSearch();" class="search-btn">
+                </div>
+            </div>
+            <div class="menu">
+                <ul id="topnav">
+                    <li><a href="/" class="home"></a></li>
+                    <li><a href="/Feight.html" class="nav_yj">运价中心</a>
+                        <div class="sub">
+                            <ul>
+                                <li><a href="/feight/GPList/-------1.html">整箱运价</a></li>
+                                <li><a href="/feight/LCLList/-------1.html">拼箱运价</a></li>
+                                <li><a href="/feight/AirList/-------1.html">空运运价</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/TransService.html" class="nav_wlfw">物流服务</a>
+                        <div class="sub">
+                            <div class="row sub_wlfw">
+                                <ul>
+                                    <li>
+                                        <h2><a href="/TransService/JcGP/">海运</a></h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/hyck.html">海运出口</a></li>
+                                    <li><a href="/TransService/Detail/hyjk.html">海运进口 </a></li>
+                                    <li><a href="/TransService/Detail/nmhy.html">内贸海运</a></li>
+                                    <li><a href="/TransService/Detail/szys.html">散杂运输</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <h2><a href="/TransService/JcAir/">空运</a></h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/kyck.html">空运出口</a></li>
+                                    <li><a href="/TransService/Detail/kyjk.html">空运进口 </a></li>
+                                    <li><a href="/TransService/Detail/nmky.html">内贸空运</a></li>
+                                    <li><a href="/TransService/Detail/xgzq.html">香港专区</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <h2><a href="/TransService/JcRail/">铁路</a></h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/gjtl.html">国际铁路</a></li>
+                                    <li><a href="/TransService/Detail/gntl.html">国内铁路 </a></li>
+                                    <li><a href="/TransService/Detail/dsly.html">多式联运</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <h2><a href="/TransService/JcRoad/">公路</a></h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/gjqy.html">国际汽运</a></li>
+                                    <li><a href="/TransService/Detail/nmzc.html">内贸整车</a></li>
+                                    <li><a href="/TransService/Detail/nmld.html">内贸零担</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <h2><a href="/TransService/JcExpress/">快递</a></h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/ckkd.html">出口快递 </a></li>
+                                    <li><a href="/TransService/Detail/jkkd.html">进口快递</a></li>
+                                    <li>
+                                        <h2><a href="/TransService/Detail/ccfw.html">仓储</a></h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/ccfw.html">仓储服务</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <h2><a href="/TransService/JcImportAndExportAgent/">进出口代理</a></h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/bgbj.html">报关报检 </a></li>
+                                    <li><a href="/TransService/Detail/whsf.html">外汇收付</a></li>
+                                    <li><a href="/TransService/Detail/hybx.html">货运保险</a></li>
+                                    <li><a href="/TransService/Detail/wldk.html">物流融资</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/SpecialService.html" class="nav_tsfw">特色服务</a>
+                        <div class="sub">
+                            <div class="row">
+                                <ul>
+                                    <li><a href="/SpecialService/kjds/index.shtml" style="width: 150px;">跨境电商物流服务</a></li>
+                                    <li><a href="/SpecialService/srwp/index.shtml">私人物品</a></li>
+                                    <li><a href="/SpecialService/cwty/index.shtml">宠物托运</a></li>
+                                    <li><a href="/SpecialService/jcty/index.shtml">轿车托运</a></li>
+                                    <li><a href="/SpecialService/zhys/index.shtml">展会运输</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="/SpecialService/gyljr/index.shtml" style="width: 140px;">供应链金融服务</a></li>
+                                    <li><a href="/SpecialService/tzgys/index.shtml">特种柜运输</a></li>
+                                    <li><a href="/SpecialService/wxpys/index.shtml">危险品运输</a></li>
+                                    <li><a href="/SpecialService/szhfw/index.shtml">散杂货运输</a></li>
+                                    <li><a href="/SpecialService/gzcyw/index.shtml">滚装船业务 </a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="/SpecialService/hwysbx/index.shtml">货物运输保险</a></li>
+                                    <li><a href="/SpecialService/qccjyw/index.shtml">汽车出境业务</a></li>
+                                    <li><a href="/SpecialService/hwys/index.shtml">大件货物运输</a></li>
+                                    <li><a href="/SpecialService/tlfw/index.shtml">边境铁路服务</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/GlobalNetwork.html" class="nav_qqwl">全球网络</a>
+                        <div class="sub">
+                            <div class="row">
+                                <ul style="width: 60px;">
+                                    <li><a href="/GlobalNetWork/Gnfgs-dalian.html">大连 </a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-beijing.html">北京</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-tianjin.html">天津</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-qingdao.html">青岛</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-nanjing.html">南京</a></li>
+                                </ul>
+                                <ul style="width: 60px;">
+                                    <li><a href="/GlobalNetWork/Gnfgs-suzhou.html">苏州</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-shanghai.html">上海</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-ningbo.html">宁波</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-hangzhou.html">杭州</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-xiamen.html">厦门</a></li>
+                                </ul>
+                                <ul style="width: 60px;">
+                                    <li><a href="/GlobalNetWork/Gnfgs-shenzhen.html">深圳</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-guangzhou.html">广州</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-xian.html">西安</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-wuhan.html">武汉</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-chongqing.html">重庆</a></li>
+                                </ul>
+                                <ul style="width: 90px;">
+                                    <li><a href="/GlobalNetWork/Gnfgs-changsha.html">长沙</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-haerbin.html">哈尔滨</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-shijiazhuang.html">石家庄</a></li>
+                                    <li><a href="/GlobalNetWork/Hwyw.html">海外业务</a></li>
+                                    <li><a href="/GlobalNetWork/Other.html">其他</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/CustomerCase.html" class="nav_khal">客户案例</a> </li>
+                    <li><a href="/News.html" class="nav_xwzx">新闻中心</a> </li>
+                    <li><a href="/ApproachJC.html" class="nav_zjjc">走进锦程</a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main_banner">
+        
+<div class="wrapper">
+    <div class="navpostion c">您所在的位置：<a href="/">首页</a> &gt;<a href="/MemberCenter/MemberCenter">会员中心</a><span style="min-width: 10px;"></span> &gt; <span style="min-width: 10px;"></span>注册</div>
+</div>
+<div class="wrapper reg_box">
+    <div class="tit">用户注册</div>
+    <div class="reg_left">
+        <form action="/MemberCenter/Register" method="post" id="form1">
+            <!--[if !IE]>注册主体开始<![endif]-->
+            <div class="reg">
+                <!--<div class='step1'></div>-->
+                <!--[if !IE]>姓名联系方式主体开始<![endif]-->
+                <div class="contact"></div>
+                <div class="regform">
+                    <div>
+                        <span class="l">
+                            <label>真实姓名<font color="#fe0000">*</font></label>
+                            <input name="TBUname" id="TBUname" type="text" maxlength="20" value="">
+                        </span>
+                    </div>
+                    <div class="sexdiv">
+                        <label>性　　别<font color="#fe0000">*</font></label>
+                        <input name="RBLSex" value="0" style="width: 20px" checked="checked" type="radio">
+                        先生
+                        <input name="RBLSex" style="width: 20px" value="1" type="radio">
+                        女士
+                    </div>
+                    <div>
+                        <label>您的职位<font color="#FFFFFF">*</font> </label>
+                        <select name="TBWSelectDDL" id="TBWSelectDDL">
+                            <option value="高管">高管</option>
+                            <option value="中层管理者">中层管理者</option>
+                            <option value="普通员工">普通员工</option>
+                        </select>
+                    </div>
+                    <div class="maildiv">
+                        <span class="l">
+                            <label>电子邮箱<font color="#fe0000">*</font></label>
+                            <input name="TBEmail" id="TBEmail" type="text" maxlength="20">
+                        </span>
+                        <span class="result">&nbsp;</span>
+                        <div class="mailalert">我们将把会员登录名及密码发送至邮箱，勿使用163/hotmail邮箱注册</div>
+                    </div>
+                    <div>
+                        <span class="l">
+                            <label>固定电话<font color="#fe0000">*</font></label>
+                            <input name="TBTelCNumber" id="TBTelCNumber" value="0086" maxlength="4" class="W55" type="text">
+                            <input name="TBPNumber" id="TBPNumber" value="地区区号" maxlength="4" class="W55" type="text" onblur="if(this.value == ''){this.value = '地区区号'}" onfocus="if(this.value == '地区区号'){this.value = ''}">
+                            <input name="TBTelTNumber" id="TBTelTNumber" value="电话号码" class="W165" type="text" onblur="if(this.value == ''){this.value = '电话号码'}" onfocus="if(this.value == '电话号码'){this.value = ''}">
+                        </span><span class="result"></span>
+                    </div>
+                    <div>
+                        <span class="l">
+                            <label>传　　真<font color="#FFFFFF">*</font></label>
+                            <input name="TBCZCNumber" id="TBCZCNumber" value="0086" maxlength="4" class="W55" type="text">
+                            <input name="TBCZPNumber" id="TBCZPNumber" maxlength="4" class="W55" type="text">
+                            <input name="TBCZTNumber" id="TBCZTNumber" class="W165" type="text">
+                        </span><span class="result "></span>
+                    </div>
+                    <div>
+                        <span class="l">
+                            <label>手　　机<font color="#fe0000">*</font></label>
+                            <input name="TBMobelNumber" id="TBMobelNumber" size="20" type="text">
+                        </span><span class="result"></span>
+                    </div>
+
+
+                </div>
+                <!--[if !IE]>姓名联系方式结束<![endif]-->
+                <div class="c"></div>
+                <!--[if !IE]>公司主体开始<![endif]-->
+                <div class="company"></div>
+                <div class="regform">
+                    <div>
+                        <span class="l">
+                            <label>公司名称<font color="#fe0000">*</font></label>
+                            <input name="TBComName" id="TBComName" type="text" maxlength="20">
+                        </span><span class="result"></span>
+                    </div>
+                    <div>
+                        <label>客户类型<font color="#fe0000">*</font></label>
+                        <select name="DDDLCustomerTyep" id="DDDLCustomerTyep">
+                            <option value=""></option>
+                            <option value="直客">贸易商</option>
+                            <option value="同行">物流商</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>公司区域<font color="#fe0000">*</font></label>
+                        <select name="DDLComLay" id="DDLComLay">
+                            <option value="028">北京</option>
+                            <option value="026">天津</option>
+                            <option value="025">上海</option>
+                            <option value="013">黑龙江</option>
+                            <option value="015">吉林</option>
+                            <option value="001">辽宁</option>
+                            <option value="014">山东</option>
+                            <option value="011">山西</option>
+                            <option value="010">河北</option>
+                            <option value="012">河南</option>
+                            <option value="020">甘肃</option>
+                            <option value="034">青海</option>
+                            <option value="009">陕西</option>
+                            <option value="002">江苏</option>
+                            <option value="016">安徽</option>
+                            <option value="004">浙江</option>
+                            <option value="017">湖南</option>
+                            <option value="007">湖北</option>
+                            <option value="008">四川</option>
+                            <option value="027">重庆</option>
+                            <option value="018">云南</option>
+                            <option value="019">贵州</option>
+                            <option value="006">江西</option>
+                            <option value="005">福建</option>
+                            <option value="003">广东</option>
+                            <option value="021">广西</option>
+                            <option value="029">宁夏回族自治区</option>
+                            <option value="030">广西壮族自治区</option>
+                            <option value="031">新疆维吾尔自治区</option>
+                            <option value="032">内蒙古自治区</option>
+                            <option value="033">西藏自治区</option>
+                            <option value="037">海南</option>
+                            <option value="024">台湾</option>
+                            <option value="035">香港</option>
+                            <option value="036">澳门</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span class="l">
+                            <label>公司地址<font color="#fe0000">*</font></label>
+                            <input name="TBComAdress" id="TBComAdress" type="text" maxlength="30">
+                        </span><span class="result"></span>
+                    </div>
+                    <div>
+                        <span class="l">
+                            <label>邮政编码<font color="#FFFFFF">*</font></label>
+                            <input name="TBPost" id="TBPost" maxlength="6" type="text">
+                        </span><span class="result"></span>
+                    </div>
+                    <div>
+                        <label>主营行业<font color="#fe0000">*</font></label>
+                        <select name="DDLHangYe" id="DDLHangYe">
+                            <option value="1">照明工业</option>
+                            <option value="2">电子元器件</option>
+                            <option value="3">传媒</option>
+                            <option value="4">安全、防护</option>
+                            <option value="5">包装</option>
+                            <option value="6">纸业</option>
+                            <option value="7">办公、文教</option>
+                            <option value="8">电脑、软件</option>
+                            <option value="9">电工电气</option>
+                            <option value="10">纺织、皮革</option>
+                            <option value="11">服装</option>
+                            <option value="12">服饰</option>
+                            <option value="13">机械及行业设备</option>
+                            <option value="14">五金、工具</option>
+                            <option value="15">化工</option>
+                            <option value="16">精细化学品</option>
+                            <option value="17">橡塑</option>
+                            <option value="18">环保</option>
+                            <option value="19">仪器仪表</option>
+                            <option value="20">家居用品</option>
+                            <option value="21">家用电器</option>
+                            <option value="22">建筑、建材</option>
+                            <option value="23">交通运输</option>
+                            <option value="24">礼品、工艺品、饰品</option>
+                            <option value="25">能源</option>
+                            <option value="26">农业</option>
+                            <option value="27">汽摩及配件</option>
+                            <option value="28">食品、饮料</option>
+                            <option value="29">通讯产品</option>
+                            <option value="30">玩具</option>
+                            <option value="31">冶金矿产</option>
+                            <option value="32">医药、保养</option>
+                            <option value="33">印刷</option>
+                            <option value="34">运动、休闲</option>
+                            <option value="35">商务服务</option>
+                            <option value="36">项目合作</option>
+                            <option value="37">二手设备转让</option>
+                            <option value="38">加工</option>
+                            <option value="39">代理</option>
+                            <option value="40">库存积压</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span class="left">
+                            <label>验证编码<font color="#fe0000">*</font></label>
+                            <input name="TBValid" id="TBValid" type="text" style="width: 80px;" maxlength="4">
+                        </span>
+
+                        <span>&nbsp;
+                            <img id="valiCode" style="cursor: pointer;" src="/MemberCenter/GetValidateCode" alt="验证码" />
+                        </span>
+
+                        <span class="result"></span>
+
+                    </div>
+                    <div class="H50"></div>
+
+                    <div class="subdiv">
+                        <input id="Send" class="subbut" type="button" onclick="return SendClick();" value="">
+                    </div>
+
+                </div>
+                <!--[if !IE]>公司结束<![endif]-->
+            </div>
+        </form>
+        <!--[if !IE]>注册结束<![endif]-->
+    </div>
+
+    <!--[if !IE]>右侧主体开始<![endif]-->
+    <div class="reg_right">
+        <!--[if !IE]>登陆开始<![endif]-->
+        <form action="/MemberCenter/Login" method="post">
+            <div class="reg_login">
+                <div class="title">已有锦程账号？</div>
+                <div class="login_form">
+                    <div>
+                        <label>用户名</label>
+                        <input name="TBUserName" id="TBUserName" class="user" type="text">
+                    </div>
+                    <div>
+                        <label>密　码</label>
+                        <input name="TBPassWord" id="TBPassWord" class="psw" type="password">
+                    </div>
+                    <div class="subdiv">
+                        <span class="left">
+                            <input name="Send2" value="" id="Submit1" class="subbut" type="submit">
+                        </span>
+                        <span class="right">
+                            <font color="#0097ff">还不是会员</font>
+                            <a href="/MemberCenter/Register" class="freereg" target="_blank">免费注册！</a>
+                        </span>
+                    </div>
+                    <div class="findpsw"><a href="/MemberCenter/ForgotPassword" target="_blank">忘记密码？</a></div>
+                </div>
+            </div>
+        </form>
+        <!--[if !IE]>登陆结束<![endif]-->
+        <div class="line"></div>
+        <!--[if !IE]>会员指南开始<![endif]-->
+        <div class="member_guide">
+            <div class="title">会员指南</div>
+            <ul>
+                <li><span class="a"></span><span class="right"><font><a href="/MemberCenter/MemberCenter">会员介绍</a></font>
+                    <br>
+                    欢迎您了解锦程为客户定制的会员服务</span></li>
+                <li><span class="b"></span><span class="right"><font><a href="/MemberCenter/MemberCenter#memberC">如何成为会员</a></font>
+                    <br>
+                    网上或电话注册申请只需要几秒钟即可</span></li>
+                
+                
+            </ul>
+        </div>
+        <!--[if !IE]>员指南结束<![endif]-->
+    </div>
+    <div class="c"></div>
+</div>
+<div class="c"></div>
+
+        <div class="wrapper">
+            <div class="footer">
+                <dl class="footer_map">
+                    <dt><i></i>网站功能 </dt>
+                    <dd><a href="/Home/SiteMap" target="_blank">网站地图</a></dd>
+                    <dd><a href="/ApproachJC/PositionList?c=0|16|0|0" target="_blank" rel="nofollow">人才招聘</a></dd>
+                    <dd id="ppjm"></dd>
+                    <dd><a href="/ApproachJC/ContactUs" target="_blank" rel="nofollow">联系我们</a></dd>
+                </dl>
+                <dl class="footer_map">
+                    <dt><i></i>锦程服务 </dt>
+                    <dd><a href="/TransService/Detail/hyck.html" target="_blank">海运服务</a></dd>
+                    <dd><a href="/TransService/Detail/kyck.html" target="_blank">空运服务</a></dd>
+                    <dd><a href="/TransService/Detail/gjtl.html" target="_blank">铁路服务</a></dd>
+                    <dd><a href="/TransService/Detail/gjqy.html" target="_blank">公路服务</a></dd>
+                    <dd><a href="/TransService/Detail/ccfw.html" target="_blank">仓储服务</a></dd>
+                    <dd><a href="/TransService/Detail/ckkd.html" target="_blank">快递服务</a></dd>
+                    <dd><a href="/TransService/Detail/bgbj.html" target="_blank">进出口代理</a></dd>
+                </dl>
+                <dl class="footer_map" style="width: 100px;">
+                    <dt><i></i>特色服务 </dt>
+                    <dd><a href="/SpecialService/kjds/index.shtml" target="_blank">跨境电商物流服务</a></dd>
+                    <dd><a href="/SpecialService/gyljr/index.shtml" target="_blank">供应链金融服务</a></dd>
+                    <dd><a href="/SpecialService/srwp/index.shtml" target="_blank">私人物品</a></dd>
+                    <dd><a href="/SpecialService/cwty/index.shtml" target="_blank">宠物托运</a></dd>
+                    <dd><a href="/SpecialService/zhys/index.shtml" target="_blank">展会运输</a></dd>
+                    <dd><a href="/SpecialService/jcty/index.shtml" target="_blank">轿车托运</a></dd>
+                    <dd><a href="/SpecialService/hwysbx/index.shtml" target="_blank">货物运输保险</a></dd>
+                </dl>
+                <dl class="footer_map">
+                    <dt><i></i>会员中心 </dt>
+                    <dd><a href="/MemberCenter/MemberCenter" target="_blank" rel="nofollow">会员介绍</a></dd>
+                    <dd><a href="/MemberCenter/MemberCenter#memberC" target="_blank" rel="nofollow">如何成为会员</a></dd>
+                </dl>
+                <dl class="footer_map">
+                    <dt><i></i>锦联成员</dt>
+                    <dd><a href="http://www.jinlian.cn/" target="_blank" rel="nofollow">锦联集团</a></dd>
+                    <dd><a href="http://www.jctrans.cn/" target="_blank" rel="nofollow">国际物流</a></dd>
+                    <dd><a href="http://www.jinlian.com.cn/" target="_blank" rel="nofollow">地产开发</a></dd>
+                    <dd><a href="http://www.jl-bank.com/" target="_blank" rel="nofollow">金融服务</a></dd>
+                    <dd><a href="http://www.jinlian.cn/showint.asp?classid=181&id=181" target="_blank" rel="nofollow">产业园区</a></dd>
+                </dl>
+                <ul class="footer_con">
+                    <li class="font14">您合理的建议是对我们最大的支持！</li>
+                    <li class="tel" id="tel"></li>
+                </ul>
+                <ul class="footer_wx">
+                    <li>
+                        <img src="/images/footer_contact.jpg" width="90" height="92"></li>
+                    <li>
+                        <b>扫一扫</b><br>
+                        微信也能查运价扫二维码关注<br>
+                        锦程货代小秘书
+                    </li>
+                </ul>
+                <div class="footer_zs">
+                    <p>
+                        2006-2014 锦程物流全球服务网版权所有<br>
+                        辽ICP备B2-20140011-1　　增值电信业务经营许可证辽B2-20140011
+                    </p>
+                    <div>
+                        <a href="http://net.china.com.cn/" target="_blank" rel="nofollow">
+                            <img src="/images/Authentication_2.png" alt="不良信息举报中心" width="100" height="50">
+                        </a>
+                        <a href="http://www.cyberpolice.cn/wfjb/" rel="nofollow" target="_blank">
+                            <img src="/images/Authentication_4.png" alt="网络110报警服务" width="100" height="50">
+                        </a>
+                        <a href="http://www.ctws.com.cn/" rel="nofollow" target="_blank">
+                            <img src="/images/Authentication_5.png" alt="无线互联网业自律同盟" width="100" height="50">
+                        </a>
+                        
+                        <br>
+                        <script src="http://s11.cnzz.com/stat.php?id=2094930&web_id=2094930&show=pic" language="JavaScript"></script>
+                    </div>
+                </div>
+                <!--百度页面访问分析代码开始-->
+                <script type="text/javascript">
+                    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5c4ab49d593b763ed73fbaac21c23956' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+                <!--百度页面访问分析代码结束-->
+                <!--站点流量统计开始-->
+                <script type="text/javascript">
+                    var _py = _py || [];
+                    _py.push(['a', 'qG..n4eBoGSiHovW5-MyiKLJlP']);
+                    _py.push(['domain', 'stats.ipinyou.com']);
+                    _py.push(['e', '']);
+                    -function (d) {
+                        var s = d.createElement('script'),
+                        e = d.body.getElementsByTagName('script')[0]; e.parentNode.insertBefore(s, e),
+                        f = 'https:' == location.protocol;
+                        s.src = (f ? 'https' : 'http') + '://' + (f ? 'fm.ipinyou.com' : 'fm.p0y.cn') + '/j/adv.js';
+                    }(document);
+                </script>
+                <noscript>
+                    <img src="//stats.ipinyou.com/adv.gif?a=qG..n4eBoGSiHovW5-MyiKLJlP&e=" style="display: none;" /></noscript>
+                <!--站点流量统计结束-->
+            </div>
+
+            <!--客服-->
+            <script type="text/javascript" src="/Scripts/swtinvite.js"></script>
+            <script language="javascript" src=""></script>
+            
+            <script language="javascript">
+                ///数组
+                function objlist(objstrArr, objid, pagename) {
+                    var objArr = objstrArr.split(',');
+                    for (var i = 0; i < objArr.length; i++) {
+                        if (typeof (LiveReceptionCode_isonline) != 'undefined') {
+                            var objf = objid + i;
+                            var checktext = "点击" + pagename + "-" + objArr[i] + "-咨询";
+                            var a = LiveReceptionCode_BuildChatWin(checktext, '客服人员在线,欢迎点击咨询');
+                            if (LiveReceptionCode_isonline)
+                                LR_GetObj(objf).innerHTML = '<a ' + LiveReceptionCode_BuildChatWin(checktext, '客服人员在线,欢迎点击咨询') + '><span class=\'port\'>' + objArr[i] + '</span></a>';
+                            else
+                                LR_GetObj(objf).innerHTML = '<a ' + LiveReceptionCode_BuildChatWin(checktext, '客服人员不在线,请点击留言') + '><span class=\'port\'>' + objArr[i] + '</span></a>';
+                        }
+                    }
+                }
+                ///单个
+                function objlink(objstr, objid, pagename) {
+                    if (typeof (LiveReceptionCode_isonline) != 'undefined') {
+                        var checktext = "点击" + pagename + "-" + objstr + "-咨询";
+                        var a = LiveReceptionCode_BuildChatWin(checktext, '客服人员在线,欢迎点击咨询');
+                        if (LiveReceptionCode_isonline)
+                            LR_GetObj(objid).innerHTML = '<a ' + LiveReceptionCode_BuildChatWin(checktext, '客服人员在线,欢迎点击咨询') + '><span class=\'port\'>' + objstr + '</span></a>';
+                        else
+                            LR_GetObj(objid).innerHTML = '<a ' + LiveReceptionCode_BuildChatWin(checktext, '客服人员不在线,请点击留言') + '><span class=\'port\'>' + objstr + '</span></a>';
+                    }
+                }
+
+                ///单个
+                function objlinkNoSpan(objstr, objid, pagename) {
+                    if (typeof (LiveReceptionCode_isonline) != 'undefined') {
+                        var checktext = "点击" + pagename + "-" + objstr + "-咨询";
+                        var a = LiveReceptionCode_BuildChatWin(checktext, '客服人员在线,欢迎点击咨询');
+                        if (LiveReceptionCode_isonline)
+                            LR_GetObj(objid).innerHTML = '<a ' + LiveReceptionCode_BuildChatWin(checktext, '客服人员在线,欢迎点击咨询') + '>' + objstr + '</a>';
+                        else
+                            LR_GetObj(objid).innerHTML = '<a ' + LiveReceptionCode_BuildChatWin(checktext, '客服人员不在线,请点击留言') + '>' + objstr + '</a>';
+                    }
+                }
+
+                ///单个图片
+                function objlinkimg(objstr, objid, pagename, img) {
+                    if (typeof (LiveReceptionCode_isonline) != 'undefined') {
+                        var checktext = "点击" + pagename + "-" + objstr + "-咨询";
+                        var a = LiveReceptionCode_BuildChatWin(checktext, '客服人员在线,欢迎点击咨询');
+                        if (LiveReceptionCode_isonline)
+                            LR_GetObj(objid).innerHTML = '<a ' + LiveReceptionCode_BuildChatWin(checktext, '客服人员在线,欢迎点击咨询') + '>' + img + '</a>';
+                        else
+                            LR_GetObj(objid).innerHTML = '<a ' + LiveReceptionCode_BuildChatWin(checktext, '客服人员不在线,请点击留言') + '>' + img + '</a>';
+                    }
+                }
+
+                ///运价中心
+                if ("undefined" != typeof (zouhuof)) {
+                    objlist(zouhuof, "zouhuoli", "运价中心");
+                }
+                if ("undefined" != typeof (typef)) {
+                    objlist(typef, "typeli", "运价中心");
+                }
+                if ("undefined" != typeof (portf)) {
+                    objlist(portf, "portdd", "运价中心");
+                }
+
+                if ($("#lianxiren2").length > 0) {
+                    $("#lianxiren2").children("b").attr("id", "lxrb");
+                    objlink("运价详情请咨询", "lxrb", "运价详情");
+                }
+
+                objlink("品牌加盟", "ppjm", "底部");
+                objlink("400-020-5556", "tel", "底部");
+
+                if ($("#news_box").length > 0) {
+                    objlink("", "news_box", "图片24小时在线业务咨询在线客服");
+                }
+
+                if ($("[class='w_80 zixun']").length > 0) {
+                    $("[class='w_80 zixun']").each(function () {
+                        var i = $("[class='w_80 zixun']").index(this);
+                        $(this).attr("id", "zixunn" + i);
+                        objlinkNoSpan("在线咨询", "zixunn" + i, "全球网络");
+                    });
+                }
+
+                if ($(".zixun").length > 0) {
+                    $(".zixun").each(function () {
+                        var i = $(".zixun").index(this);
+                        $(this).attr("id", "zixun" + i);
+                        objlinkNoSpan("在线咨询", "zixun" + i, "全球网络");
+                    });
+                }
+
+                if ($(".lianxiren2").length > 0) {
+                    $(".lianxiren2").each(function () {
+                        var i = $(".lianxiren2").index(this);
+                        $(this).children("b").attr("id", "lianxiren2" + i);
+                        objlink("人工服务在线咨询", "lianxiren2" + i, "全球网络");
+                    });
+                }
+
+                if ($(".noyj").length > 0) {
+                    $(".noyj").each(function () {
+                        var i = $(".noyj").index(this);
+                        $(this).children("div").children("i").attr("id", "noyj" + i);
+                        objlink("专业客服", "noyj" + i, "全球网络");
+                    });
+                }
+
+                if ($("#hours").length > 0)
+                {
+                    objlink("", "hours", "全球网络");
+                }
+
+                if ($("#hourss").length > 0) {
+                    objlink("24小时在线客服为您服务", "hourss", "24小时在线客服为您服务");
+                }
+
+                if ($("#btnonline").length > 0) {
+                    objlinkNoSpan("点击咨询在线客服", "btnonline", "登录页");
+                }
+
+                if ($(".khal").length > 0)
+                {
+                    $(".khal").each(function () {
+                        var i = $(".khal").index(this);
+                        $(this).attr("id", "khal" + i);
+                        var img = "<img src=\"/images/btn.png\" class=\"btn\" />";
+                        objlinkimg("", "khal" + i, "客户案例", img);
+                    });
+                }
+                
+            </script>
+            <!--客服-->
+        </div>
+    </div>
+</body>
+</html>

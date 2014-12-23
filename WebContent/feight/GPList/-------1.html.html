@@ -1,0 +1,1006 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    
+    <title>海运整箱运价、运费查询_第1页-锦程国际物流</title>
+    <meta name="keywords" content="海运、海运费、海运价、海运费" />
+    <meta name="description" content="锦程国际物流运价中心提供真实、有效、及时的海运整箱运价在线查询，电话:4000205556" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/Content/base.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/nav.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/pos.css" />
+
+    <script src="/Scripts/jquery-1.7.1.js"></script>
+
+    
+    
+    <script src="/Scripts/JsonPort.js?147"></script>
+    <script src="/Scripts/JsonAirPort.js?147"></script>
+    <script src="/Scripts/JsonShipCompany.js?147"></script>
+    <script src="/Scripts/JsonAirLines.js?147"></script>
+
+    <script src="/Scripts/Index_BsPostion.js"></script>
+    <script src="/Scripts/Index_Postion.js"></script>
+    
+
+    <script type="text/javascript" src="/Scripts/jquery.hoverIntent.minified.js"></script>
+
+    <script src="/Scripts/Index.js"></script>
+
+    <script src="/Scripts/Index_Pub.js"></script>
+
+    
+    <script src="/Scripts/yj_js.js"></script>
+    <link href="/Content/yj.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <div class="top">
+        <div class="wrapper">
+            <p>
+                <a id="login_a" rel="nofollow" href="/MemberCenter/Login" target="_blank" style="display:none;">登录  </a> 
+                <a id="register_a" rel="nofollow" href="/MemberCenter/Register" target="_blank" style="display:none;">注册</a>
+                <b id="loginSucc" style="display:none;"></b>
+                <a id="loginSucc_a" rel="nofollow"  href="/MemberCenter/Exit" target="_blank" style="display:none;">[退出] </a> | 
+                <a target="_blank" href="/SpecialService/kjds/index.shtml">跨境电商物流服务</a>  | 
+                <a rel="nofollow" target="_self" href="http://www.jctrans.cn/cooperation/jmgs/">合作加盟</a>  | 
+                <a rel="nofollow" href="/MemberCenter/MemberCenter" target="_blank">会员中心</a> | 
+                <a rel="nofollow" href="/wap/intro.shtml" target="_blank">手机版</a> | 
+                <a href="http://www.jctrans.cn/english/" target="_blank">ENGLISH</a> | 
+                <a rel="nofollow" href="/russian/russia.shtml" target="_blank" rel="nofollow">RUSSIAN</a> | 
+                <a rel="nofollow" onclick="AddFavorite('http://www.jc56.com','锦程国际物流在线服务有限公司')" >收藏锦程</a>  | 
+                <span>400-020-5556</span>
+            </p>
+        </div>
+    </div>
+    <div class="nav-index">
+        <div class="wrapper">
+            <div class="logo-news">
+                <a rel="nofollow" href="/">
+                    <img src="/images/index1_02.jpg" alt="" width="223" height="122" border="0" align="top" />
+                </a>
+            </div>
+            <div class="search">
+                <div class="search_box">
+                    <div style="display: block;" class="s-content" id="con_scontent_1">
+                        <ul>
+                            <li><span>
+                                <select name="select_yunjia" id="select_yunjia" class="kuang" onchange="search_Index()">
+                                    <option value="0">整&nbsp;箱</option>
+                                    <option value="1">拼&nbsp;箱</option>
+                                    <option value="2">空&nbsp;运</option>
+                                </select>
+                            </span></li>
+                            <li id="con_s_1_0">
+                                <em>起始港：</em>
+                                <span class="ipt-asy bord">
+                                    <input id="GPStartPort" name="GPStartPort" class="por_a" value="" vid="" vcountry="" type="text">
+                                </span>
+                                <em>目的港：</em>
+                                <span class="ipt-ayb">
+                                    <input id="GPEndPort" name="GPEndPort" class="por_a" value="" vid="" vcountry="" type="text">
+                                </span>
+                            </li>
+                            <li id="con_s_1_1" style="display: none">
+                                <em>起始港：</em>
+                                <span class="ipt-asy bord">
+                                    <input type="text" id="LCLStartPort" name="LCLStartPort" value="" vid="" vcountry="" class="por_a">
+                                </span>
+                                <em>目的港：</em>
+                                <span class="ipt-ayb">
+                                    <input type="text" id="LCLEndPort" name="LCLEndPort" value="" vid="" vcountry="" class="por_a">
+                                </span>
+                            </li>
+                            <li id="con_s_1_2" style="display: none">
+                                <em>起始地：</em>
+                                <span class="ipt-asy bord">
+                                    <input id="AirStartPort" name="AirStartPort" class="por_a" value="" vid="" vcountry="" type="text">
+                                </span>
+                                <em>目的地：</em>
+                                <span class="ipt-ayb">
+                                    <input id="AirEndPort" name="AirEndPort" class="por_a" value="" vid="" vcountry="" type="text">
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <input id="btnSearch" type="button" value="搜 索" onclick="GPSearch();" class="search-btn">
+                </div>
+            </div>
+            <div class="menu">
+                <ul id="topnav">
+                    <li><a href="/" class="home"></a></li>
+                    <li><a href="/Feight.html" class="nav_yj">运价中心</a>
+                        <div class="sub">
+                            <ul>
+                                <li><a href="/feight/GPList/-------1.html">整箱运价</a></li>
+                                <li><a href="/feight/LCLList/-------1.html">拼箱运价</a></li>
+                                <li><a href="/feight/AirList/-------1.html">空运运价</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/TransService.html" class="nav_wlfw">物流服务</a>
+                        <div class="sub">
+                            <div class="row sub_wlfw">
+                                <ul>
+                                    <li>
+                                        <h2><a href="/TransService/JcGP/">海运</a></h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/hyck.html">海运出口</a></li>
+                                    <li><a href="/TransService/Detail/hyjk.html">海运进口 </a></li>
+                                    <li><a href="/TransService/Detail/nmhy.html">内贸海运</a></li>
+                                    <li><a href="/TransService/Detail/szys.html">散杂运输</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <h2><a href="/TransService/JcAir/">空运</a></h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/kyck.html">空运出口</a></li>
+                                    <li><a href="/TransService/Detail/kyjk.html">空运进口 </a></li>
+                                    <li><a href="/TransService/Detail/nmky.html">内贸空运</a></li>
+                                    <li><a href="/TransService/Detail/xgzq.html">香港专区</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <h2><a href="/TransService/JcRail/">铁路</a></h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/gjtl.html">国际铁路</a></li>
+                                    <li><a href="/TransService/Detail/gntl.html">国内铁路 </a></li>
+                                    <li><a href="/TransService/Detail/dsly.html">多式联运</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <h2><a href="/TransService/JcRoad/">公路</a></h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/gjqy.html">国际汽运</a></li>
+                                    <li><a href="/TransService/Detail/nmzc.html">内贸整车</a></li>
+                                    <li><a href="/TransService/Detail/nmld.html">内贸零担</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <h2><a href="/TransService/JcExpress/">快递</a></h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/ckkd.html">出口快递 </a></li>
+                                    <li><a href="/TransService/Detail/jkkd.html">进口快递</a></li>
+                                    <li>
+                                        <h2><a href="/TransService/Detail/ccfw.html">仓储</a></h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/ccfw.html">仓储服务</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <h2><a href="/TransService/JcImportAndExportAgent/">进出口代理</a></h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/bgbj.html">报关报检 </a></li>
+                                    <li><a href="/TransService/Detail/whsf.html">外汇收付</a></li>
+                                    <li><a href="/TransService/Detail/hybx.html">货运保险</a></li>
+                                    <li><a href="/TransService/Detail/wldk.html">物流融资</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/SpecialService.html" class="nav_tsfw">特色服务</a>
+                        <div class="sub">
+                            <div class="row">
+                                <ul>
+                                    <li><a href="/SpecialService/kjds/index.shtml" style="width:150px;">跨境电商物流服务</a></li>
+                                    <li><a href="/SpecialService/srwp/index.shtml">私人物品</a></li>
+                                    <li><a href="/SpecialService/cwty/index.shtml">宠物托运</a></li>
+                                    <li><a href="/SpecialService/jcty/index.shtml">轿车托运</a></li>
+                                    <li><a href="/SpecialService/zhys/index.shtml">展会运输</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="/SpecialService/gyljr/index.shtml" style="width:140px;">供应链金融服务</a></li>
+                                    <li><a href="/SpecialService/tzgys/index.shtml">特种柜运输</a></li>
+                                    <li><a href="/SpecialService/wxpys/index.shtml">危险品运输</a></li>
+                                    <li><a href="/SpecialService/szhfw/index.shtml">散杂货运输</a></li>
+                                    <li><a href="/SpecialService/gzcyw/index.shtml">滚装船业务 </a></li>
+                               </ul>
+                               <ul>
+                                    <li><a href="/SpecialService/hwysbx/index.shtml">货物运输保险</a></li>
+                                    <li><a href="/SpecialService/qccjyw/index.shtml">汽车出境业务</a></li>
+                                    <li><a href="/SpecialService/hwys/index.shtml">大件货物运输</a></li>
+                                    <li><a href="/SpecialService/tlfw/index.shtml">边境铁路服务</a></li>
+                               </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/GlobalNetwork.html" class="nav_qqwl">全球网络</a>
+                        <div class="sub">
+                            <div class="row">
+                                <ul style="width: 60px;">
+                                    <li><a href="/GlobalNetWork/Gnfgs-dalian.html">大连 </a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-beijing.html">北京</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-tianjin.html">天津</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-qingdao.html">青岛</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-nanjing.html">南京</a></li>
+                                </ul>
+                                <ul style="width: 60px;">
+                                    <li><a href="/GlobalNetWork/Gnfgs-suzhou.html">苏州</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-shanghai.html">上海</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-ningbo.html">宁波</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-hangzhou.html">杭州</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-xiamen.html">厦门</a></li>
+                                </ul>
+                                <ul style="width: 60px;">
+                                    <li><a href="/GlobalNetWork/Gnfgs-shenzhen.html">深圳</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-guangzhou.html">广州</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-xian.html">西安</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-wuhan.html">武汉</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-chongqing.html">重庆</a></li>
+                                </ul>
+                                <ul style="width: 90px;">
+                                    <li><a href="/GlobalNetWork/Gnfgs-changsha.html">长沙</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-haerbin.html">哈尔滨</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-shijiazhuang.html">石家庄</a></li>
+                                    <li><a href="/GlobalNetWork/Hwyw.html">海外业务</a></li>
+                                    <li><a href="/GlobalNetWork/Other.html">其他</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/CustomerCase.html" class="nav_khal">客户案例</a> </li>
+                    <li><a href="/News.html" class="nav_xwzx">新闻中心</a> </li>
+                    <li><a href="/ApproachJC.html" class="nav_zjjc">走进锦程</a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main_banner">
+        <div class="wrapper">
+            <div class="navpostion c">
+                您所在的位置： 
+                <a href="/">首页</a> 
+                <span style="min-width: 10px;"></span>&gt; 
+                <a href="/Feight.html">运价中心</a> 
+                <span style="min-width: 10px;"></span>&gt
+                <a href="/feight/GPList/-------1.html" target="_blank">海运整箱运价</a>
+            </div>
+        </div>
+        
+
+<div class="wrapper">
+    <!--[if !IE]>搜索<![endif]-->
+    <div class="inquiry_l1">
+        <div class="inquiry_tit">
+            <input type="hidden" value="GPSearch" id="hid_SearchType_Index" />
+            <a class="on" id="MenuOcean" style="cursor: pointer;" onclick="FeightShow('Ocean')">
+                <span class="in_te1">海运运费</span>
+                <span class="in_te2">OCEAN FREIGHT</span>
+            </a>
+            <a class="" id="MenuAir" style="cursor: pointer;" onclick="FeightShow('Air')">
+                <span class="in_te1">空运运费</span>
+                <span class="in_te2">AIR FREIGHT</span>
+            </a>
+        </div>
+        <div class="inquiry_form">
+            <div id="divOceanSearchType" class="inquiry_1" style="display: block;">
+                <a id="a_GP" class="on" style="margin-top: 30px;" onclick="OceanShow('GP')">海运整箱运价</a>
+
+                <a id="a_LCL" style="cursor: pointer; margin-top: 30px;" onclick="OceanShow('LCL')">海运拼箱运价</a>
+
+                <input id="hid_OceanType" type="hidden" value="GP" />
+            </div>
+            <div id="divOceanSearch" class="inquiry_2" style="display: block;">
+                <ul>
+                    <li>
+                        
+                        <input id="GPStartPort_Index" name="GPStartPort_Index" class="txt-rightTitle" onblur="if(this.value == ''){this.value = '起始港'}" onfocus="if(this.value == '起始港'){this.value = ''}" value="起始港" vid="" vcountry="" type="text">
+                    </li>
+                    <li>
+                        
+                        <input id="GPEndPort_Index" name="GPEndPort_Index" class="txt-rightTitle" onblur="if(this.value == ''){this.value = '目的港'}" onfocus="if(this.value == '目的港'){this.value = ''}" value="目的港" vid="" vcountry="" type="text">
+                    </li>
+                    <li>
+                        
+                        <input id="ShipComp_Index" name="ShipComp_Index" class="txt-rightTitle" onblur="if(this.value == ''){this.value = '船公司'}" onfocus="if(this.value == '船公司'){this.value = ''}" value="船公司" vid="" vcountry="" type="text">
+                    </li>
+                    <li>
+                        
+                        <input id="GPStartDate" class="txt-rightTitle" value="有效期" readonly>
+                    </li>
+                    <li id="li_isGPSpecial" class="note_inquiry ">特价<input type="checkbox" id="isGPSpecial" value="1">
+                        <input id="hid_isGPSpecial" type="hidden" value="" />
+                    </li>
+                </ul>
+                <div class="c"></div>
+                <ul>
+                    <li class="note_inquiry " id="ul_isLCLETD" style="display: block;">
+                        <input id="hid_OceanETD" type="hidden" value="" />
+                        <input type="checkbox" name="chckbxOceanMon" value="0">
+                        <label for="checkbox"></label>
+                        周一
+                         <input type="checkbox" name="chckbxOceanMon" value="1">
+                        <label for="checkbox2"></label>
+                        周二
+                        
+                         <input type="checkbox" name="chckbxOceanMon" value="2">
+                        <label for="checkbox3"></label>
+                        周三
+                         <input type="checkbox" name="chckbxOceanMon" value="3">
+                        <label for="checkbox4"></label>
+                        周四
+                         <input type="checkbox" name="chckbxOceanMon" value="4">
+                        <label for="checkbox5"></label>
+                        周五
+                         <input type="checkbox" name="chckbxOceanMon" value="5">
+                        <label for="checkbox6"></label>
+                        周六
+                         <input type="checkbox" name="chckbxOceanMon" value="6">
+                        <label for="checkbox7"></label>
+                        周日
+                    </li>
+                    <li class="note_inquiry " id="ul_isGPETD"></li>
+                    <li>
+                        <input type="button" class="btn_inquiry" value="查询" name="btnOcean" id="btnOcean" onclick="GPSearch_Index();">
+                        <input type="button" class="btn_inquiry" value="查询" name="btnOcean" id="btnOceanLCL" onclick="LCLSearch_Index();">
+                        <input type="button" class="btn_inquiry" value="查询" name="btnOcean" id="btnOceanAir" onclick="airSearch_Index();">
+                    </li>
+                </ul>
+            </div>
+            <div id="divGPSearchLine" class="inquiry_bottom c" style="display: block;">
+                <b>热搜航线：</b>
+                <a target="_blank" href="/feight/GPList/------6-1.html">欧地线</a><a target="_blank" href="/feight/GPList/-----18--1.html">中东</a><a target="_blank" href="/feight/GPList/------46--1.html">西非</a><a target="_blank" href="/feight/GPList/------10--1.html">欧洲非基本港</a><a target="_blank" href="/feight/GPList/------13--1.html">东地</a><a target="_blank" href="/feight/GPList/------52--1.html">南美东</a><a target="_blank" href="/feight/GPList/------8--1.html">欧洲基本港</a><a target="_blank" href="/feight/GPList/------38--1.html">澳大利亚</a><a target="_blank" href="/feight/GPList/------14--1.html">西地</a><a target="_blank" href="/feight/GPList/------31--1.html">新马泰</a>
+            </div>
+            <div id="divLCLSearchLine" class="inquiry_bottom c" style="display: none;">
+                <b>热搜航线：</b>
+                <a target="_blank" href="/feight/LCLList/------6-1.html">欧地线</a><a target="_blank" href="/feight/LCLList/------18-1.html">中东</a><a target="_blank" href="/feight/LCLList/-----46--1.html">西非</a><a target="_blank" href="/feight/LCLList/-----10--1.html">欧洲非基本港</a><a target="_blank" href="/feight/LCLList/-----13--1.html">东地</a><a target="_blank" href="/feight/LCLList/-----52--1.html">南美东</a><a target="_blank" href="/feight/LCLList/-----8--1.html">欧洲基本港</a><a target="_blank" href="/feight/LCLList/-----38--1.html">澳大利亚</a><a target="_blank" href="/feight/LCLList/-----14--1.html">西地</a><a target="_blank" href="/feight/LCLList/-----31--1.html">新马泰</a>
+            </div>
+            <div class="inquiry_1" style="height: 30px; display: none;" id="divAirSearchType">
+            </div>
+            <div class="inquiry_2" id="divAirSearch" style="display: none;">
+                <ul>
+                    <li>
+                        
+                        <input id="AirStartPort_Index" name="AirStartPort_Index" onfocus="if(this.value == '起始地'){this.value = ''}" onblur="if(this.value == ''){this.value = '起始地'}" class="txt-rightTitle" value="起始地" vid="" vcountry="" type="text">
+                        <input id="hid_AirStartPort_Index" type="hidden" value="" />
+                    </li>
+                    <li>
+                        
+                        <input id="AirEndPort_Index" name="AirEndPort_Index" onfocus="if(this.value == '目的地'){this.value = ''}" onblur="if(this.value == ''){this.value = '目的地'}" class="txt-rightTitle" value="目的地" vid="" vcountry="" type="text">
+                        <input id="hid_AirEndPort_Index" type="hidden" value="" />
+                    </li>
+                    <li>
+                        
+                        <input id="AirComp_Index" name="AirComp_Index" onfocus="if(this.value == '航空公司'){this.value = ''}" onblur="if(this.value == ''){this.value = '航空公司'}" class="txt-rightTitle" value="航空公司" vid="" vcountry="" type="text">
+                        <input id="hid_AirComp_Index" type="hidden" value="" />
+                    </li>
+                    <li>
+                        
+                        <input id="AirStartDate" type="text" value="有效期" class="txt-rightTitle" readonly>
+                    </li>
+                    <li class="note_inquiry ">特价<input type="checkbox" id="isAirSpecial" value="1">
+                        <input id="hid_isAirSpecial" type="hidden" value="" />
+                    </li>
+                </ul>
+
+                <div class="c"></div>
+                <ul>
+                    <input id="hid_airETD" type="hidden" value="" />
+                    <li class="note_inquiry ">
+                        <input type="checkbox" name="chckbxAirETD" value="0">
+                        <label for="checkbox"></label>
+                        周一
+                        <input type="checkbox" name="chckbxAirETD" value="1">
+                        <label for="checkbox2"></label>
+                        周二                    
+                        <input type="checkbox" name="chckbxAirETD" value="2">
+                        <label for="checkbox3"></label>
+                        周三
+                        <input type="checkbox" name="chckbxAirETD" value="3">
+                        <label for="checkbox4"></label>
+                        周四
+                        <input type="checkbox" name="chckbxAirETD" value="4">
+                        <label for="checkbox5"></label>
+                        周五
+                        <input type="checkbox" name="chckbxAirETD" value="5">
+                        <label for="checkbox6"></label>
+                        周六
+                        <input type="checkbox" name="chckbxAirETD" value="6">
+                        <label for="checkbox7"></label>
+                        周日
+                    </li>
+                    <li>
+                        <input type="button" name="btnAir" value="查询" class="btn_inquiry" onclick="airSearch_Index();">
+                    </li>
+                </ul>
+            </div>
+            <div id="divAirSearchLine" class="inquiry_bottom c" style="display: none;">
+                <b>空运热搜：</b>
+                <a target="_blank" href="/feight/AirList/495-457------1.html">上海浦东机场-迪拜</a><a target="_blank" href="/feight/AirList/719-56------1.html">北京-墨尔本</a><a target="_blank" href="/feight/AirList/162-286------1.html">深圳-洛杉矶</a><a target="_blank" href="/feight/AirList/180------1.html">广州-多哈</a><a target="_blank" href="/feight/AirList/719-445------1.html">北京-吉隆坡</a><a target="_blank" href="/feight/AirList/495-658------1.html">上海浦东机场-新加坡</a>
+            </div>
+        </div>
+    </div>
+    <!--[if !IE]>搜索END<![endif]-->
+    <!--[if !IE]>在线咨询<![endif]-->
+    <!--客服公共方法 -->
+    <script type="text/javascript">
+        var _Swt = function (r, p, e, arrname, LiClass, TportClass, TonlineClass, OnlineText, breaken) {
+            this.r = r == "" ? "" : "&r=" + encodeURI(r);
+            this.p = p == "" ? "" : "&p=" + encodeURI(p);
+            this.e = e == "" ? "" : "&e=" + encodeURI(e);
+            this.lk = breaken == 1 ? "/files/html/swt_jump.html" : "/files/html/swt_error.html";
+            this.liclass = LiClass;
+            this.portClass = TportClass;
+            this.onlineClass = TonlineClass;
+            this.arrname = arrname;
+            this.href = this.lk + this.e + this.r + this.p;
+            this.onlineText = OnlineText != "" ? OnlineText : "[在线]";
+        }
+        _Swt.prototype = {
+            DocWritedd: function () {
+                var li = "";
+                var objArray = this.arrname.split(',');
+                for (var i = 0; i < objArray.length; i++) {
+                    li += "<dd id=\"" + this.liclass + i + "\"  target=\"_blank\" rel=\"nofollow\"></dd>";
+                }
+                return li;
+            },
+            DocWriteli: function () {
+                var li = "";
+                var objArray = this.arrname.split(',');
+                for (var i = 0; i < objArray.length; i++) {
+                    li += "<li id=\"" + this.liclass + i + "\"  target=\"_blank\" rel=\"nofollow\"></li>";
+                }
+                return li;
+            }
+        }
+    </script>
+    <!--客服 -->
+    
+    <div class="on-line r">
+        <div class="tit">
+            <h2 style="width: 200px; color: #ff7b00" id="htype1">
+            </h2>
+            <div style="overflow: hidden; width: 250px; font-size: 12px; height: 20px; float: right; text-align: right" id="s1" class="scrollDiv">
+                <ul id="zouhuo" style="margin-top: 0px;">
+                </ul>
+                <script type="text/javascript">
+                    var zouhuof = "北京客户陆运走货咨询中,青岛客户陆运走货咨询中,大连客户海运业务走货咨询中,哈尔滨客户空运业务走货咨询中,上海客户海运业务走货咨询中,南京客户空运业务走货咨询中";
+                    var C_Swt_zouhuo = new _Swt("", "", "", zouhuof, "zouhuoli", "zouhuo", "", "[在线]", 1);
+                    document.getElementById("zouhuo").innerHTML = C_Swt_zouhuo.DocWriteli();
+                </script>
+            </div>
+        </div>
+        <ul class="linebtn1" id="linebtn1">
+        </ul>
+        <script type="text/javascript">
+            var typef = "海&nbsp;运,空&nbsp;运,陆&nbsp;运,仓&nbsp;储,快&nbsp;递,进出口,报关报检,其他运输";
+            var C_Swt_type = new _Swt("", "", "", typef, "typeli", "type", "", "[在线]", 1);
+            document.getElementById("linebtn1").innerHTML = C_Swt_type.DocWriteli();
+        </script>
+        <div class="m12 c"></div>
+        <div class="tit ">
+            <h2 style="width: 250px; color: #ff7b00" id="htype2">
+            </h2>
+        </div>
+        <dl class="linezi" id="linezi">
+        </dl>
+        <script type="text/javascript">
+            var portf = "上海,宁波,深圳,广州,青岛,天津,大连,厦门,北京,杭州,南京,苏州,重庆,长沙,武汉,西安,哈尔滨,石家庄,海外,其他";
+            var C_Swt_part = new _Swt("", "", "", portf, "portdd", "port", "", "[在线]", 1);
+            document.getElementById("linezi").innerHTML = C_Swt_part.DocWritedd();
+        </script>
+    </div>
+    <!--[if !IE]>在线咨询 END<![endif]-->
+</div>
+<div class="c">&nbsp;</div>
+<link href="/Scripts/datepicker/jquery-ui-1.8.5.custom.css" rel="stylesheet" />
+<script src="/Scripts/datepicker/jquery.ui.datepicker-zh-CN.js"></script>
+<script src="/Scripts/datepicker/ui.datepicker.js"></script>
+<script src="/Scripts/freight/freight_Index.js"></script>
+
+        <div class="c">&nbsp;</div>
+    </div>
+    <div class="hyyj">
+        <div class="hy_tit">
+            
+
+            <h1>整箱运价</h1>
+            <div class="scrollDiv" id="s2" style="overflow: hidden; width: 950px; height: 30px; float: left;">
+                <ul style="margin-top: 0px;">
+                                    
+                </ul>
+            </div>
+        </div>
+
+        <!--[if !IE]>运价信息<![endif]-->
+        <div class="hy_xinxi">
+            <span>共找到
+                整箱运价
+                <b class="red"> 3585 </b>条
+            </span>
+            
+        </div>
+
+        <!--[if !IE]>运价列表<![endif]-->
+        
+        <div class="hy_con">
+            <div class="listtit">
+                <ul>
+                    <li class="w_470"><span>起始港—目的港</span></li>
+                    <li class="w_180">船公司</li>
+                    <li class="w_80">
+                        
+                        <a href="/feight/GPList/----20DESC---1.html" class="">20▼</a>
+                    </li>
+                    <li class="w_80">
+                        
+                        <a href="/feight/GPList/----40DESC---1.html" class="">40▼</a>
+                    </li>
+                    <li class="w_80">
+                        
+                        <a href="/feight/GPList/----40HDESC---1.html" class="">40H▼</a>
+                    </li>
+                    <li class="w_80">
+                        
+                        <a href="/feight/GPList/----45HDESC---1.html" class="">45GP▼</a>
+                    </li>
+                </ul>
+            </div>
+            
+                    <div class="list">
+                        <ul>
+                            <li class="w_300 zi2">
+                                <a href="/feight/GPDetail/19694.html" class="zi2" title="上海-蒙得维的亚海运整箱运价">
+                                    <span>上海</span> 
+                                    — 
+                                    <span>蒙得维的亚</span>
+                                </a>
+                            </li>
+                            <li class="w_150">
+                                <b>
+                                    
+                                        直达
+                                    
+                                </b>
+                            </li>
+                            <li class="zi1 w_180">SAF </li>
+                            <li class="zi1 w_80">3100</li>
+                            <li class="zi1 w_80">2000</li>
+                            <li class="zi1 w_80">2000</li>
+                            <li class="zi1 w_80">0</li>
+
+                        </ul>
+                        <ul>
+                            <li class="w_300"><b>班期:(FRI)</b></li>
+                            <li class="w_150">航程:</li>
+                            <li>
+                                <span class="zi3">
+                                                                    
+                                </span>
+                            </li>
+                        </ul>
+                        <p class="zixun"></p>
+                    </div>
+                
+                    <div class="list">
+                        <ul>
+                            <li class="w_300 zi2">
+                                <a href="/feight/GPDetail/19693.html" class="zi2" title="上海-亚松森海运整箱运价">
+                                    <span>上海</span> 
+                                    — 
+                                    <span>亚松森</span>
+                                </a>
+                            </li>
+                            <li class="w_150">
+                                <b>
+                                    
+                                        直达
+                                    
+                                </b>
+                            </li>
+                            <li class="zi1 w_180">SAF </li>
+                            <li class="zi1 w_80">4300</li>
+                            <li class="zi1 w_80">3450</li>
+                            <li class="zi1 w_80">3450</li>
+                            <li class="zi1 w_80">0</li>
+
+                        </ul>
+                        <ul>
+                            <li class="w_300"><b>班期:(FRI)</b></li>
+                            <li class="w_150">航程:</li>
+                            <li>
+                                <span class="zi3">
+                                                                    
+                                </span>
+                            </li>
+                        </ul>
+                        <p class="zixun"></p>
+                    </div>
+                
+                    <div class="list">
+                        <ul>
+                            <li class="w_300 zi2">
+                                <a href="/feight/GPDetail/19692.html" class="zi2" title="上海-乌斯怀亚海运整箱运价">
+                                    <span>上海</span> 
+                                    — 
+                                    <span>乌斯怀亚</span>
+                                </a>
+                            </li>
+                            <li class="w_150">
+                                <b>
+                                    
+                                        直达
+                                    
+                                </b>
+                            </li>
+                            <li class="zi1 w_180">SAF </li>
+                            <li class="zi1 w_80">5700</li>
+                            <li class="zi1 w_80">4600</li>
+                            <li class="zi1 w_80">4600</li>
+                            <li class="zi1 w_80">0</li>
+
+                        </ul>
+                        <ul>
+                            <li class="w_300"><b>班期:(TUE)</b></li>
+                            <li class="w_150">航程:</li>
+                            <li>
+                                <span class="zi3">
+                                                                    
+                                </span>
+                            </li>
+                        </ul>
+                        <p class="zixun"></p>
+                    </div>
+                
+                    <div class="list">
+                        <ul>
+                            <li class="w_300 zi2">
+                                <a href="/feight/GPDetail/19691.html" class="zi2" title="上海-萨腊特海运整箱运价">
+                                    <span>上海</span> 
+                                    — 
+                                    <span>萨腊特</span>
+                                </a>
+                            </li>
+                            <li class="w_150">
+                                <b>
+                                    
+                                        直达
+                                    
+                                </b>
+                            </li>
+                            <li class="zi1 w_180">SAF </li>
+                            <li class="zi1 w_80">3700</li>
+                            <li class="zi1 w_80">2600</li>
+                            <li class="zi1 w_80">2600</li>
+                            <li class="zi1 w_80">0</li>
+
+                        </ul>
+                        <ul>
+                            <li class="w_300"><b>班期:(FRI)</b></li>
+                            <li class="w_150">航程:</li>
+                            <li>
+                                <span class="zi3">
+                                                                    
+                                </span>
+                            </li>
+                        </ul>
+                        <p class="zixun"></p>
+                    </div>
+                
+                    <div class="list">
+                        <ul>
+                            <li class="w_300 zi2">
+                                <a href="/feight/GPDetail/19690.html" class="zi2" title="上海-布宜诺斯艾利斯海运整箱运价">
+                                    <span>上海</span> 
+                                    — 
+                                    <span>布宜诺斯艾利斯</span>
+                                </a>
+                            </li>
+                            <li class="w_150">
+                                <b>
+                                    
+                                        直达
+                                    
+                                </b>
+                            </li>
+                            <li class="zi1 w_180">SAF </li>
+                            <li class="zi1 w_80">3100</li>
+                            <li class="zi1 w_80">2000</li>
+                            <li class="zi1 w_80">2000</li>
+                            <li class="zi1 w_80">0</li>
+
+                        </ul>
+                        <ul>
+                            <li class="w_300"><b>班期:(FRI/WED/SAT)</b></li>
+                            <li class="w_150">航程:</li>
+                            <li>
+                                <span class="zi3">
+                                                                    
+                                </span>
+                            </li>
+                        </ul>
+                        <p class="zixun"></p>
+                    </div>
+                
+                    <div class="list">
+                        <ul>
+                            <li class="w_300 zi2">
+                                <a href="/feight/GPDetail/19689.html" class="zi2" title="上海-萨尔瓦多海运整箱运价">
+                                    <span>上海</span> 
+                                    — 
+                                    <span>萨尔瓦多</span>
+                                </a>
+                            </li>
+                            <li class="w_150">
+                                <b>
+                                    
+                                        直达
+                                    
+                                </b>
+                            </li>
+                            <li class="zi1 w_180">SAF </li>
+                            <li class="zi1 w_80">5000</li>
+                            <li class="zi1 w_80">5000</li>
+                            <li class="zi1 w_80">5000</li>
+                            <li class="zi1 w_80">0</li>
+
+                        </ul>
+                        <ul>
+                            <li class="w_300"><b>班期:(WED)</b></li>
+                            <li class="w_150">航程:</li>
+                            <li>
+                                <span class="zi3">
+                                                                    
+                                </span>
+                            </li>
+                        </ul>
+                        <p class="zixun"></p>
+                    </div>
+                
+<div id="page_abc">
+    
+    <span class="page-cur">
+        1
+        
+    </span>
+    <span class="page_num">
+        
+        <a href="/feight/GPList/-------2.html">2</a>
+        
+    </span>
+    <span class="page_num">
+        
+        <a href="/feight/GPList/-------3.html">3</a>
+                       
+    </span>
+    <span class="page_num">
+        
+        <a href="/feight/GPList/-------4.html">4</a>
+                          
+    </span>
+    <span class="page_num">
+        
+        <a href="/feight/GPList/-------5.html">5</a>
+                          
+    </span>
+    ...
+                <span class="page_num"><a href="/feight/GPList/-------597.html">597</a></span>
+    <span class="page_num"><a href="/feight/GPList/-------598.html">598</a></span>
+    
+    <span class="page_end"><a href="/feight/GPList/-------2.html">下一页</a></span>
+    
+    <span class="page_sum">共598页</span>
+    <span class="page_sum">到
+        <input id="txtPageination" type="text" class="page_on_num" value="" />
+        页
+    </span>
+    <span class="page_sum">
+        <input type="button" class="btn" onclick="ClickPageination('/feight/GPList/-------{0}.html    ','598    ')" />
+    </span>
+    
+</div>
+<script type="text/javascript">
+    function ClickPageination(url, pageCount) {
+        var t = $.trim($("#txtPageination").val());
+        if (isNaN(t) || t == "" || parseFloat(t) < 1 || parseFloat(t) > parseFloat(pageCount)) {
+            alert("请重新填写页数！！！");
+        }
+        else {
+            t = url.replace("{0}", t);
+            location.href = t;
+        }
+    }
+</script>
+
+        </div>
+    </div>
+
+    <div class="c">&nbsp;</div>
+    <div class="wrapper">
+        <div class="footer">
+            <dl class="footer_map">
+                <dt><i></i>网站功能 </dt>
+                <dd><a href="/Home/SiteMap" target="_blank">网站地图</a></dd>
+                <dd><a href="/ApproachJC/PositionList?c=0|16|0|0" target="_blank" rel="nofollow">人才招聘</a></dd>
+                <dd id="ppjm"></dd>
+                <dd><a href="/ApproachJC/ContactUs" target="_blank" rel="nofollow">联系我们</a></dd>
+            </dl>
+            <dl class="footer_map">
+                <dt><i></i>锦程服务 </dt>
+                <dd><a href="/TransService/Detail/hyck.html" target="_blank">海运服务</a></dd>
+                <dd><a href="/TransService/Detail/kyck.html" target="_blank">空运服务</a></dd>
+                <dd><a href="/TransService/Detail/gjtl.html" target="_blank">铁路服务</a></dd>
+                <dd><a href="/TransService/Detail/gjqy.html" target="_blank">公路服务</a></dd>
+                <dd><a href="/TransService/Detail/ccfw.html" target="_blank">仓储服务</a></dd>
+                <dd><a href="/TransService/Detail/ckkd.html" target="_blank">快递服务</a></dd>
+                <dd><a href="/TransService/Detail/bgbj.html" target="_blank">进出口代理</a></dd>
+            </dl>
+            <dl class="footer_map" style="width:100px;">
+                <dt><i></i>特色服务 </dt>
+                <dd><a href="/SpecialService/kjds/index.shtml" target="_blank">跨境电商物流服务</a></dd>
+                <dd><a href="/SpecialService/gyljr/index.shtml" target="_blank">供应链金融服务</a></dd>
+                <dd><a href="/SpecialService/srwp/index.shtml" target="_blank">私人物品</a></dd>
+                <dd><a href="/SpecialService/cwty/index.shtml" target="_blank">宠物托运</a></dd>
+                <dd><a href="/SpecialService/zhys/index.shtml" target="_blank">展会运输</a></dd>
+                <dd><a href="/SpecialService/jcty/index.shtml" target="_blank">轿车托运</a></dd>
+                <dd><a href="/SpecialService/hwysbx/index.shtml" target="_blank">货物运输保险</a></dd>
+            </dl>
+            <dl class="footer_map">
+                <dt><i></i>会员中心 </dt>
+                <dd><a href="/MemberCenter/MemberCenter" target="_blank" rel="nofollow">会员介绍</a></dd>
+                <dd><a href="/MemberCenter/MemberCenter#memberC" target="_blank" rel="nofollow">如何成为会员</a></dd>
+            </dl>
+            <dl class="footer_map">
+                <dt><i></i>锦联成员</dt>
+                <dd><a href="http://www.jinlian.cn/" target="_blank" rel="nofollow">锦联集团</a></dd>
+                <dd><a href="http://www.jctrans.cn/" target="_blank" rel="nofollow">国际物流</a></dd>
+                <dd><a href="http://www.jinlian.com.cn/" target="_blank" rel="nofollow">地产开发</a></dd>
+                <dd><a href="http://www.jl-bank.com/" target="_blank" rel="nofollow">金融服务</a></dd>
+                <dd><a href="http://www.jinlian.cn/showint.asp?classid=181&id=181" target="_blank" rel="nofollow">产业园区</a></dd>
+            </dl>
+            <ul class="footer_con">
+                <li class="font14">您合理的建议是对我们最大的支持！</li>
+                <li class="tel" id="tel"></li>
+            </ul>
+            <ul class="footer_wx">
+                <li>
+                    <img src="/images/footer_contact.jpg" width="90" height="92"></li>
+                <li>
+                    <b>扫一扫</b><br>
+                    微信也能查运价扫二维码关注<br>
+                    锦程货代小秘书
+                </li>            
+            </ul>
+            <div class="footer_zs">
+                <p>
+                    2006-2014 锦程物流全球服务网版权所有<br>
+                    辽ICP备B2-20140011-1　　增值电信业务经营许可证辽B2-20140011
+                </p>
+                <div>
+                    <a href="http://net.china.com.cn/" target="_blank" rel="nofollow">
+                        <img src="/images/Authentication_2.png" alt="不良信息举报中心" width="100" height="50">
+                    </a>
+                    <a href="http://www.cyberpolice.cn/wfjb/" rel="nofollow" target="_blank">
+                        <img src="/images/Authentication_4.png" alt="网络110报警服务" width="100" height="50">
+                    </a>
+                    <a href="http://www.ctws.com.cn/" rel="nofollow" target="_blank">
+                        <img src="/images/Authentication_5.png" alt="无线互联网业自律同盟" width="100" height="50">
+                    </a>
+                    
+                    <br>
+                    <script src="http://s11.cnzz.com/stat.php?id=2094930&web_id=2094930&show=pic" language="JavaScript"></script>
+                </div>
+            </div>
+            <!--百度页面访问分析代码开始-->
+            <script type="text/javascript">
+                var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5c4ab49d593b763ed73fbaac21c23956' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <!--百度页面访问分析代码结束-->
+            <!--站点流量统计开始-->
+            <script type="text/javascript">
+                var _py = _py || [];
+                _py.push(['a', 'qG..n4eBoGSiHovW5-MyiKLJlP']);
+                _py.push(['domain', 'stats.ipinyou.com']);
+                _py.push(['e', '']);
+                -function (d) {
+                    var s = d.createElement('script'),
+                    e = d.body.getElementsByTagName('script')[0]; e.parentNode.insertBefore(s, e),
+                    f = 'https:' == location.protocol;
+                    s.src = (f ? 'https' : 'http') + '://' + (f ? 'fm.ipinyou.com' : 'fm.p0y.cn') + '/j/adv.js';
+                }(document);
+            </script>
+            <noscript><img src="//stats.ipinyou.com/adv.gif?a=qG..n4eBoGSiHovW5-MyiKLJlP&e=" style="display:none;"/></noscript>
+            <!--站点流量统计结束-->
+            </div>
+
+            <!--客服-->
+            <script type="text/javascript" src="/Scripts/swtinvite.js"></script>
+            <script language="javascript" src=""></script>
+            
+            <script language="javascript">
+                ///数组
+                function objlist(objstrArr, objid, pagename) {
+                    var objArr = objstrArr.split(',');
+                    for (var i = 0; i < objArr.length; i++) {
+                        if (typeof (LiveReceptionCode_isonline) != 'undefined') {
+                            var objf = objid + i;
+                            var checktext = "点击" + pagename + "-" + objArr[i] + "-咨询";
+                            var a = LiveReceptionCode_BuildChatWin(checktext, '客服人员在线,欢迎点击咨询');
+                            if (LiveReceptionCode_isonline)
+                                LR_GetObj(objf).innerHTML = '<a ' + LiveReceptionCode_BuildChatWin(checktext, '客服人员在线,欢迎点击咨询') + '><span class=\'port\'>' + objArr[i] + '</span></a>';
+                            else
+                                LR_GetObj(objf).innerHTML = '<a ' + LiveReceptionCode_BuildChatWin(checktext, '客服人员不在线,请点击留言') + '><span class=\'port\'>' + objArr[i] + '</span></a>';
+                        }
+                    }
+                }
+                ///单个
+                function objlink(objstr, objid, pagename)
+                {
+                    if (typeof (LiveReceptionCode_isonline) != 'undefined') {
+                        var checktext = "点击" + pagename + "-" + objstr + "-咨询";
+                        var a = LiveReceptionCode_BuildChatWin(checktext, '客服人员在线,欢迎点击咨询');
+                        if (LiveReceptionCode_isonline)
+                            LR_GetObj(objid).innerHTML = '<a ' + LiveReceptionCode_BuildChatWin(checktext, '客服人员在线,欢迎点击咨询') + '><span class=\'port\'>' + objstr + '</span></a>';
+                        else
+                            LR_GetObj(objid).innerHTML = '<a ' + LiveReceptionCode_BuildChatWin(checktext, '客服人员不在线,请点击留言') + '><span class=\'port\'>' + objstr + '</span></a>';
+                    }
+                }
+
+                ///运价中心
+                if ("undefined" != typeof(zouhuof))
+                {
+                    objlist(zouhuof, "zouhuoli", "运价中心");
+                }
+                if ("undefined" != typeof (typef))
+                {
+                    objlist(typef, "typeli", "运价中心");
+                }
+                if ("undefined" != typeof (portf))
+                {
+                    objlist(portf, "portdd", "运价中心");
+                }
+
+                if ($(".zixun").length > 0)
+                {
+                    $(".zixun").each(function () {
+                        var i = $(".zixun").index(this);
+                        $(this).attr("id", "zixun" + i);
+                        objlink("在线咨询", "zixun" + i, "运价中心");
+                    });
+                }
+                
+                if ($(".lianxiren2").length > 0)
+                {
+                    $(".lianxiren2").each(function () {
+                        var i = $(".lianxiren2").index(this);
+                        $(this).children("b").attr("id", "lianxiren2" + i);
+                        objlink("人工服务在线咨询", "lianxiren2" + i, "运价中心");
+                    });
+                }
+                
+                if ($(".noyj").length > 0)
+                {
+                    $(".noyj").each(function () {
+                        var i = $(".noyj").index(this);
+                        $(this).children("div").children("i").attr("id", "noyj" + i);
+                        objlink("专业客服", "noyj" + i, "运价中心");
+                    });
+                }
+
+                objlink("品牌加盟", "ppjm", "底部");
+                objlink("400-020-5556", "tel", "底部");
+
+                if ($("#htype1").length > 0)
+                {
+                    objlink("24小时在线客服为您服务", "htype1", "首页");
+                }
+                
+                if ($("#htype2").length > 0)
+                {
+                    objlink("24小时在线客服为您服务", "htype2", "首页");
+                }
+                
+
+            </script>
+            <!--客服-->
+        </div>
+    </body>
+</html>

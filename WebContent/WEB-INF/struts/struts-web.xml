@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+
+
+
+  	<package name="web" namespace="/" extends="inn">
+  		<action name="webAction_*" method="{1}" class="webAction">
+  			<interceptor-ref name="innInterceptor"></interceptor-ref>
+  			<result name="index_jt">index_jt.jsp</result>
+  			<result name="index">index.jsp</result>
+  			
+			<result name="updateNews">/WEB-INF/jsp/business/updateNews.jsp</result>
+			<result name="updateBusiness">/WEB-INF/jsp/business/updateBusiness.jsp</result>
+			<result name="viewNews">/WEB-INF/jsp/web/news.jsp</result>
+			<result name="viewNews_jt">/WEB-INF/jsp/web/news_jt.jsp</result>
+			<result name="aboutUs">/WEB-INF/jsp/web/aboutUs.jsp</result>
+			<result name="aboutUs_jt">/WEB-INF/jsp/web/aboutUs_jt.jsp</result>
+			<result name="updateCP">/WEB-INF/jsp/business/updateCP.jsp</result>
+			<result name="welcome">/welcome.jsp</result>
+			<result name="listNews">/WEB-INF/jsp/web/listNews.jsp</result>
+			<result name="listNews_jt">/WEB-INF/jsp/web/listNews_jt.jsp</result>
+			<result name="listBusiness">/WEB-INF/jsp/web/listBusiness.jsp</result>
+			<result name="listBusiness_jt">/WEB-INF/jsp/web/listBusiness_jt.jsp</result>
+			<result name="listUser">/WEB-INF/jsp/business/listUser.jsp</result>
+			<result name="listUs">/WEB-INF/jsp/business/listUser.jsp</result>
+			
+			
+			<result name="company">/WEB-INF/jsp/web/company.jsp</result>
+			<result name="company_jt">/WEB-INF/jsp/web/company_jt.jsp</result>
+			
+			<result name="action2News" type="redirectAction">businessAction_findAllNews.action</result>
+			<result name="action2Business" type="redirectAction">businessAction_findAllBusiness.action</result>
+  		</action>
+  	</package>
+</struts>	

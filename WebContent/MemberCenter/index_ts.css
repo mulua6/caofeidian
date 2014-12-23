@@ -1,0 +1,43 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*特色圆图标*/
+.ts{clear: both; position: relative;width:1100px; height:145px; margin:auto}
+.ts_icon {margin-left:18px; margin-top:8px; *margin-left:0px;}
+.ts_icon li{ margin:0; width:140px; height:140px; float:left; }
+.ts_icon li a{width:130px; height:130px;  display:block; }
+.ts_icon li a:hover{}
+.ts_icon a.i1{ background:url(http://nocdn.jc56.com/images/ico1_01.png) no-repeat;}
+/*.ts_icon a.i1:hover{ background:url(images/ico2_01.png) no-repeat;}*/
+.ts_icon a.i2{ background:url(http://nocdn.jc56.com/images/ico1_02.png) no-repeat;}
+/*.ts_icon a.i2:hover{ background:url(images/ico2_02.png) no-repeat;}*/
+.ts_icon a.i3{ background:url(http://nocdn.jc56.com/images/ico1_03.png) no-repeat;}
+/*.ts_icon a.i3:hover{ background:url(images/ico2_03.png) no-repeat;}*/
+.ts_icon a.i4{ background:url(http://nocdn.jc56.com/images/ico1_04.png) no-repeat;}
+/*.ts_icon a.i4:hover{ background:url(images/ico2_04.png) no-repeat;}*/
+.ts_icon a.i5{ background:url(http://nocdn.jc56.com/images/ico1_05.png) no-repeat;}
+/*.ts_icon a.i5:hover{ background:url(images/ico2_05.png) no-repeat;}*/
+.ts_icon a.i6{ background:url(http://nocdn.jc56.com/images/ico1_06.png) no-repeat;}
+/*.ts_icon a.i6:hover{ background:url(images/ico2_06.png) no-repeat;}*/
+.ts_icon a.i7{ background:url(http://nocdn.jc56.com/images/ico1_07.png) no-repeat;}
+/*.ts_icon a.i7:hover{ background:url(images/ico2_07.png) no-repeat;}*/
+.ts_icon a.i8{ background:url(http://nocdn.jc56.com/images/ico1_08.png) no-repeat;}
+/*.ts_icon a.i8:hover{ background:url(images/ico2_08.png) no-repeat;}*/
+.ts_icon a.i9{ background:url(http://nocdn.jc56.com/images/ico1_09.png) no-repeat;}
+/*.ts_icon a.i9:hover{ background:url(images/ico2_09.png) no-repeat;}*/
+.ts_icon a.i10{ background:url(http://nocdn.jc56.com/images/ico1_10.png) no-repeat;}
+/*.ts_icon a.i10:hover{ background:url(images/ico2_10.png) no-repeat;}*/
+.ts_icon a.i11{ background:url(http://nocdn.jc56.com/images/ico1_11.png) no-repeat;}
+/*.ts_icon a.i11:hover{ background:url(images/ico2_11.png) no-repeat;}*/
+.ts_icon a.i12{ background:url(http://nocdn.jc56.com/images/ico1_12.png) no-repeat;}
+/*.ts_icon a.i12:hover{ background:url(images/ico2_12.png) no-repeat;}*/
+.ts_icon a.i13{ background:url(http://nocdn.jc56.com/images/ico1_13.png) no-repeat;}
+/*.ts_icon a.i13:hover{ background:url(images/ico2_13.png) no-repeat;}*/
+.ts_icon a.i14{ background:url(http://nocdn.jc56.com/images/ico1_14.png) no-repeat;}
+/*.ts_icon a.i14:hover{ background:url(images/ico2_14.png) no-repeat;}*/
+.ts_icon a.i15{ background:url(http://nocdn.jc56.com/images/ico1_15.png) no-repeat;}
+.ts_icon a.i16{ background:url(http://nocdn.jc56.com/images/ico1_16.png) no-repeat;}
+
+.ts_icon a.prev1{opacity:.5;width:25px;height:40px;line-height:24px;position:absolute;text-indent:-999em; background: url(http://nocdn.jc56.com/images/icon_v4.png) 0px -45px; right:0; top:35%; no-repeat;}
+.ts_icon a.next1{opacity:.5;width:25px;height:40px;line-height:24px; right:2px; position: absolute; text-indent:-999em; top:2px; background:url(http://nocdn.jc56.com/images/icon_v4.png) 0px top; left:0; top:35%;}
+.ts_icon a.prev1:hover, .ts_icon a.next1:hover { opacity:1; }

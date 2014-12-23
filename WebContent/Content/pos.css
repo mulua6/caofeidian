@@ -1,0 +1,118 @@
+﻿@charset "utf-8";
+
+.portlist {
+    font-family: Arial,Simsun;
+    font-size: 12px;
+    position:relative;
+    z-index:99;
+}
+.port_warpper {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #7F9DB9;
+    margin: 0;
+    padding: 4px;
+    text-align: left;
+}
+.port_warpperjzx {
+    margin-top:10px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #7F9DB9;
+    margin: 0;
+    padding: 4px;
+    text-align: left;
+    width: 220px;
+}
+.portlist .port_warpper {
+}
+.portlist .port_msg {
+    border-bottom: 1px dashed #AAAAAA;
+    color: #666666;
+    display: block;
+    font-family: "Simyou";
+    line-height: 20px;
+    padding: 0 0 0 5px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.portlist .port_contxt {
+    margin: 5px 0 0;
+    padding: 0;
+}
+.portlist .port_contxt {
+}
+.portlist .port_contxt span {
+    float: left;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.portlist .port_contxt a {
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+    color: #0055AA;
+    cursor: pointer;
+    display: block;
+    line-height: 20px;
+    padding: 1px 5px 0;
+    text-align: right;
+    text-decoration: none;
+}
+.portlist .port_contxt a {
+}
+.portlist .port_contxt a:hover {
+    background: none repeat scroll 0 0 #E7F1FD;
+    border-bottom: 1px solid #7F9DB9;
+    border-top: 1px solid #7F9DB9;
+}
+.portlist .port_selected {
+    background: none repeat scroll 0 0 #C8E3FC;
+    border-bottom: 1px solid #C8E3FC;
+    border-top: 1px solid #C8E3FC;
+    color: #FFFFFF;
+}
+.portlist .port_pagebreak {
+    display: none;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.portlist .port_pagebreak a {
+    color: #0055AA;
+    font-family: Arial,"Microsoft YaHei",Simsun,sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0 4px;
+    text-decoration: underline;
+}
+.portlist .port_arrowl, .portlist .port_arrowr {
+    color: #0055AA;
+}
+.portlist a.port_current {
+    color: #000000;
+    text-decoration: none;
+}
+.portlist .port_contxt a.anone:hover {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+}
+.portlist .port_contxt a.anone:hover {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+}
+.portlist {
+    *margin-top:5px;
+
+
+    background: url("http://style.jctrans.com/oe09/yj/air/triangle4.gif") no-repeat 0 0;
+
+    padding-top: 8px;
+}
+.port_warpper {
+    border-top: medium none;
+    margin-top: -1px;
+}
+.port_warpperjzx {
+    border-top: medium none;
+    margin-top: -1px;
+}

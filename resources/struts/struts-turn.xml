@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts> 
+	<package name="forward" namespace="/" extends="struts-default">
+		<action name="forwardAction_*" method="{1}" class="com.mulua.action.ForwardAction">
+			<result name="top">/WEB-INF/jsp/frame/top.html</result>
+			<result name="left">/WEB-INF/jsp/frame/left.jsp</result>
+			<result name="right">/WEB-INF/jsp/frame/right.html</result>
+			<result name="bottom">/WEB-INF/jsp/frame/bottom.html</result>
+			<result name="kynamic">/WEB-INF/jsp/kynamic/kynamic.jsp</result>
+			<result name="addNews">/WEB-INF/jsp/business/addNews.jsp</result>
+			<result name="addBusiness">/WEB-INF/jsp/business/addBusiness.jsp</result>
+			<result name="addUs">/WEB-INF/jsp/business/addUs.jsp</result>
+			<result name="addUser">/WEB-INF/jsp/business/addUser.jsp</result>
+			<result name="listNews">/WEB-INF/jsp/business/listNews.jsp</result>
+			<result name="listBusiness">/WEB-INF/jsp/business/listBusiness.jsp</result>
+			<result name="listUser">/WEB-INF/jsp/business/listUser.jsp</result>
+			<result name="listUs">/WEB-INF/jsp/business/listUser.jsp</result>
+			
+			<result name="updateNews">/WEB-INF/jsp/business/updateNews.jsp</result>
+			<result name="updateBusiness">/WEB-INF/jsp/business/updateBusiness.jsp</result>
+			<result name="updateUser">/WEB-INF/jsp/business/updateUser.jsp</result>
+			<result name="updateUs">/WEB-INF/jsp/business/updateUs.jsp</result>
+			<result name="updateCP">/WEB-INF/jsp/business/updateCP.jsp</result>
+			<result name="addPic">/WEB-INF/jsp/business/upload.jsp</result>
+		</action>
+	</package>
+</struts>

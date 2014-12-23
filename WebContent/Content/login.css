@@ -1,0 +1,172 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+@import url(nav.css);
+@import url(base.css);
+body{background: #f1f1f1;}
+.reg_box{ border:1px solid #CCC; background:#FFF;box-shadow:0px 0px 8px #ccc;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;}
+.login_box{ border:1px solid #CCC; background:url(../images/login_bg.jpg) -300px -280px no-repeat #FFF;box-shadow:0px 0px 8px #ccc;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;  height:500px; position:relative}
+
+.tit{height: 47px;border-width: 1px;border-style: solid;border-color: #FFF #FFF #E3E3E3;padding-left: 30px;color: #171717;font: 22px/47px Microsoft Yahei; margin-top:3px;}
+.reg_left{  border-right:1px solid #dfdfdf; width:800px; padding-top:5px; padding-bottom:20px; float:left}
+.reg_right{ width:349px; float:right}
+.reg_left .tit1{ font-size:26px; text-indent:15px; line-height:26px; display:block;  width:128px; color:#23448b;}
+
+/*注册*/
+.reg{ margin:auto;}
+.reg .contact {width:450px; margin:30px auto; height:50px;background:url(../images/bk_reg.gif) left top no-repeat;}
+.reg .company {width:450px; margin:30px auto; height:50px;background:url(../images/bk_reg.gif) left -55px no-repeat;}
+/*分步*/
+.step3, .step2, .step1 { height: 38px; width:500px; margin:auto; margin-bottom:30px; margin-top:30px; }
+.step1 { background: url("../images/i360_email.png") no-repeat scroll -190px -310px transparent; width: 372px; }
+.step2 { background: url("../images/i360_email.png") no-repeat scroll -191px -355px transparent; width: 376px; }
+.step3 { background: url("../images/i360_email.png") no-repeat scroll -191px -394px transparent; width: 372px; }
+
+
+/*注册FORM表*/
+.regform{ width:450px; margin:auto; line-height:35px;}
+.regform label {color:#656565;font-size:14px;height:35px;margin-right:10px;}
+.regform select {width:175px;}
+.regform input {height:20px;background:url(../images/coin_014.gif) left top no-repeat;border:1px solid #ddd;width:285px;vertical-align:middle;line-height:20px;color:#9a9a9a;}
+.regform input.sex {width:auto;background:none;border:none;}
+.regform input.W55 {width:55px;}
+.regform input.W165 {width:165px;}
+.regform div{ clear:both; _height:30px;}
+.regform div span{ float:left}
+.regform div.mailalert { height: 20px;  clear: both;   color: #F00; line-height: 20px; margin-left: 75px; }
+.regform .result{ margin-top:10px; display:block; float:left; margin-left:5px;}
+.regform .ok {background:url(../images/check_right.gif) no-repeat; width:18px; height:18px;}
+.regform .error {background:url(../images/check_error.gif) no-repeat;width:18px; height:18px;}
+.regform .H50 {
+	height:50px;
+	background:url(/image/bk_reg.gif) left -100px no-repeat;
+}
+.regform .subdiv {height:70px;	padding-top:30px;text-align:center;}
+.regform .subbut { cursor:pointer; 	width:130px;height:38px;background:url(/image/bk_reg.gif) left -163px no-repeat;
+	border:none;
+}
+/*注册成功*/
+.reg_success {height:500px;width:650px;	margin:auto;/*background:url(/image/coin_035.gif) 100px 10px no-repeat;*/	line-height:50px;font-weight:bold;font-size:16px;text-align:center; color:#666}
+.reg_success h2{ font-size:26px; color:#090; margin-top:100px; background:url(../images/success.png) center 0 no-repeat; padding-top:150px;}
+.reg_success span a{ padding:8px 10px; font-size:14px; color:#FFF;  background:#036;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;}
+
+
+/*注册页右侧*/
+.reg_right .title{color: #0065CD;font-size: 14px;font-weight: bold;height: 55px;line-height: 55px;}
+.reg_right .title{height: 45px;color: #171717; margin-bottom:10px;font: 18px/44px Microsoft Yahei;}
+.reg_login{ background:url(../images/bk_member-center_left.gif) no-repeat; padding-top:110px; padding-left:20px; height:220px; width:328px;}
+
+/*注册页 登陆*/
+.login_form {height:160px;}
+.login_form div {height:45px;}
+.login_form div.findpsw, .login_form .subdiv {	height:35px;}
+.login_form div.findpsw {padding-left:63px;}
+.login_form .findpsw a:link, .login_form .findpsw a:visited, .login_form .findpsw a:hover {	color:#999;}
+.login_form label {	font-size:14px;	height:45px;	line-height:34px;	float:left;	margin-right:20px;}
+.login_form .user, .login_form .psw {	width:195px;	height:28px;	border:1px solid #ddd;	background:url(../images/coin_014.gif) left top no-repeat;	font-size:14px;	color:#999;	line-height:28px;}
+.login_form .subbut { width:69px; height:39px; background:url(../images/coin_031.gif) left top no-repeat;border:none;cursor:pointer;}
+.login_form span.left {	padding-left:63px;}
+.login_form span.right {height:30px; line-height:30px;}
+
+.line{ border-bottom:1px solid #E3E3E3; clear:both}
+
+/*注册页会员指南*/
+.member_guide {padding:5px 0 0 0; margin-left:20px;}
+.member_guide li {margin-bottom:15px;}
+.member_guide li span{ margin-right:10px;}
+.member_guide li span.right font {color:#3598ff; font-weight:bold; font-size:14px;}
+.member_guide li span.right {height:32px;color:#9a9a9a;	line-height:16px;}
+.member_guide li span.right, .member_guide li span.right {width:210px;}
+.member_guide li .a { display:block; float:left;width:42px;	height:32px;background:url(../images/coin_038.gif) left top no-repeat;}
+.member_guide li .b {display:block; float:left;	width:42px;	height:32px;	background:url(../images/coin_038.gif) -42px top no-repeat;}
+.member_guide li .c {display:block; float:left;	width:42px;	height:32px;background:url(../images/coin_038.gif) -84px top no-repeat;}
+.member_guide li .d {display:block; float:left;	width:42px;	height:32px;background:url(../images/coin_038.gif) -126px top no-repeat;}
+.member_guide li a:link, .member_guide li a:visited, .member_guide li a:hover {	color:#3598ff;}
+
+
+
+/*找回密码*/
+.mima{ margin:auto; width:500px; margin-top:80px;	}
+.mima .alert{width:438px; height:28px; border:1px solid #ffe6b0;	background:url(../images/coin_034.gif) 10px 5px no-repeat #ffffeb;	color:#666;	padding:10px 10px 0 60px;	line-height:17px;}
+.findway {height:323px;	width:500px;	background:url(../images/bk_password_right.gif) left -130px no-repeat;	margin-top:20px;
+}
+.findway .way1 {padding:70px 0 0 160px;}
+.findway .way1 input.email {height:20px; width:210px; background:url(../images/coin_014.gif) left top no-repeat; border:1px solid #999;
+}
+.findway .way1 input.subbut, .member_login .form input.subbut {	width:69px;	height:35px;background:url(../images/coin_036.gif) left top no-repeat;	border:none; cursor:pointer}
+.findway .way1 span.emaildiv {padding-top:5px;margin-right:10px;}
+.findway .way3 a {float:left;height:30px;margin:235px 0 0 160px;width:140px;}
+
+
+/*右边微信*/
+.weixin{ margin:20px 10px 20px 15px; clear:both}
+.weixin .btn_zc{ background:url(../images/reg_btn.jpg) no-repeat; height:50px; line-height:50px; clear:both; font-size:18px; font-weight:bold; text-align:center;margin-bottom:10px;}
+.weixin .btn_zc a:hover{color:#000;text-decoration:none}
+.weixin .btn_online{background:url(../images/reg_btn.jpg) 0 -55px no-repeat;height:50px; line-height:50px; clear:both; font-size:18px; font-weight:bold; text-align:center; margin-bottom:10px; }
+.weixin .btn_online a{color:#F60}
+.weixin .btn_online a:hover{color:#F30; text-decoration:none}
+.weixin .wx_pic img{ float:left}
+.weixin .wx_pic span{ float: left; width:190px; font-size:14px; margin:10px 0 5px 15px; line-height:25px;}
+.weixin .wx_pic span b{ color:#F60;}
+
+
+/*会员指南*/
+.zinan{ width:580px; margin:auto; clear:both; padding:20px;font-size:14px;}
+.zinan .title{ margin-top:20px; margin-bottom:40px; height:40px; line-height:40px;color:#39F; font-weight:bold; font-size:18px; padding-left:20px;}
+.member_intropicture {height:273px;width:552px; margin:auto;background:url(../images/bk_member-guide.jpg) center 0px no-repeat;}
+.introdetail .detail {color:#333;font-size:14px;line-height:25px;margin-bottom:20px;padding-right:30px;}
+.member_becomepicture {height:200px;width:552px;background:url(../images/bk_member-guide.jpg) center -568px no-repeat;}
+.member_becomepictureone {height:25px;background:url(../images/coin_039.gif) left -58px no-repeat;float:left;	margin:50px 0 0 20px;	line-height:18px;	text-indent:30px;	float:left;}
+.member_becomepicturetwo {height:25px;background:url(../images/coin_039.gif) left -100px no-repeat;	float:left;	margin:50px 0 0 20px;	line-height:18px;text-indent:30px;	float:left;}
+.member_servicepicture {height:294px;width:552px;background:url(../images/bk_member-guide.jpg) center -274px no-repeat;}
+.member_servicetable {padding:20px 0 20px 0;}
+.member_servicetable span {	font-size:12px;	line-height:25px;}
+.member_servicetitle {padding-left:20px;color:#3399FE;}
+.member_servicetitletwo {padding-left:10px;	color:#3399FE;}
+
+/*登录*/
+/*登录微信*/
+.login_wx{ width:380px; margin:80px 0 0 250px; clear:both}
+.login_wx .btn_online{  background:url(../images/reg_btn.jpg) -2px -58px no-repeat; width:311px; height:43px; line-height:43px; clear:both; font-size:18px; font-weight:bold; text-align:center; margin-bottom:10px; margin-top:30px;}
+.login_wx .btn_online a{color:#F60}
+.login_wx .btn_online a:hover{color:#F30; text-decoration:none}
+.login_wx .wx_pic img{ float:left}
+.login_wx .wx_pic span{ float: left; width:190px; font-size:14px; margin:10px 0 5px 35px; line-height:25px;}
+.login_wx .wx_pic span b{ color:#F60;}
+
+/*登录页会员指南*/
+.login_guide {padding:5px 0 0 0; margin-left:20px; margin-top:50px;}
+.login_guide li {margin-bottom:15px; float:left; width:300px;}
+.login_guide li span{ margin-right:10px;}
+.login_guide li span.right font {color:#3598ff; font-weight:bold; font-size:14px;}
+.login_guide li span.right {height:32px;color:#9a9a9a;	line-height:16px;}
+.login_guide li span.right, .member_guide li span.right {width:210px;}
+.login_guide li .a { display:block; float:left;width:42px;	height:32px;background:url(../images/coin_038.gif) left top no-repeat;}
+.login_guide li .b {display:block; float:left;	width:42px;	height:32px;	background:url(../images/coin_038.gif) -42px top no-repeat;}
+.login_guide li .c {display:block; float:left;	width:42px;	height:32px;background:url(../images/coin_038.gif) -84px top no-repeat;}
+.login_guide li .d {display:block; float:left;	width:42px;	height:32px;background:url(../images/coin_038.gif) -126px top no-repeat;}
+.login_guide li a:link, .member_guide li a:visited, .member_guide li a:hover {	color:#3598ff;}
+
+
+.login{ position:absolute; top:80px; right:60px; height:300px; width:320px; border:1px solid #fff; background:#FFF;box-shadow:0px 0px 8px #66abe2;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px; }
+/*注册页 登陆*/
+
+.login div {height:45px;}
+.login .subdiv, .login .findpsw{ padding-left:63px; line-height:35px; } 
+.login .findpsw a:link, .login .findpsw a:visited, .login .findpsw a:hover {color:#999;}
+.login label {font-size:14px;	height:45px; line-height:34px;	float:left;	margin-right:20px;}
+.login .user, .login .psw {	width:195px;height:28px;border:1px solid #ddd;	background:url(../images/coin_014.gif) left top no-repeat;	font-size:14px;	color:#999;	line-height:28px;}
+.login .subbut { width:69px; height:39px; background:url(../images/coin_031.gif) left top no-repeat;border:none;cursor:pointer;}
+
+
+.member_building{height:273px;width:552px; margin:auto;background:url(../images/soon.jpg) center 50px no-repeat;}
+
+/*无运价*/
+.noyj{ width:600px; margin:20px auto 0; font-size:14px; line-height:35px; }
+.noyj i a{ color:#036;font-size:16px;}
+.noyj b{ color:#F60; font-size:16px;}
+.noyj i{ color:#036; font-style:normal; font-size:16px;}
+.lianxiren{width:300px;/*height:43px;*/ margin:10px auto; }
+.lianxiren1{width:62px;height:45px;float:left; display:block; background:url(../images/yj/telbccl.jpg) no-repeat #069;}
+.lianxiren2{height:45px;float:left; line-height:45px; font-size:16px; padding:0 20px; display:block;background:#fff url(../images/yj/telbccm.jpg) repeat-x;}
+.lianxiren3{width:15px;height:45px;float:left; display:block;background:url(../images/yj/telbccr.jpg) no-repeat;}

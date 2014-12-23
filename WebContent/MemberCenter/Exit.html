@@ -1,0 +1,810 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>锦程国际物流-空运海运费运价运费查询|货运货代物流服务</title>
+    <meta name="keywords" content="物流,海运,空运,货代,货运" />
+    <meta name="description" content="锦程国际物流1990年创立,3亿资本,拥有200家全国分支,提供24小时国内国际海运空运运价运费查询,海运空运货运铁路货代集装箱等专业物流服务.多家船公司物流服务代理,电话:4000205556" />
+
+    <link rel="stylesheet" type="text/css" href="/Content/pos.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/index.css" />
+    <link rel="stylesheet" type="text/css" href="index_ts.css?998" />
+
+    <script type="text/javascript" src="/Scripts/jquery-1.7.1.min.js"></script>
+
+    <!-- 商务系统拷贝的脚本 Start-->
+    <script src="/Scripts/JsonPort.js"></script>
+    <script src="/Scripts/JsonAirPort.js"></script>
+    <script src="/Scripts/JsonShipCompany.js"></script>
+    <script src="/Scripts/JsonAirLines.js"></script>
+
+    <script src="/Scripts/Index_BsPostion.js"></script>
+    <script src="/Scripts/Index_Postion.js"></script>
+
+    <!-- 商务系统拷贝的脚本 End-->
+
+    <script src="/Scripts/Index.js"></script>
+
+    <!--<script type="text/javascript" src="index_Info.js?999"></script>-->
+    <script src="Scripts/index_Info.js"></script>
+
+
+    <script type="text/javascript" src="/Scripts/jquery.hoverIntent.minified.js"></script>
+    <script src="/Scripts/selectpr.js" type="text/javascript"></script>
+    <script src="/Scripts/Index_Pub.js"></script>
+
+    <!-- 在线ON-LINE下浮 有关闭-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btn_fechar_barra_fica").click(function () {
+                $("#barra_fixa").hide("slow");
+            })
+        });
+
+        function zhuanhuan() {
+            var v = $("#select_yunjia").val();
+            if (v == "0") {
+                $("#con_s_1_0").show();
+                $("#but_ship").show();
+
+                $("#con_s_1_1").hide();
+                $("#but_air").hide();
+            } else {
+                $("#con_s_1_0").hide();
+                $("#but_ship").hide();
+
+                $("#con_s_1_1").show();
+                $("#but_air").show();
+            }
+        }
+    </script>
+</head>
+
+<body>
+<!--    <div style="width: 1150px; display: block; clear: both; min-height: 70px; *_height: 70px; margin: 0 auto; margin-bottom: 3px;" id="dvTopAD">
+        <div id='imgtop1'>
+            <a href="http://www.jc56.com/SpecialService/gyljr/index.shtml" target="_blank">
+                <img src="/images/1150x45.jpg" width='1150px' height='70px' />
+            </a>
+        </div>
+        <div id='imgtop2' style='display: none'>
+            <a href="http://www.jc56.com/SpecialService/gyljr/index.shtml" target="_blank">
+                <img src="/images/1150x150.jpg" width='1150px' height='200px' />
+            </a>
+        </div>
+    </div>-->
+    <div class="top">
+        <div class="wrapper">
+            <p>
+                <a id="login_a" rel="nofollow" href="/MemberCenter/Login" target="_blank" style="display: none;">登录 </a>
+                <a id="register_a" rel="nofollow" href="/MemberCenter/Register" target="_blank" style="display: none;">注册</a>
+                <b id="loginSucc" style="display: none;"></b>
+                <a id="loginSucc_a" rel="nofollow" href="/MemberCenter/Exit" target="_blank" style="display: none;">[退出]</a> | 
+                <a target="_blank" href="/SpecialService/kjds/index.shtml">跨境电商物流服务</a>  | 
+                <a rel="nofollow" target="_self" href="http://www.jctrans.cn/cooperation/jmgs/">合作加盟</a>  | 
+                <a rel="nofollow" href="/MemberCenter/MemberCenter" target="_blank">会员中心</a> | 
+                <a rel="nofollow" href="/wap/intro.shtml" target="_blank">手机版</a> | 
+                <a href="http://www.jctrans.cn/english/" target="_blank">ENGLISH</a> | 
+                <a rel="nofollow" href="/russian/russia.shtml" target="_blank" rel="nofollow">RUSSIAN</a> | 
+                <a rel="nofollow" onclick="AddFavorite('http://www.jc56.com','锦程国际物流在线服务有限公司')">收藏锦程</a>  | 
+                <span>400-020-5556</span>
+            </p>
+        </div>
+    </div>
+    <div class="nav-index">
+        <div class="wrapper">
+            <div class="logo-news">
+                <a rel="nofollow" href="/">
+                    <img src="/images/index1_02.jpg" alt="" width="223" height="122" border="0" align="top" />
+                </a>
+            </div>
+            <div class="search">
+                <div class="search_box">
+                    <div style="display: block;" class="s-content" id="con_scontent_1">
+                        <ul>
+                            <li><span>
+                                <select name="select_yunjia" id="select_yunjia" class="kuang" onchange="search_Index()">
+                                    <option value="0">整&nbsp;箱</option>
+                                    <option value="1">拼&nbsp;箱</option>
+                                    <option value="2">空&nbsp;运</option>
+                                </select>
+                            </span></li>
+                            <li id="con_s_1_0">
+                                <em>起始港：</em>
+                                <span class="ipt-asy bord">
+                                    <input id="GPStartPort" name="GPStartPort" class="por_a" value="" vid="" vcountry="" type="text">
+                                </span>
+                                <em>目的港：</em>
+                                <span class="ipt-ayb">
+                                    <input id="GPEndPort" name="GPEndPort" class="por_a" value="" vid="" vcountry="" type="text">
+                                </span>
+                            </li>
+                            <li id="con_s_1_1" style="display: none">
+                                <em>起始港：</em>
+                                <span class="ipt-asy bord">
+                                    <input type="text" id="LCLStartPort" name="LCLStartPort" value="" vid="" vcountry="" class="por_a">
+                                </span>
+                                <em>目的港：</em>
+                                <span class="ipt-ayb">
+                                    <input type="text" id="LCLEndPort" name="LCLEndPort" value="" vid="" vcountry="" class="por_a">
+                                </span>
+                            </li>
+                            <li id="con_s_1_2" style="display: none">
+                                <em>起始地：</em>
+                                <span class="ipt-asy bord">
+                                    <input id="AirStartPort" name="AirStartPort" class="por_a" value="" vid="" vcountry="" type="text">
+                                </span>
+                                <em>目的地：</em>
+                                <span class="ipt-ayb">
+                                    <input id="AirEndPort" name="AirEndPort" class="por_a" value="" vid="" vcountry="" type="text">
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <input id="btnSearch" type="button" value="搜 索" onclick="GPSearch();" class="search-btn">
+                </div>
+            </div>
+            <div class="menu">
+                <ul id="topnav">
+                    <li><a href="/" class="home"></a></li>
+                    <li><a href="/Feight.html" class="nav_yj">运价中心</a>
+                        <div class="sub">
+                            <ul>
+                                <li><a href="/feight/GPList/-------1.html">整箱运价</a></li>
+                                <li><a href="/feight/LCLList/-------1.html">拼箱运价</a></li>
+                                <li><a href="/feight/AirList/-------1.html">空运运价</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="/TransService.html" class="nav_wlfw">物流服务</a>
+                        <div class="sub">
+                            <div class="row sub_wlfw">
+                                <ul>
+                                    <li>
+                                        <h2><a href="/TransService/JcGP/">海运</a></h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/hyck.html">海运出口</a></li>
+                                    <li><a href="/TransService/Detail/hyjk.html">海运进口 </a></li>
+                                    <li><a href="/TransService/Detail/nmhy.html">内贸海运</a></li>
+                                    <li><a href="/TransService/Detail/szys.html">散杂运输</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <h2><a href="/TransService/JcAir/">空运</a></h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/kyck.html">空运出口</a></li>
+                                    <li><a href="/TransService/Detail/kyjk.html">空运进口 </a></li>
+                                    <li><a href="/TransService/Detail/nmky.html">内贸空运</a></li>
+                                    <li><a href="/TransService/Detail/xgzq.html">香港专区</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <h2><a href="/TransService/JcRail/">铁路</a></h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/gjtl.html">国际铁路</a></li>
+                                    <li><a href="/TransService/Detail/gntl.html">国内铁路 </a></li>
+                                    <li><a href="/TransService/Detail/dsly.html">多式联运</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <h2><a href="/TransService/JcRoad/">公路</a></h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/gjqy.html">国际汽运</a></li>
+                                    <li><a href="/TransService/Detail/nmzc.html">内贸整车</a></li>
+                                    <li><a href="/TransService/Detail/nmld.html">内贸零担</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <h2><a href="/TransService/JcExpress/">快递</a></h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/ckkd.html">出口快递 </a></li>
+                                    <li><a href="/TransService/Detail/jkkd.html">进口快递</a></li>
+                                    <li>
+                                        <h2>仓储</h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/ccfw.html">仓储服务</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <h2><a href="/TransService/JcImportAndExportAgent/">进出口代理</a></h2>
+                                    </li>
+                                    <li><a href="/TransService/Detail/bgbj.html">报关报检 </a></li>
+                                    <li><a href="/TransService/Detail/whsf.html">外汇收付</a></li>
+                                    <li><a href="/TransService/Detail/hybx.html">货运保险</a></li>
+                                    <li><a href="/TransService/Detail/wldk.html">物流融资</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/SpecialService.html" class="nav_tsfw">特色服务</a>
+                        <div class="sub">
+                            <div class="row">
+                                <ul>
+                                    <li><a href="/SpecialService/kjds/index.shtml" style="width: 150px;">跨境电商物流服务</a></li>
+                                    <li><a href="/SpecialService/srwp/index.shtml">私人物品</a></li>
+                                    <li><a href="/SpecialService/cwty/index.shtml">宠物托运</a></li>
+                                    <li><a href="/SpecialService/jcty/index.shtml">轿车托运</a></li>
+                                    <li><a href="/SpecialService/zhys/index.shtml">展会运输</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="/SpecialService/gyljr/index.shtml" style="width: 140px;">供应链金融服务</a></li>
+                                    <li><a href="/SpecialService/tzgys/index.shtml">特种柜运输</a></li>
+                                    <li><a href="/SpecialService/wxpys/index.shtml">危险品运输</a></li>
+                                    <li><a href="/SpecialService/szhfw/index.shtml">散杂货运输</a></li>
+                                    <li><a href="/SpecialService/gzcyw/index.shtml">滚装船业务 </a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="/SpecialService/hwysbx/index.shtml">货物运输保险</a></li>
+                                    <li><a href="/SpecialService/qccjyw/index.shtml">汽车出境业务</a></li>
+                                    <li><a href="/SpecialService/hwys/index.shtml">大件货物运输</a></li>
+                                    <li><a href="/SpecialService/tlfw/index.shtml">边境铁路服务</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/GlobalNetwork.html" class="nav_qqwl">全球网络</a>
+                        <div class="sub">
+                            <div class="row">
+                                <ul style="width: 60px;">
+                                    <li><a href="/GlobalNetWork/Gnfgs-dalian.html">大连 </a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-beijing.html">北京</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-tianjin.html">天津</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-qingdao.html">青岛</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-nanjing.html">南京</a></li>
+                                </ul>
+                                <ul style="width: 60px;">
+                                    <li><a href="/GlobalNetWork/Gnfgs-suzhou.html">苏州</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-shanghai.html">上海</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-ningbo.html">宁波</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-hangzhou.html">杭州</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-xiamen.html">厦门</a></li>
+                                </ul>
+                                <ul style="width: 60px;">
+                                    <li><a href="/GlobalNetWork/Gnfgs-shenzhen.html">深圳</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-guangzhou.html">广州</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-xian.html">西安</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-wuhan.html">武汉</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-chongqing.html">重庆</a></li>
+                                </ul>
+                                <ul style="width: 90px;">
+                                    <li><a href="/GlobalNetWork/Gnfgs-changsha.html">长沙</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-haerbin.html">哈尔滨</a></li>
+                                    <li><a href="/GlobalNetWork/Gnfgs-shijiazhuang.html">石家庄</a></li>
+                                    <li><a href="/GlobalNetWork/Hwyw.html">海外业务</a></li>
+                                    <li><a href="/GlobalNetWork/Other.html">其他</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/CustomerCase.html" class="nav_khal">客户案例</a> </li>
+                    <li><a href="/News.html" class="nav_xwzx">新闻中心</a> </li>
+                    <li><a href="/ApproachJC.html" class="nav_zjjc">走进锦程</a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main_banner">
+        <div class="wrapper">
+            <div class="on-line">
+                <div class="tit">
+                    <h2 id="htype1" style="width: 250px; color: #ff7b00"></h2>
+                    <div class="scrollDiv" id="s1" style="overflow: hidden; width: 280px; font-size: 12px; height: 20px; float: right; text-align: right">
+                        <ul>
+                             <li><a href="/files/html/swt_jump.html" target="_blank" rel="nofollow">上海客户海运走货咨询中</a></li> <li><a href="/files/html/swt_jump.html" target="_blank" rel="nofollow">长春客户空运走货咨询中</a></li> <li><a href="/files/html/swt_jump.html" target="_blank" rel="nofollow">天津客户海运走货咨询中</a></li> <li><a href="/files/html/swt_jump.html" target="_blank" rel="nofollow">深圳客户海运走货咨询中</a></li> <li><a href="/files/html/swt_jump.html" target="_blank" rel="nofollow">南京客户空运走货咨询中</a></li> <li><a href="/files/html/swt_jump.html" target="_blank" rel="nofollow">青岛客户陆运走货咨询中</a></li> <li><a href="/files/html/swt_jump.html" target="_blank" rel="nofollow">北京客户陆运走货咨询中</a></li> <li><a href="/files/html/swt_jump.html" target="_blank" rel="nofollow">厦门客户海运走货咨询中</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <ul class="linebtn1" id="linebtn1">
+                </ul>
+                <script type="text/javascript">
+                    var _Swt = function (r, p, e, portname, LiClass, TportClass, TonlineClass, OnlineText, breaken) {
+                        this.r = r == "" ? "" : "&r=" + encodeURI(r);
+                        this.p = p == "" ? "" : "&p=" + encodeURI(p);
+                        this.e = e == "" ? "" : "&e=" + encodeURI(e);
+                        this.lk = breaken == 1 ? "/files/html/swt_jump.html" : "/files/html/swt_error.html";
+                        this.liclass = LiClass;
+                        this.portClass = TportClass;
+                        this.onlineClass = TonlineClass;
+                        this.portname = portname;
+                        this.href = this.lk + this.e + this.r + this.p;
+                        this.onlineText = OnlineText != "" ? OnlineText : "[在线]";
+                    }
+                    _Swt.prototype = {
+                        DocWritedd: function () {
+                            var li = "";
+                            var portArray = this.portname.split(',');
+                            for (var i = 0; i < portArray.length; i++) {
+                                li += "<dd id=\"" + this.liclass + i + "\"  target=\"_blank\" rel=\"nofollow\"></dd>";
+                            }
+                            return li;
+                        },
+                        DocWriteli: function () {
+                            var li = "";
+                            var portArray = this.portname.split(',');
+                            for (var i = 0; i < portArray.length; i++) {
+                                li += "<li id=\"" + this.liclass + i + "\"  target=\"_blank\" rel=\"nofollow\"></li>";
+                            }
+                            return li;
+                        }
+                    }
+                    var type = "海&nbsp;运,空&nbsp;运,陆&nbsp;运,仓&nbsp;储,快&nbsp;递,进出口,报关报检,其他运输";
+                    var C_Swt_typefour = new _Swt("", "", "", type, "partli", "port", "line", "[在线]", 1);
+                    document.getElementById("linebtn1").innerHTML = C_Swt_typefour.DocWriteli();
+                </script>
+
+
+                <div class="m12 c"></div>
+                <div class="tit ">
+                    <h2 id="htype2" style="width: 250px; color: #ff7b00"></h2>
+                </div>
+
+                <dl class="linezi" id="linezi">
+                </dl>
+
+                <script type="text/javascript">
+                    var port = "上海,宁波,深圳,广州,青岛,天津,大连,厦门,北京,杭州,南京,苏州,重庆,长沙,武汉,西安,哈尔滨,石家庄,海外,其他";
+                    var C_Swt_partfour = new _Swt("", "", "", port, "partdd", "port", "line", "[在线]", 1);
+                    document.getElementById("linezi").innerHTML = C_Swt_partfour.DocWritedd();
+                </script>
+
+            </div>
+            <div style="float: right;">
+                <div class="banner">
+                    <div class="slider-wrapper theme-default" style="float: left;">
+                        <div id="slider" class="nivoSlider1">
+                            <a href="/SpecialService/gyljr/index.shtml" target="_blank">
+                                <img src="/images/20141027.jpg" width="550" height="136" alt="Slide1" /></a>
+                            <a href="/News/DetailPage-45531.html" target="_blank">
+                                <img src="/images/adv1.jpg" width="550" height="136" alt="Slide2" style="display: none;"/></a>
+                            <a href="/ApproachJC.html" target="_blank">
+                                <img src="/images/b2_03.jpg" width="550" height="136" alt="Slide3" style="display: none;" /></a>
+                            <a href="/adv/adv-msk/index.shtml" target="_blank">
+                                <img src="/images/b1_03.jpg" width="550" height="136" alt="Slide4" style="display: none;" /></a>
+                            <a href="/adv/cx7/guangzhoujc.shtml" target="_blank">
+                                <img src="/images/b2_05.jpg" width="550" height="136" alt="Slide5" style="display: none;" /></a>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="banner">
+                    <div class="banner-img">
+                        <ul class="banner-box" id="banner-box">
+                            <li style="background: #F2F2F2 url(/images/adv1.jpg); opacity: 0; filter: alpha(opacity:0);"><a href="/News/DetailPage/45531" target="_blank"></a></li>
+                            <li style="background: #F2F2F2 url(/images/b2_03.jpg); opacity: 1; filter: alpha(opacity:100);"><a href="/ApproachJC.html" target="_blank"></a></li>
+                            <li style="background: #F2F2F2 url(/images/b1_03.jpg); opacity: 0; filter: alpha(opacity:0);"><a href="/adv/adv-msk/index.shtml" target="_blank"></a></li>
+                            <li style="background: #F2F2F2 url(/images/b0_03.jpg); opacity: 0; filter: alpha(opacity:0);"><a href="/adv/adv-cosco/index.shtml" target="_blank"></a></li>
+                        </ul>
+                        <div class="banner-btn-box">
+                            <div class="banner-btn" id="banner-btn">
+                                <span class='on' index='0'>1</span>
+                                <span index='1'>2</span>
+                                <span index='2'>3</span>
+                                <span index='3'>4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <div class="m8 c"></div>
+                <div class="demo">
+                    <div class="bx_wrap">
+                        <div class="bx_container">
+                            <ul id="demo2">
+                                <li><span><a href="/CustomerCase/DetailPage-45086.html" target="_blank" rel="nofollow">超大件如何装入开顶柜</a></span><p><a href="/CustomerCase/DetailPage/45086" target="_blank" rel="nofollow"><img src="uploadfile/2014/0826/20140826090617248.jpg" width="90" height="68"></a><a href="/CustomerCase/DetailPage/45086" target="_blank">锦程物流承接客户委托上海到汉堡的集装箱业务，其中...</a></p><li><span><a href="/CustomerCase/DetailPage-45085.html" target="_blank" rel="nofollow">大件货物操作心得</a></span><p><a href="/CustomerCase/DetailPage/45085" target="_blank" rel="nofollow"><img src="uploadfile/2014/0826/20140826090148784.jpg" width="90" height="68"></a><a href="/CustomerCase/DetailPage/45085" target="_blank">1. 大件货物：需要车船直取，需要在船到港前，向码...</a></p><li><span><a href="/CustomerCase/DetailPage-45084.html" target="_blank" rel="nofollow">危险品集装箱运输操作</a></span><p><a href="/CustomerCase/DetailPage/45084" target="_blank" rel="nofollow"><img src="uploadfile/2014/0826/20140826085431704.jpg" width="90" height="68"></a><a href="/CustomerCase/DetailPage/45084" target="_blank">锦程物流拥有专业的销售和资深的客服团队，熟识危险...</a></p><li><span><a href="/CustomerCase/DetailPage-45083.html" target="_blank" rel="nofollow">危险品等级划分</a></span><p><a href="/CustomerCase/DetailPage/45083" target="_blank" rel="nofollow"><img src="uploadfile/2014/0825/20140825040113275.jpg" width="90" height="68"></a><a href="/CustomerCase/DetailPage/45083" target="_blank">&nbsp;
+危险品运输
+锦程物流专业承接危险品运输，...</a></p><li><span><a href="/CustomerCase/DetailPage-45082.html" target="_blank" rel="nofollow">锦程物流可根据客户需求修...</a></span><p><a href="/CustomerCase/DetailPage/45082" target="_blank" rel="nofollow"><img src="uploadfile/2014/0825/20140825033803135.jpg" width="90" height="68"></a><a href="/CustomerCase/DetailPage/45082" target="_blank">锦程物流可根据客户需求，修改适用于本次运输的挂衣...</a></p><li><span><a href="/CustomerCase/DetailPage-45081.html" target="_blank" rel="nofollow">挂衣箱的改箱</a></span><p><a href="/CustomerCase/DetailPage/45081" target="_blank" rel="nofollow"><img src="uploadfile/2014/0825/20140825032039225.jpg" width="90" height="68"></a><a href="/CustomerCase/DetailPage/45081" target="_blank">锦程物流根据客户对出口货物特性的需求，修改普通集...</a></p><li><span><a href="/CustomerCase/DetailPage-45080.html" target="_blank" rel="nofollow">锅炉机组运输</a></span><p><a href="/CustomerCase/DetailPage/45080" target="_blank" rel="nofollow"><img src="uploadfile/2014/0825/20140825023728623.jpg" width="90" height="68"></a><a href="/CustomerCase/DetailPage/45080" target="_blank">2013年锦程接到客户委托，运输一批锅炉机组出口到国...</a></p><li><span><a href="/CustomerCase/DetailPage-45079.html" target="_blank" rel="nofollow">游艇运输案例</a></span><p><a href="/CustomerCase/DetailPage/45079" target="_blank" rel="nofollow"><img src="uploadfile/2014/0825/20140825022740288.jpg" width="90" height="68"></a><a href="/CustomerCase/DetailPage/45079" target="_blank">始发港：上海
+目的港：弗里敦
+&nbsp;
+货物品名：...</a></p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c">&nbsp;</div>
+            <div class="adv_pic">
+                <ul>
+                    <li><a href="/SpecialService/kjds/index.shtml" target="_blank">
+                        <img src="/images/advpic/adv_pic_09.png"></a> </li>
+                    <li><a href="/adv/cx1/index.shtml" target="_blank">
+                        <img src="/images/advpic/adv_pic_03.png"></a> </li>
+                    <li><a href="/adv/cx3/index.shtml" target="_blank">
+                        <img src="/images/advpic/adv_pic_05.png"></a> </li>
+                    <li><a href="/adv/cx4/index.shtml" target="_blank">
+                        <img src="/images/advpic/adv_pic_07.png"></a> </li>
+                    <li><a href="/adv/cx6/index.shtml" target="_blank">
+                        <img src="/images/advpic/adv_pic_11.png"></a> </li>
+                    <li><a href="http://www.jctrans.cn/cooperation/jmgs/" target="_blank">
+                        <img src="/images/advpic/adv_pic_13.png"></a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="c"></div>
+    <div class="container">
+        <div class="ts">
+            <div class="ts_icon">
+                <div class="ts_container" id="ts_container">
+                    <ul id="ts2">
+                        <li><a href="/SpecialService/srwp/index.shtml" class="i1" target="_blank"></a></li>
+                        <li style="margin: 0; padding: 0"><a href="/SpecialService/gyljr/index.shtml" class="i16" target="_blank"></a></li>
+                        <li><a href="/SpecialService/cwty/index.shtml" class="i2" target="_blank"></a></li>
+                        <li><a href="/SpecialService/jcty/index.shtml" class="i3" target="_blank"></a></li>
+                        <li><a href="/SpecialService/zhys/index.shtml" class="i4" target="_blank"></a></li>
+                        <li><a href="/SpecialService/tzgys/index.shtml" class="i5" target="_blank"></a></li>
+                        <li><a href="/SpecialService/gzcyw/index.shtml" class="i6" target="_blank"></a></li>
+                        <li><a href="/SpecialService/hwysbx/index.shtml" class="i7" target="_blank"></a></li>
+                        <li><a href="/TransService/Detail/hyjk.html" class="i8" target="_blank"></a></li>
+                        <li><a href="/TransService/Detail/szys.html" class="i9" target="_blank"></a></li>
+                        <li><a href="/TransService/Detail/kyjk.html" class="i10" target="_blank"></a></li>
+                        <li><a href="/TransService/Detail/ckkd.html" class="i11" target="_blank"></a></li>
+                        <li><a href="/TransService/Detail/gjqy.html" class="i12" target="_blank"></a></li>
+                        <li><a href="/TransService/Detail/gjtl.html" class="i13" target="_blank"></a></li>
+                        <li><a href="/TransService/Detail/bgbj.html" class="i14" target="_blank"></a></li>
+                        <li><a href="/SpecialService/wxpys/index.shtml" class="i15" target="_blank"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 滚动 -->
+        <div class="c m8">&nbsp;</div>
+        <div class="c m8">&nbsp;</div>
+        <div id="katj" role="katj">
+            <dl>
+                <dt><b>口岸特价</b><a href="/feight/GPList/------1-1.html" target="_blank">更多&raquo;</a></dt>
+                <dd>
+                    <ul>
+                        <li><a href="/feight/GPDetail/30798.html" title="深圳-仁川海运费" target="_blank">深圳-仁川海运费<em>USD40/50/50/0</em></a><span>12-01</span></li><li><a href="/feight/GPDetail/30800.html" title="深圳-东京海运费" target="_blank">深圳-东京海运费<em>USD100/170/170/0</em></a><span>12-01</span></li><li><a href="/feight/GPDetail/30801.html" title="深圳-横滨海运费" target="_blank">深圳-横滨海运费<em>USD100/170/170/0</em></a><span>12-01</span></li><li><a href="/feight/GPDetail/30802.html" title="深圳-名古屋海运费" target="_blank">深圳-名古屋海运费<em>USD130/230/230/0</em></a><span>12-01</span></li><li><a href="/feight/GPDetail/30804.html" title="深圳-大阪海运费" target="_blank">深圳-大阪海运费<em>USD100/170/170/0</em></a><span>12-01</span></li><li><a href="/feight/GPDetail/29996.html" title="上海-胡志明市海运费" target="_blank">上海-胡志明市海运费<em>USD0/-120/-120/0</em></a><span>11-18</span></li><li><a href="/feight/GPDetail/29519.html" title="厦门-挺坎海运费" target="_blank">厦门-挺坎海运费<em>USD1700/0/0/0</em></a><span>11-18</span></li><li><a href="/feight/GPDetail/29684.html" title="厦门-瓦伦西亚海运费" target="_blank">厦门-瓦伦西亚海运费<em>USD1400/0/0/0</em></a><span>11-18</span></li>                    
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+
+        <!--[if !IE]>口岸特价结束<![endif]-->
+
+        <!--[if !IE]>口岸动态开始<![endif]-->
+        <div id="kadt" role="kadt">
+            <dl>
+                <dt><b>口岸动态</b><a href="/News/KadtList-kadtDalian-1.html" target="_blank">更多&raquo;</a></dt>
+                <dd>
+                    <ul>
+                        <li><em><a href="/News/KadtList-kadtDalian-1.html" class="port" title="大连口岸" target="_blank">[大连]</a></em><a href="/News/KadtDetail-2087.html" title="12月1日起印巴航线预计小幅涨价" target="_blank">12月1日起印巴航线预计小幅涨价</a><span>12-01</span></li><li><em><a href="/News/KadtList-kadtGuangzhou-1.html" class="port" title="广州口岸" target="_blank">[广州]</a></em><a href="/News/KadtDetail-2094.html" title="澳洲线12月预计涨价" target="_blank">澳洲线12月预计涨价</a><span>12-01</span></li><li><em><a href="/News/KadtList-kadtNingbo-1.html" class="port" title="宁波口岸" target="_blank">[宁波]</a></em><a href="/News/KadtDetail-2091.html" title="墨西哥、南美西航线15日以后上调GRI" target="_blank">墨西哥、南美西航线15日以后上调GRI</a><span>12-01</span></li><li><em><a href="/News/KadtList-kadtQingdao-1.html" class="port" title="青岛口岸" target="_blank">[青岛]</a></em><a href="/News/KadtDetail-2089.html" title="地中海航线运价下跌" target="_blank">地中海航线运价下跌</a><span>12-01</span></li><li><em><a href="/News/KadtList-kadtShanghai-1.html" class="port" title="上海口岸" target="_blank">[上海]</a></em><a href="/News/KadtDetail-2092.html" title="美西塞港严重预计15日起上调PCS" target="_blank">美西塞港严重预计15日起上调PCS</a><span>12-01</span></li><li><em><a href="/News/KadtList-kadtShenzhen-1.html" class="port" title="深圳口岸" target="_blank">[深圳]</a></em><a href="/News/KadtDetail-2095.html" title="东南亚航线舱位较紧张" target="_blank">东南亚航线舱位较紧张</a><span>12-01</span></li><li><em><a href="/News/KadtList-kadtTianjin-1.html" class="port" title="天津口岸" target="_blank">[天津]</a></em><a href="/News/KadtDetail-2088.html" title="美西航线收取拥堵费全水爆舱" target="_blank">美西航线收取拥堵费全水爆舱</a><span>12-01</span></li><li><em><a href="/News/KadtList-kadtXiamen-1.html" class="port" title="厦门口岸" target="_blank">[厦门]</a></em><a href="/News/KadtDetail-2093.html" title="南美航线15日后预期有涨价" target="_blank">南美航线15日后预期有涨价</a><span>12-01</span></li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+
+        <!--[if !IE]>口岸动态结束<![endif]-->
+
+        <!--[if !IE]>订舱信息开始<![endif]-->
+        <div id="dcxx" role="dcxx">
+            <dl>
+                <dt><b>订舱信息</b></dt>
+                <dd>
+                    <ul>
+                        <li><em>海运</em><a>青岛-釜山 青岛客户</a> <span>&nbsp;</span></li><li><em>海运</em><a>广州-鹿特丹 广州客户</a> <span>&nbsp;</span></li><li><em>海运</em><a>厦门-汉堡 厦门客户</a> <span>&nbsp;</span></li><li><em>海运</em><a>上海-迪拜 上海客户</a> <span>&nbsp;</span></li><li><em>海运</em><a>大连-东京 大连客户</a> <span>&nbsp;</span></li><li><em>海运</em><a>深圳-卡拉奇 深圳客户</a> <span>&nbsp;</span></li><li><em>海运</em><a>大连-鹿特丹 大连客户</a> <span>&nbsp;</span></li><li><em>海运</em><a>天津-横滨 天津客户</a> <span>&nbsp;</span></li>                        
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+
+        <!--[if !IE]>订舱信息结束<![endif]-->
+        <div class="c m8">&nbsp;</div>
+        <div class="c m8"></div>
+        <!--[if !IE]>船公司公告开始<![endif]-->
+        <div id="cgs" role="cgs">
+            <dl>
+                <dt><b>船公司公告</b><a href="/News/List-cgsgg-1.html" target="_blank">更多&raquo;</a></dt>
+                <dd>
+                    <ul>
+                        <li><a href="/News/DetailPage-48521.html" title="阿联酋航运公告" target="_blank"><b>[阿联酋航运]:</b>阿联酋航运宣布，自2014年12月1日起至3...</a><span>12-02</span></li><li><a href="/News/DetailPage-48519.html" title="东方海外公告" target="_blank"><b>[东方海外]:</b>尊敬的客户：东方海外在此通知您，自20...</a><span>12-02</span></li><li><a href="/News/DetailPage-48410.html" title="现代商船公告" target="_blank"><b>[现代商船]:</b>MEXICOCITY内陆运费涨价如下，请...</a><span>11-27</span></li><li><a href="/News/DetailPage-48409.html" title="东方海外公告" target="_blank"><b>[东方海外]:</b>尊敬的客户：为避免混淆卸货港/目的...</a><span>11-27</span></li><li><a href="/News/DetailPage-48408.html" title="川崎汽船公告" target="_blank"><b>[川崎汽船]:</b>致：尊敬的客户及订舱代理，接通...</a><span>11-27</span></li><li><a href="/News/DetailPage-48407.html" title="金星轮船公告" target="_blank"><b>[金星轮船]:</b>致各家货主及货代：接总部通知，即日起...</a><span>11-27</span></li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+
+        <!--[if !IE]>船公司公告结束<![endif]-->
+
+        <!--[if !IE]>常用工具开始<![endif]-->
+        <div id="tool" role="tool">
+            <dl>
+                <dt><b>常用工具</b><a href="/tools/shiper.shtml" target="_blank" title="常用工具">更多&raquo;</a></dt>
+                <dd>
+                    <ul>
+                        <li class="a0"><a href="/tools/shiper.shtml" target="_blank" rel="nofollow">船公司查询</a></li>
+                        <li class="a1"><a href="/tools/dangerousmarks.shtml" target="_blank" rel="nofollow">危险品标志</a></li>
+                        <li class="a2"><a href="/tools/jzxcs.shtml" target="_blank" rel="nofollow">集装箱参数</a></li>
+                        <li class="a3"><a href="/tools/dangername.shtml" target="_blank" rel="nofollow">危险品名</a></li>
+                        <li class="a4"><a href="/tools/tariffinquires.shtml" target="_blank" rel="nofollow">关税查询</a></li>
+                        <li class="a5"><a href="/tools/worldclock.html" target="_blank" rel="nofollow">世界时钟</a></li>
+                        <li class="a6"><a href="/tools/portfees.shtml" target="_blank" rel="nofollow">口岸杂费</a></li>
+                        <li class="a7"><a href="/tools/jzys.shtml" class="title2back_price_text" id="jzys.shtml" target="_blank" rel="nofollow">积载因数</a></li>
+                        <li class="a8"><a href="/tools/dwhs.shtml" target="_blank" rel="nofollow">单位换算</a></li>
+                        <li class="a9"><a href="/tools/aircomcode.shtml" target="_blank" rel="nofollow">航空公司代码</a></li>
+                        <li class="a10"><a href="/tools/customscode.shtml" target="_blank" rel="nofollow">报关代码</a></li>
+                        <li class="a11"><a href="/tools/3code.shtml" target="_blank" rel="nofollow">空港三字码</a></li>
+                        <li class="a12"><a href="/tools/jsq.html" class="title2back_price_text" target="_blank" rel="nofollow">在线计算</a></li>
+                        <li class="a13"><a href="/tools/shippingterms.shtml" target="_blank" rel="nofollow">航运术语</a></li>
+                        <li class="a14"><a href="/tools/worldcurrency.shtml" target="_blank" rel="nofollow">世界货币</a></li>
+                        <li class="a15"><a href="/tools/tradeterms.shtml" target="_blank" rel="nofollow">贸易术语</a></li>
+                        <li class="a16"><a href="/tools/portmap.shtml" target="_blank" rel="nofollow">港口地图</a></li>
+                        <li class="a17"><a href="/tools/surcharge.shtml" target="_blank" rel="nofollow">附加费缩写</a></li>
+                        <li class="a18"><a href="/tools/airlines.shtml" target="_blank" rel="nofollow">航空公司</a></li>
+                    </ul>
+                    <div class="c"></div>
+                </dd>
+            </dl>
+        </div>
+
+        <!--[if !IE]>常用工具结束<![endif]-->
+        <div class="c m8">&nbsp;</div>
+        <div class="c m8"></div>
+
+        <!--[if !IE]>锦程动态开始<![endif]-->
+        <div id="jc" role="jc">
+            <div id="jcdt" role="jcdt">
+                <dl id="Dl1">
+                    <dt><b>锦程动态</b><a href="/News/List-jcdt-1.html" target="_blank">更多&raquo;</a></dt>
+                    <dd>
+                        <ul>
+                            <li><a href="/News/DetailPage-48533.html" title="锦程物流服务公司各分公司百花齐放" target="_blank">锦程物流服务公司各分公司百花齐放</a><span>12-02</span></li><li><a href="/News/DetailPage-48453.html" title="锦程受赠“业务精湛 心系客户”锦旗" target="_blank">锦程受赠“业务精湛 心系客户”锦旗</a><span>11-28</span></li><li><a href="/News/DetailPage-48421.html" title="锦程物流网在全国电子商务创新推进大会上获奖" target="_blank">锦程物流网在全国电子商务创新推进大会上获奖</a><span>11-27</span></li><li><a href="/News/DetailPage-48382.html" title="通化市东昌区领导一行来访锦程集团" target="_blank">通化市东昌区领导一行来访锦程集团</a><span>11-26</span></li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+            <div id="jcry" role="jcry">
+                <dl>
+                    <dt><b>资质荣誉</b><a href="/ApproachJC/QualiList-1.html" target="_blank">更多&raquo;</a></dt>
+                    <dd>
+                        <div class="demo3">
+                            <div class="bx_wrap">
+                                <div class="bx_container">
+                                    <ul id="demo4">
+                                        <li><a href="/ApproachJC/HonourDetail-273.html" title="自理报检单位备案登记证明书" target="_blank" rel="nofollow"><img src="uploadfile/2013/0705/20130705042656191.jpg" width="127" height="87"></a><a href="/ApproachJC/HonourDetail-273.html" title="自理报检单位备案登记证明书" target="_blank">自理报检单位备案登...</a></li><li><a href="/ApproachJC/HonourDetail-274.html" title="进出口货物收发货人报关注册登记证书" target="_blank" rel="nofollow"><img src="uploadfile/2014/1202/20141202111333975.jpg" width="127" height="87"></a><a href="/ApproachJC/HonourDetail-274.html" title="进出口货物收发货人报关注册登记证书" target="_blank">进出口货物收发货人...</a></li><li><a href="/ApproachJC/HonourDetail-277.html" title="WCA世界货运联盟成员" target="_blank" rel="nofollow"><img src="uploadfile/2010/1026/20101026113027730.jpg" width="127" height="87"></a><a href="/ApproachJC/HonourDetail-277.html" title="WCA世界货运联盟成员" target="_blank">WCA世界货运联盟成...</a></li><li><a href="/ApproachJC/HonourDetail-278.html" title="中国货代协会副会长单位" target="_blank" rel="nofollow"><img src="uploadfile/2011/0815/20110815093441685.jpg" width="127" height="87"></a><a href="/ApproachJC/HonourDetail-278.html" title="中国货代协会副会长单位" target="_blank">中国货代协会副会长...</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        <!--[if !IE]>船公司公告结束<![endif]-->
+
+        <!--[if !IE]>全球网络开始<![endif]-->
+        <div id="qqwl" role="qqwl">
+            <dl>
+                <dt><b>全球网络</b><a href="/GlobalNetwork.html" target="_blank">更多&raquo;</a></dt>
+                <dd>
+                    <div class="gj">
+                        <a href="/GlobalNetWork/Sjgkdl.html" target="_blank" class="map_link"></a>
+                        <p>
+                            锦程国际物流集团作为<em>"中国国际货代物流百强民营第一名企业"</em><br>
+                            正以崭新的发展模式和明确的战略目标，不断创造成长的奇迹。<br>
+                            国内主要分支  口岸区域物流服务中心
+                            <br>
+                            全球近<em>300</em>家分支机构 <em>300</em>多家海外国际代理服务网络
+                        </p>
+                        <div class="c"></div>
+                    </div>
+                </dd>
+                <dd>
+                    <div class="gn">
+                        <p>
+                            <em>国内直属分支</em>
+                            <a href="/GlobalNetWork/Other" target="_blank" class="map_link"></a>
+                            <br>
+                            <a href="/GlobalNetWork/Other" target="_blank" class="map_link"></a>
+                            <a href="/GlobalNetWork/Gnfgs-dalian.html" target="_blank">大连</a>|
+                            <a href="/GlobalNetWork/Gnfgs-beijing.html" target="_blank">北京</a>|
+                            <a href="/GlobalNetWork/Gnfgs-tianjin.html" target="_blank">天津</a>|
+                            <a href="/GlobalNetWork/Gnfgs-qingdao.html" target="_blank">青岛</a>|
+                            <a href="/GlobalNetWork/Gnfgs-nanjing.html" target="_blank">南京</a>|
+                            <a href="/GlobalNetWork/Gnfgs-suzhou.html" target="_blank">苏州</a>|
+                            <a href="/GlobalNetWork/Gnfgs-shanghai.html" target="_blank">上海</a>|
+                            <a href="/GlobalNetWork/Gnfgs-ningbo.html" target="_blank">宁波</a>
+                            <br>
+                            <a href="/GlobalNetWork/Gnfgs-hangzhou.html" target="_blank">杭州</a>|
+                            <a href="/GlobalNetWork/Gnfgs-xiamen.html" target="_blank">厦门</a>|
+                            <a href="/GlobalNetWork/Gnfgs-shenzhen.html" target="_blank">深圳</a>|
+                            <a href="/GlobalNetWork/Gnfgs-guangzhou.html" target="_blank">广州</a>|
+                            <a href="/GlobalNetWork/Gnfgs-xian.html" target="_blank">西安</a>|
+                            <a href="/GlobalNetWork/Gnfgs-wuhan.html" target="_blank">武汉</a>|
+                            <a href="/GlobalNetWork/Gnfgs-chongqing.html" target="_blank">重庆</a>|
+                            <a href="/GlobalNetWork/Gnfgs-changsha.html" target="_blank">长沙</a>
+                            <br>
+                            <a href="/GlobalNetWork/Gnfgs-haerbin.html" target="_blank">哈尔滨</a>|
+                            <a href="/GlobalNetWork/Gnfgs-shijiazhuang.html" target="_blank">石家庄</a>|
+                            <a href="/GlobalNetWork/Other" target="_blank">其他</a>
+                        </p>
+                        <div class="c"></div>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+
+        <!--[if !IE]>全球网络结束<![endif]-->
+        <div class="c m8">&nbsp;</div>
+        <div class="footer">
+            <dl class="footer_map">
+                <dt><i></i>网站功能 </dt>
+                <dd><a href="/Home/SiteMap" target="_blank">网站地图</a></dd>
+                <dd><a href="/ApproachJC/PositionList?c=0|16|0|0" target="_blank" rel="nofollow">人才招聘</a></dd>
+                <dd id="ppjm"></dd>
+                <dd><a href="/ApproachJC/ContactUs" target="_blank" rel="nofollow">联系我们</a></dd>
+            </dl>
+            <dl class="footer_map">
+                <dt><i></i>锦程服务 </dt>
+                <dd><a href="/TransService/Detail/hyjk.html" target="_blank">海运服务</a></dd>
+                <dd><a href="/TransService/Detail/kyjk.html" target="_blank">空运服务</a></dd>
+                <dd><a href="/TransService/Detail/gjtl.html" target="_blank">铁路服务</a></dd>
+                <dd><a href="/TransService/Detail/gjqy.html" target="_blank">公路服务</a></dd>
+                <dd><a href="/TransService/Detail/ccfw.html" target="_blank">仓储服务</a></dd>
+                <dd><a href="/TransService/Detail/ckkd.html" target="_blank">快递服务</a></dd>
+                <dd><a href="/TransService/Detail/bgbj.html" target="_blank">进出口代理</a></dd>
+            </dl>
+            <dl class="footer_map" style="width: 100px;">
+                <dt><i></i>特色服务 </dt>
+                <dd><a href="/SpecialService/kjds/index.shtml" target="_blank">跨境电商物流服务</a></dd>
+                <dd><a href="/SpecialService/gyljr/index.shtml" target="_blank">供应链金融服务</a></dd>
+                <dd><a href="/SpecialService/srwp/index.shtml" target="_blank">私人物品</a></dd>
+                <dd><a href="/SpecialService/cwty/index.shtml" target="_blank">宠物托运</a></dd>
+                <dd><a href="/SpecialService/zhys/index.shtml" target="_blank">展会运输</a></dd>
+                <dd><a href="/SpecialService/jcty/index.shtml" target="_blank">轿车托运</a></dd>
+                <dd><a href="/SpecialService/hwysbx/index.shtml" target="_blank">货物运输保险</a></dd>
+            </dl>
+            <dl class="footer_map">
+                <dt><i></i>会员中心 </dt>
+                <dd><a href="/MemberCenter/MemberCenter" target="_blank" rel="nofollow">会员介绍</a></dd>
+                <dd><a href="/MemberCenter/MemberCenter#memberC" target="_blank" rel="nofollow">如何成为会员</a></dd>
+            </dl>
+            <dl class="footer_map">
+                <dt><i></i>锦联成员</dt>
+                <dd><a href="http://www.jinlian.cn/" target="_blank" rel="nofollow">锦联集团</a></dd>
+                <dd><a href="http://www.jctrans.cn/" target="_blank" rel="nofollow">国际物流</a></dd>
+                <dd><a href="http://www.jinlian.com.cn/" target="_blank" rel="nofollow">地产开发</a></dd>
+                <dd><a href="http://www.jl-bank.com/" target="_blank" rel="nofollow">金融服务</a></dd>
+                <dd><a href="http://www.jinlian.cn/showint.asp?classid=181&id=181" target="_blank" rel="nofollow">产业园区</a></dd>
+            </dl>
+            <ul class="footer_con">
+                <li class="font14">您合理的建议是对我们最大的支持！</li>
+                <li class="tel" id="tel"></li>
+            </ul>
+            <ul class="footer_wx">
+                <li>
+                    <img src="/images/footer_contact.jpg" width="90" height="92"></li>
+                <li>
+                    <b>扫一扫</b><br>
+                    微信也能查运价扫二维码关注<br>
+                    锦程货代小秘书
+                </li>
+            </ul>
+            <div class="footer_zs">
+                <p>
+                    2006-2014 锦程物流全球服务网版权所有<br>
+                    辽ICP备B2-20140011-1　　增值电信业务经营许可证辽B2-20140011
+                </p>
+                <div>
+                    <a href="http://net.china.com.cn/" target="_blank" rel="nofollow">
+                        <img src="/images/Authentication_2.png" alt="不良信息举报中心" width="100" height="50">
+                    </a>
+                    <a href="http://www.cyberpolice.cn/wfjb/" rel="nofollow" target="_blank">
+                        <img src="/images/Authentication_4.png" alt="网络110报警服务" width="100" height="50">
+                    </a>
+                    <a href="http://www.ctws.com.cn/" rel="nofollow" target="_blank">
+                        <img src="/images/Authentication_5.png" alt="无线互联网业自律同盟" width="100" height="50">
+                    </a>
+                    <a href="http://webscan.360.cn/index/checkwebsite/url/www.jc56.com">
+                        <img border="0" src="http://img.webscan.360.cn/status/pai/hash/8745672676c43963dee9f7958d6d518c" width="100" height="42"/>
+                    </a> 
+                    <!--<a href="/home/license" rel="nofollow" target="_blank">
+                    <img src="/images/Authentication_6.png" alt="无线互联网业自律同盟" width="50" height="50">
+                </a>-->
+                    <br>
+                    <script src="http://s11.cnzz.com/stat.php?id=2094930&web_id=2094930&show=pic" language="JavaScript"></script>
+                </div>
+            </div>
+
+            <!--百度页面访问分析代码开始-->
+            <script type="text/javascript">
+                var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5c4ab49d593b763ed73fbaac21c23956' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <!--百度页面访问分析代码结束-->
+
+            <!--站点流量统计开始-->
+            <script type="text/javascript">
+                var _py = _py || [];
+                _py.push(['a', 'qG..n4eBoGSiHovW5-MyiKLJlP']);
+                _py.push(['domain', 'stats.ipinyou.com']);
+                _py.push(['e', '']);
+                -function (d) {
+                    var s = d.createElement('script'),
+                    e = d.body.getElementsByTagName('script')[0]; e.parentNode.insertBefore(s, e),
+                    f = 'https:' == location.protocol;
+                    s.src = (f ? 'https' : 'http') + '://' + (f ? 'fm.ipinyou.com' : 'fm.p0y.cn') + '/j/adv.js';
+                }(document);
+            </script>
+            <noscript>
+                <img src="//stats.ipinyou.com/adv.gif?a=qG..n4eBoGSiHovW5-MyiKLJlP&e=" style="display: none;" /></noscript>
+            <!--站点流量统计结束-->
+        </div>
+    </div>
+
+    <!--客服-->
+    <script type="text/javascript" src="/Scripts/swtinvite.js"></script>
+    <!--<script language="javascript" src="http://pkt.zoosnet.net/JS/LSJS.aspx?siteid=PKT24276631&lng=cn"></script>-->
+    <script language="javascript" src=""></script>
+
+    <script language="javascript">
+
+        ///数组
+        function objlist(objstrArr, objid, pagename) {
+            var objArr = objstrArr.split(',');
+            for (var i = 0; i < objArr.length; i++) {
+                if (typeof (LiveReceptionCode_isonline) != 'undefined') {
+                    var objf = objid + i;
+                    var checktext = "点击" + pagename + "-" + objArr[i] + "-咨询";
+                    var a = LiveReceptionCode_BuildChatWin(checktext, '客服人员在线,欢迎点击咨询');
+                    if (LiveReceptionCode_isonline)
+                        LR_GetObj(objf).innerHTML = '<a ' + LiveReceptionCode_BuildChatWin(checktext, '客服人员在线,欢迎点击咨询') + '><span class=\'port\'>' + objArr[i] + '</span></a>';
+                    else
+                        LR_GetObj(objf).innerHTML = '<a ' + LiveReceptionCode_BuildChatWin(checktext, '客服人员不在线,请点击留言') + '><span class=\'port\'>' + objArr[i] + '</span></a>';
+                }
+            }
+        }
+        ///单个
+        function objlink(objstr, objid, pagename) {
+            if (typeof (LiveReceptionCode_isonline) != 'undefined') {
+                var checktext = "点击" + pagename + "-" + objstr + "-咨询";
+                var a = LiveReceptionCode_BuildChatWin(checktext, '客服人员在线,欢迎点击咨询');
+                if (LiveReceptionCode_isonline)
+                    LR_GetObj(objid).innerHTML = '<a ' + LiveReceptionCode_BuildChatWin(checktext, '客服人员在线,欢迎点击咨询') + '><span class=\'port\'>' + objstr + '</span></a>';
+                else
+                    LR_GetObj(objid).innerHTML = '<a ' + LiveReceptionCode_BuildChatWin(checktext, '客服人员不在线,请点击留言') + '><span class=\'port\'>' + objstr + '</span></a>';
+            }
+        }
+
+        ///运价中心
+        if ("undefined" != typeof (type)) {
+            objlist(type, "partli", "首页");
+        }
+        if ("undefined" != typeof (port)) {
+            objlist(port, "partdd", "首页");
+        }
+
+        objlink("24小时在线客服为您服务", "htype1", "首页");
+        objlink("24小时在线客服为您服务", "htype2", "首页");
+
+        window.onload = function(){
+            var bottomlink = "其它业务,空运进出口,海运进出口";
+            if ("undefined" != typeof (bottomlink)) {
+                objlist(bottomlink, "bottomlink", "首页底部");
+            }
+        };
+
+        objlink("品牌加盟", "ppjm", "首页底部");
+        objlink("400-020-5556", "tel", "首页底部");
+        
+    </script>
+
+    <!--客服-->
+
+    <script type="text/javascript">
+
+        jQuery(window).load(function () {
+            jQuery('#slider').nivoSlider();
+        });
+    </script>
+    <!--顶部拉幕广告AD -->
+    <!-- <script type="text/javascript">
+        var maxh = 200; var minh = 70; var dv = document.getElementById("dvTopAD");
+        var img1 = document.getElementById("imgtop1"); var img2 = document.getElementById("imgtop2");
+        var i = 50; var t; var ishow = 0; var speed = 100;
+     </script>-->
+     <!--存在拉幕广告的时候打开下列脚本-->
+     <!--<script src="/Scripts/topad.js"></script>-->
+     <!--顶部拉幕广告end-->
+</body>
+</html>
+

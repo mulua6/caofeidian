@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+.demo_menu{font-size: 14px;text-align: center;margin: 10px 0 0 0;color: #999;line-height: 180%;}
+.demo_menu b{color: #333;}
+.demo_menu a, .demo_menu a: visited{color: #F00;font-size: 14px;}
+.demo_menu a: hover{color: #090;font-size: 14px;}
+body{background: #ccc;}
+.text{font-size: 12px;}
+#kefu{position: fixed;_position: absolute;_top: expression(documentElement.scrollTop + 20 + "px");top: 20px;right: 0;z-index: 999}
+#kefu .box-content{position: relative;background-color: #fff;width: 170px;}
+#kefu .title-btn, #kefu .qq, #kefu .phone, #kefu .service, #kefu .on span{background: url(http://www.codefans.net/jscss/demoimg/201312/kefu.png) no-repeat}
+#kefu .title-btn{width: 33px;height: 97px;position: absolute;top: 0;left: -33px;}
+#kefu .title-btn span{display: none}
+#kefu .on span{background-position: -129px 7px;height: 16px;display: block;}
+#kefu .pad{padding: 16px 10px 10px;overflow: hidden;font-size: 12px;}
+#kefu .pad a{text-decoration: none;}
+#kefu .qq{background-position: 0 -118px;display: inline-block;zoom: 1;*display: inline;padding-left: 16px;}
+#kefu .phone{height: 28px;background-position: 0 -153px;margin: 18px 0}
+#kefu .service{display: inline-block;zoom: 1;*display: inline;height: 51px;background-position: 0 -203px;width: 151px;margin-left: 3px}
+#kefu .text{background-color: #ededed;padding: 5px 10px;text-align: center}
+#kefu .off{width: 0;}
+#kefu .off .pad, #kefu .off .text{display: none}
+p, p a{font-size: 12px;color: #666;}
+</style>
+<title>在线客服</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<script src="http://www.codefans.net/ajaxjs/jquery-1.6.2.min.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="kefu">
+  <div class="box-content off">
+    <div class="title-btn cu"><span><a href="/"></a></span></div>
+    <div class="pad"> <a href="http://sighttp.qq.com/msgrd?v=3&uin=12345678&site=qq&menu=yes" class="qq" style="margin-right:16px">售前咨询</a><a href="http://sighttp.qq.com/msgrd?v=3&uin=12345678&site=qq&menu=yes" class="qq">广告-合作</a>
+      <div class="phone"></div>
+      <a href="/" class="service" target="_blank"></a> </div>
+    <div class="text"> 客服时间：(9:00-18:00)<br>
+      （周六日休息） </div>
+  </div>
+</div>
+<script type="text/javascript"> 
+$(".select").hover(
+  function () {
+    $(this).find(".msgNav").show();
+  },
+  function () {
+    $(this).find(".msgNav").hide();
+  }
+);
+$(".title-btn").toggle(
+  function () {
+    $(this).addClass("on");
+	$(this).parent(".box-content").removeClass("off");
+  },
+  function () {
+    $(this).removeClass("on");
+	$(this).parent(".box-content").addClass("off");
+  }
+);
+</script>
+</body>
+</html>

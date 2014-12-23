@@ -1,0 +1,150 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+body,body, ul, ol, li, dl, dt, dd, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div,legend { margin:0; padding:0; border:0; }
+body {background:#fff; font-family:"Apple LiGothic Medium","Arial","宋体","SimSun","SimHei";font-size:12px; line-height:16px; color:#3e3e3e;}
+p{ font-weight:normal;}
+strong{ font-weight:normal;}
+ul, ol { list-style-type:none; list-style:none}
+fieldset{ border:0px;}
+select, input, select { vertical-align:middle; font-family:"Microsoft YaHei","宋体","SimSun","SimHei";}
+img{ vertical-align:bottom;}
+a { text-decoration:none; color:#3e3e3e}
+a:hover { text-decoration: underline; }
+h1, h2, h3, h4, h5, h6 { font-size:14px;}
+
+h1, h2 {font-family:"Microsoft YaHei","Apple LiGothic Medium","Arial","宋体","SimSun","SimHei"; }
+
+em { font-style:normal; font-family:"Apple LiGothic Medium","Arial","宋体","SimSun","SimHei";}
+.c{ clear:both; }
+.l{ float:left;}
+.r{ float:right;}
+.m8 {margin-top:8px;}
+.m15 {margin-top:15px;}
+.m20 {margin-top:20px;}
+.font14{ font-size:14px;}
+.red{ color:#F00}
+.orange{ color:#F60}
+
+
+.wrapper {width:1150px;margin:auto; /*border:1px solid #00F*/}
+/*toper */
+.top { background:#f1f1f1;	text-align:right; height:30px; line-height:30px; color:#e0e0e0; padding-right:20px;}
+ .top b   { color:#3e3e3e; font-weight:normal}
+.top a{ padding:0px 5px;}
+.top span{font-family:"Arial","宋体","SimSun","SimHei"; font-size:20px; height:30px; line-height:30px; font-style:italic; color:#F30; background:url(../images/tel24.png) no-repeat; padding-left:40px; padding-right:1px;}
+.main_banner{width:100%; background: #f1f1f1;padding-top:20px;}
+.container{ width:1150px; margin:auto; border:1px solid #e2e3e5; border-bottom:0; border-top:0;padding-top:15px; box-shadow:0px 0px 8px #000; /*text-align:center;*/ border-radius: 0px 0px 0px 0px; }
+
+/*footer */
+.footer{ margin:auto; padding:50px 50px 20px 50px;  background:url(../images/bg_footer.jpg) repeat-x #b3b3b3; height:230px; border-radius: 0px 0px 35px 0px; border-radius:0px;  border:1px solid #c2c2c2; }
+.footer_con{ float:left; text-align:left; margin-left:50px;}
+.footer_con .tel{ font-size:30px; color:#137bb8; padding:20px 0;}
+.footer_con .tel a{ font-size:30px; color:#137bb8; padding:20px 0;}
+.footer_wx { float:left; width:90px; margin-left:60px; text-align:left;height:180px;}
+.footer_map{ float:left; margin-right:20px; text-align:center; margin-left:20px; width:80px; height:180px;} 
+.footer_map dt{ font-size:14px; font-weight:bold; height:25px;}
+.footer_map dd{ height:20px; line-height:20px;}
+.footer_zs{ border-top:1px solid #999; padding-top:10px; *margin-top:-50px; clear:both}
+.footer_zs a{ float:left; margin-right:2px; /*background:#fff;border:1px solid #CCC; */}
+.footer_zs p{ float:right; text-align:right; line-height:20px; padding:0; margin:0}
+
+/*------------搜索框------------*/
+/*搜索框*/
+.searchbox{float:right; font-family:"Apple LiGothic Medium","Arial","宋体","SimSun","SimHei";}
+/*.search_menu{ width:350px;}
+.search_menu ul li.tab-on,.search_menu ul li.tab-on a,.search_box,.search_box ul li input.search-btn{}
+.search_menu ul li{ float:left; _display:inline; margin-right:10px;height:25px; line-height:25px; padding-right:15px;cursor:pointer}
+.search_menu ul li a{color:#666666;padding-left:15px; font-size:14px;}
+.search_menu ul li a:hover{ text-decoration:none;cursor:pointer}
+.search_menu ul li.tab-on{ background-position: right -101px;}
+.search_menu ul li.tab-on a{ background-position:0px -101px;  color:#525252; font-weight:bold; line-height:25px; height:25px; display:inline-block;font-size:14px;}*/ 
+.search_box{ width:620px; height:40px; overflow:hidden;_zoom:1;color:#333333; position:relative}
+.search_box ul li{ float:left; display:inline; padding-left:3px; line-height:19px; }
+.search_box ul li input{ height:18px; border:none; background:#FFF;font-size:12x; padding:0; line-height:16px;color:#333333;margin-top:0px; *margin-top:3px; -webkit_margin-top:-2px;  font-family:"宋体","SimSun","SimHei";}
+
+/*搜索按钮*/
+.search_box input.search-btn{ position:absolute; right:2px; width:70px; _width:65px; height:32px; background:#215098; font-size:14px; color:#FFF; font-family:Microsoft YaHei,"宋体","SimSun","SimHei"; cursor:pointer ;border-radius:5px; float:left; border:0; -moz-box-shadow: 0px 3px 3px #458ccb inset;-webkit-box-shadow: 0px 3px 3px #458ccb inset;box-shadow: 0px 3px 3px #458ccb inset; background:url(../images/searchbt.jpg) no-repeat;}
+.s-content{-moz-box-shadow: 0px 1px 3px #f1f1f1 inset;-webkit-box-shadow: 0px 1px 3px #f1f1f1 inset; box-shadow: 0px 1px 3px #f1f1f1 inset;
+color:#333333; margin:0px 10px; height:27px; padding-top:4px; width:530px; float:left;border-radius:5px;border:1px solid #CCC;}
+.s-content ul li em{ line-height:24px; margin-left:5px;}
+/*下拉列表*/
+.s-content ul li{ float:left; font-size:12px; padding-left:10px;}
+.s-content ul li .kuang{ font-family:"Apple LiGothic Medium","Arial","宋体","SimSun","SimHei";border: 0;  width:60px; padding:0;  margin:0; margin:0px 0px 0px -2px;_height:19px;/*margin:-2px -2px 0px -3px; _margin:-2px -2px 0px -2px;**/height:22px; }
+
+
+
+/*输入框宽度*/
+.por_a{ width:160px; height:16px;*height:13px;_height:auto;}
+.por_b{ width:200px; height:20px;*height:16px;_height:auto;}
+.por_c{ width:170px; height:20px;*height:16px;_height:auto;}
+.por_d{ width:190px; height:20px;*height:16px;_height:auto;}
+.por_e{ width:190px; height:20px;*height:16px;_height:auto;}
+.por_f{ width:290px; height:20px;*height:16px;_height:auto;}
+.por_g{ width:140px; height:20px;*height:16px;_height:auto;}
+.por_h{ width:220px; height:20px;*height:16px;_height:auto;}
+
+/*列表宽度*/
+.w_40{ width:40px}
+.w_50{ width:50px}
+.w_60{ width:60px}
+.w_70{ width:70px}
+.w_80{ width:80px}
+
+.w_100{ width:100px}
+.w_130{ width:130px}
+.w_150{ width:150px}
+.w_160{ width:160px}
+.w_170{ width:170px}
+.w_180{ width:180px}
+.w_190{ width:190px}
+.w_200{ width:200px}
+.w_220{ width:220px}
+.w_240{ width:240px}
+.w_250{ width:250px}
+.w_280{ width:280px}
+.w_300{ width:300px}
+.w_320{ width:300px}
+.w_360{ width:360px}
+.w_390{ width:390px}
+.w_410{ width:410px}
+.w_450{ width:450px}
+.w_460{ width:460px}
+.w_470{ width:470px}
+.w_480{ width:480px}
+
+
+
+
+/*面包削导航*/
+.navpostion {height:30px; color:#666}
+
+
+
+/*分页*/
+#page_num{ width:150px; float:left;padding-top:20px; padding-bottom:10px; margin-left:10px; }
+#page_num span{ float:left; display:block}
+#page_num a{ display:block; float:left; width:17px; margin-right:3px; background:url(images/page_num.gif) no-repeat; height:17px; color:#061D49; text-align:center;}
+#page_num a.on{ background:url(images/page_numon.gif); color:#f60}
+
+#page_abc {   margin-top:8px; margin-bottom:8px;  width:585px; margin:auto; font-size:12px; text-align:right; padding-top:10px; padding-bottom:10px; height:auto;  }
+#page_abc .btn{ background:url(/images/queren.gif); width:38px; height:21px; border:none; cursor:pointer}
+#page_abc span{padding-top:3px; padding-bottom:2px; margin-right:0px;}
+#page_abc span a{ margin-left:0px; color:#0048A2;padding-top:3px; padding-bottom:2px;  }
+#page_abc span a:hover{ color:#5197d2;border:1px solid #5197d2; text-decoration:none;}
+#page_abc .page_start{}
+#page_abc .page_start a{border:#9C9C9C solid 1px; background:url(/images/up_u.gif) no-repeat left; padding-left:12px; padding-right:10px; }
+#page_abc .page_end{padding-left:10px;}
+#page_abc .page_end a{border:#9C9C9C solid 1px; background:url(/images/up_d.gif) no-repeat right; padding-right:12px; padding-left:10px; }
+#page_abc .page_num a{ border:#9C9C9C solid 1px;padding-left:5px; padding-right:5px;}
+#page_abc .page_num a:hover{border:1px solid #5197d2; text-decoration:none; }
+
+#page_abc .page-cur{background-color:#16467c;border:1px solid #16467c;padding-left:5px; padding-right:5px; color:#fff;margin-right: 5px; }
+#page_abc  .pagination{ float:right}
+#page_abc .page_start_off{ background:url(images/up_u_off.gif) left no-repeat;border:#9C9C9C solid 1px; padding-left:5px; padding-right:5px;}
+#page_abc .page_end_off{ background:url(images/up_d_off.gif) right no-repeat;border:#9C9C9C solid 1px; padding-right:5px;padding-left:5px;}
+
+#page_abc .page_sum{ padding-left:3px; color:#7C7C7C;}
+#page_abc .page_on_num{ border:1px solid #AFAFAF;margin:0 3px;padding:0;width:36px;}
+

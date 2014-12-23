@@ -94,7 +94,7 @@
 									headerValue="请选择板块" cssClass="InputStyle"></s:select>*</td>
 						</tr> --%>
 						<tr>
-							<td><s:hidden name="plateId" ></s:hidden></td>
+							<td><s:hidden name="fplateId" ></s:hidden></td>
 						</tr>
 						<tr>
 							<td>模块名称</td>

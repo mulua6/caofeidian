@@ -90,5 +90,10 @@ public class PlateServiceImpl
 	public void setPdao(PlateDao pdao) {
 		this.pdao = pdao;
 	}
+
+	@Override
+	public List<Plate> listPlateForCheckAdmin() {
+		return pdao.listPlateForCheckAdmin();
+	}
 	
 }

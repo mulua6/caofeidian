@@ -21,6 +21,7 @@
         <thead>
             <tr align=center valign=middle id=TableTitle>
                 <td width="100">序号</td>
+                <td width="200">所属板块</td>
                 <td width="200">模块名</td>
                 <td width="200">状态</td>
                 <td width="200">相关操作</td>
@@ -33,8 +34,13 @@
            <s:iterator value="%{childrenPlates}"  id = "c"   status = "s" >
 	             <tr  class="TableDetail1 template">
 		                <td align="center" nowrap = "nowrap"><s:property value ="%{#s.count}"/></td >
+		                 <td align="center" nowrap = "nowrap">
+		                	<s:if test="fid==1">船舶代理</s:if>
+		                	<s:if test="state==1">审核未通过</s:if>
+		                	<s:if test="state==2">审核通过</s:if>
+		                </td>
 		                <td align="center" nowrap = "nowrap">
-		                <s:a action="plateAction_updateUI?plateId=%{id}">${name}&nbsp;</s:a>
+		                <s:a action="plateAction_lookForCheck?plateId=%{id}">${name}&nbsp;</s:a>
 		                </td>
 		                <td align="center" nowrap = "nowrap">
 		                	<s:if test="state==0">未审核</s:if>

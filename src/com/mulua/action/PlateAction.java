@@ -1,6 +1,5 @@
 package com.mulua.action;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -24,10 +23,13 @@ public class PlateAction extends BaseAction<Plate> {
 	public PlateService plateService;
 	public int plateId;
 	public Plate plate;
+	public int fplateId;
 	
 //	public String processname;
+	public int[] processIds;
 	public String[] processName;
 	public String[] processDescribe;
+	public int[] attentionIds;
 	public String[] attentionContent;
 	/**
 	 * 新增
@@ -57,25 +59,60 @@ public class PlateAction extends BaseAction<Plate> {
 		
 		plate.setAttentions(attentions);
 		plate.setProcesses(processes);
-		plate.setFid(plateId);
+		plate.setFid(fplateId);
 		plate.setLevel(2);
 		plate.setState(0);
 		plateService.addPlate(plate);
 		return action2action;
 	}
+	
 	/**
-	 * 修改模块信息   先插入
+	 * 修改模块信息   
+	 * 根据状态判断
+	 * 	审核通过就新增
+	 * 	未审核或者没通过就修改
 	 * @return
 	 */
 	public String updatePlate(){
+		
 		Plate plate = this.getModel();
+		
+		processes = new HashSet<Process>();
+		for(int i=0;i<processName.length;i++){
+			Process p = new Process();
+			if(plate.getState()!=2){
+				p.setId(processIds[i]);
+			}
+			p.setName(processName[i]);
+			p.setDescribe(processDescribe[i]);
+			p.setStep(i+1);
+			p.setPlate(plate);
+			processes.add(p);
+		}
+		
+		attentions = new HashSet<Attention>();
+		for(int i=0;i<attentionContent.length;i++){
+			Attention a = new Attention();
+			if(plate.getState()!=2){
+				a.setId(attentionIds[i]);
+			}
+			a.setContent(attentionContent[i]);
+			a.setOrder(i+1);
+			a.setPlate(plate);
+			attentions.add(a);
+		}
+		
 		plate.setAttentions(attentions);
 		plate.setProcesses(processes);
-		
-		//设置为未审核
+		plate.setFid(fplateId);
+		plate.setLevel(2);
 		plate.setState(0);
-		
-		plateService.addPlate(plate);
+		if(plate.getState()!=2){
+//			plate.setId(id);
+			plateService.updatePlate(plate);
+		}else{
+			plateService.addPlate(plate);
+		}
 		return action2action;
 	}
 	
@@ -88,16 +125,33 @@ public class PlateAction extends BaseAction<Plate> {
 		plateService.updatePlate(plate);
 		return action2action;
 	}
+	/**
+	 * 审核模块信息  
+	 * @return
+	 */
+	public String delete(){
+		Plate plate = this.getModel();
+		plateService.deletePlate(plateId);
+		return action2action;
+	}
 	
 	/**
 	 * 查找最新的板块信息
 	 * @return
 	 */
 	public String listPlateForAdmin(){
-		Plate plate = this.getModel();
-		int id = plate.getId();
-		childrenPlates = plateService.findChildrenPlates(plateId);
+		childrenPlates = plateService.findChildrenPlates(fplateId);
 		return "listAction";
+	}
+	/**
+	 * 查找审核管理员的板块信息
+	 * 显示所有的板块的待审核信息
+	 * @return
+	 */
+	public String listPlateForCheckAdmin(){
+		childrenPlates = plateService.listPlateForCheckAdmin();
+		
+		return "listPlateForCheckAdmin";
 	}
 	
 	
@@ -109,6 +163,15 @@ public class PlateAction extends BaseAction<Plate> {
 		
 		plate = plateService.findPlateById(plateId);
 		return "updateUI";
+	}
+	/**
+	 * 给审核管理员提供查看页面
+	 * @return
+	 */
+	public String lookForCheck(){
+		
+		plate = plateService.findPlateById(plateId);
+		return "checkUI";
 	}
 	public String updateUI(){
 		
@@ -177,9 +240,28 @@ public class PlateAction extends BaseAction<Plate> {
 	public void setPlate(Plate plate) {
 		this.plate = plate;
 	}
-	
-	
-	
+	public int getFplateId() {
+		return fplateId;
+	}
+	public void setFplateId(int fplateId) {
+		this.fplateId = fplateId;
+	}
+
+	public int[] getProcessIds() {
+		return processIds;
+	}
+
+	public void setProcessIds(int[] processIds) {
+		this.processIds = processIds;
+	}
+
+	public int[] getAttentionIds() {
+		return attentionIds;
+	}
+
+	public void setAttentionIds(int[] attentionIds) {
+		this.attentionIds = attentionIds;
+	}
 	
 	
 	

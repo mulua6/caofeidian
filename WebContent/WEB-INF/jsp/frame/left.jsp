@@ -74,7 +74,7 @@
 					<span><a target="right" style="font-size:16px;color:black;text-decoration : none" >模块管理</a></span>
 					
 					<ul>
-						<li><a target="right" style="font-size:15px;color:black;text-decoration : none" href='plateAction_listPlateForAdmin?plateId=1'>船舶代理</a></li>
+						<li><a target="right" style="font-size:15px;color:black;text-decoration : none" href='plateAction_listPlateForAdmin?fplateId=1'>船舶代理</a></li>
 					</ul>
 					<ul>
 						<li><a target="right" style="font-size:15px;color:black;text-decoration : none" href='userAction_showAllUsers'>仓储</a></li>
@@ -105,7 +105,7 @@
 					<span><a target="right" style="font-size:16px;color:black;text-decoration : none" >板块审核</a></span>
 					
 					<ul>
-						<li><a target="right" style="font-size:15px;color:black;text-decoration : none" href='userAction_showAllUsers'>待审核列表</a></li>
+						<li><a target="right" style="font-size:15px;color:black;text-decoration : none" href='plateAction_listPlateForCheckAdmin'>待审核列表</a></li>
 					</ul>
 				</li>
 				<li>

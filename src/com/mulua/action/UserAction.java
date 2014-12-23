@@ -5,15 +5,19 @@
 
 package com.mulua.action;
 
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Set;
+
+import org.springframework.beans.BeanUtils;
+
 import com.mulua.domain.system.Department;
 import com.mulua.domain.system.Role;
 import com.mulua.domain.system.User;
-import com.mulua.service.*;
-import com.mulua.util.MD5Utils;
+import com.mulua.service.DepartmentService;
+import com.mulua.service.RoleService;
+import com.mulua.service.UserService;
 import com.opensymphony.xwork2.ActionContext;
-import com.opensymphony.xwork2.util.ValueStack;
-import java.util.*;
-import org.springframework.beans.BeanUtils;
 
 // Referenced classes of package com.mulua.action:
 //			BaseAction

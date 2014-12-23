@@ -40,4 +40,9 @@ public interface PlateService {
 	 * @return
 	 */
 	public List<Plate> findChildrenPlates(int id);
+	/**
+	 * 查找未审核列表
+	 * @return
+	 */
+	public List<Plate> listPlateForCheckAdmin();
 }

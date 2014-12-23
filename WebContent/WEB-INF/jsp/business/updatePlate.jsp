@@ -68,12 +68,12 @@
 
 	<!--显示表单内容-->
 	<div id=MainArea>
-		<s:form action="plateAction_savePlate">
+		<s:form action="plateAction_updatePlate">
 			<div class="ItemBlock_Title1">
 				<!-- 信息说明 -->
 				<div class="ItemBlock_Title1">
 					<img border="0" width="4" height="7"
-						src="./css/blue/images/item_point.gif" /> 用户信息
+						src="./css/blue/images/item_point.gif" /> 模块信息
 				</div>
 			</div>
 			<!-- 表单内容显示 -->
@@ -94,46 +94,41 @@
 									headerValue="请选择板块" cssClass="InputStyle"></s:select>*</td>
 						</tr> --%>
 						<tr>
-							<td><s:hidden name="plateId" ></s:hidden></td>
+							<td><s:hidden name="fplateId" ></s:hidden></td>
+						</tr>
+						<tr>
+							<td><s:hidden name="id" value="%{plate.id}"></s:hidden></td>
 						</tr>
 						<tr>
 							<td>模块名称</td>
-							<td><s:textfield name="name" style="  width:350px;" cssClass="InputStyle"></s:textfield>*</td>
+							<td><s:textfield name="name" value="%{plate.name}" style="  width:350px;" cssClass="InputStyle"></s:textfield></td>
 						</tr>
 
 						<tr>
 							<td>简介</td>
-							<td><s:textarea name="describe" style="  width:350px; height:100px;" cssClass="InputStyle"></s:textarea>
+							<td><s:textarea name="describe" value="%{plate.describe}" style="  width:350px; height:100px;" cssClass="InputStyle"></s:textarea>
 							</td>
 						</tr>
 						<tr>
 							<td>业务</td>
-							<td><s:textarea name="business" style="  width:350px; height:100px;" cssClass="InputStyle"></s:textarea>
+							<td><s:textarea name="business" value="%{plate.business}" style="  width:350px; height:100px;" cssClass="InputStyle"></s:textarea>
 							</td>
 						</tr>
-						
-						<tr>
-							<td><input type="button" id="addButton1" value="添加步骤" onclick="addOne()"/></td>
-							<td><input type="button" id="addButton2" value="添加注意事项" onclick="addAttention()"/></td>
-						</tr>
-						
-						
-						<%-- <tr>
-							<td><br/>步骤<br/></td>
-						</tr>
-						<tr id="process">
-							<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名称</td>
-							<td>&nbsp;&nbsp;<s:textfield name="process.name" style="  width:250px;" cssClass="InputStyle"></s:textfield><br/></td>
-							<td>描述</td>
-							<td>&nbsp;&nbsp;<s:textfield name="process.content" style="  width:300px;" cssClass="InputStyle"></s:textfield></td>
-							<td><input type="button" id="addButton1" value="+" onclick="addOne()"/><br/></td>
-						</tr>
-						
-						<tr id="attention">
-							<td>注意事项</td>
-							<td>&nbsp;&nbsp;<s:textfield name="attention.name" style="  width:250px;" cssClass="InputStyle"></s:textfield><br/></td>
-							<td><input type="button" id="addButton2" value="+" onclick="addAttention()"/><br/></td>
-						</tr> --%>
+						<tr><td>步骤：</td></tr>
+						<s:iterator value="plate.processes" var="p">
+							<tr>
+								<td><s:hidden name="processIds" value="%{#p.id}"></s:hidden></td>
+								<td><s:textfield name="processName" value="%{#p.name}"></s:textfield></td>
+								<td><s:textfield name="processDescribe" value="%{#p.describe}"></s:textfield></td>
+							</tr>
+						</s:iterator>
+						<tr><td>注意事项：</td></tr>
+						<s:iterator value="plate.attentions" var="a">
+							<tr>
+								<td><s:hidden name="attentionIds" value="%{#a.id}"></s:hidden></td>
+								<td><s:textfield name="attentionContent" value="%{#a.content}"></s:textfield></td>
+							</tr>
+						</s:iterator>
 					</table>
 				</div>
 			</div>

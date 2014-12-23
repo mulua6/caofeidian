@@ -6,7 +6,9 @@
 	<package name="plate" namespace="/" extends="interceptor">
 		<action name="plateAction_*" method="{1}" class="plateAction">
 			<result name="listAction">/WEB-INF/jsp/business/listPlate.jsp</result>
-			<result name="updateUI">/WEB-INF/jsp/system/user/update.jsp</result>
+			<result name="listPlateForCheckAdmin">/WEB-INF/jsp/business/listPlateForCheckAdmin.jsp</result>
+			<result name="updateUI">/WEB-INF/jsp/business/updatePlate.jsp</result>
+			<result name="checkUI">/WEB-INF/jsp/business/hyck.jsp</result>
 			<result name="saveUI">/WEB-INF/jsp/business/addPlate.jsp</result>
 			<result name="input">/WEB-INF/jsp/system/user/error.jsp</result>
 			<result name="action2action" type="redirectAction">plateAction_listPlateForAdmin.action</result>

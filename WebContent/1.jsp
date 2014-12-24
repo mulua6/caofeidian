@@ -1,4 +1,4 @@
 <%
         /* response.sendRedirect("webAction_index_jt.action"); */
-        request.getRequestDispatcher("webAction_index.action?typeId=4").forward(request, response);
+        request.getRequestDispatcher("plateAction_index.action").forward(request, response);
     %>

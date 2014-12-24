@@ -49,4 +49,20 @@ public class PlateDaoImpl extends BaseDaoImpl<Plate> implements PlateDao {
 		return this.getHibernateTemplate().find("from Plate p where state !=2 ");
 	}
 
+	@Override
+	public List<Plate> findPlateByLevel(int level) {
+		return this.getHibernateTemplate().find("from Plate p where p.level = "+level);
+	}
+
+	@Override
+	public List<Plate> findPlateByFid(int fid) {
+		return this.getHibernateTemplate().find("from Plate p where p.fid = "+fid);
+	}
+
+	@Override
+	public Plate findFPlate(int plateId) {
+		Plate p = this.findPlateById(plateId);
+		return (Plate) this.findPlateById(p.getFid());
+	}
+
 }

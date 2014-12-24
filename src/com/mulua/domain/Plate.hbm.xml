@@ -32,11 +32,11 @@
 		<property name="describe" length="500" type="java.lang.String" column="describe1"></property>
 		<property name="business" length="500" type="java.lang.String" column="business"></property>
 		
-		<set name="processes" inverse="false" cascade="all">
+		<set name="processes" inverse="false" cascade="all" order-by="step asc">
                 <key column="plateId" ></key>
                 <one-to-many class="com.mulua.domain.Process"/>
         </set>
-        <set name="attentions" inverse="false" cascade="all">
+        <set name="attentions" inverse="false" cascade="all" order-by="order asc">
                 <key column="plateId" ></key>
                 <one-to-many class="com.mulua.domain.Attention"/>
         </set>

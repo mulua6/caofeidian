@@ -10,6 +10,9 @@
 			<result name="updateUI">/WEB-INF/jsp/business/updatePlate.jsp</result>
 			<result name="checkUI">/WEB-INF/jsp/business/hyck.jsp</result>
 			<result name="saveUI">/WEB-INF/jsp/business/addPlate.jsp</result>
+
+			<result name="index">/index.jsp</result>
+			<result name="view">/TransService/Detail/plate.jsp</result>
 			<result name="input">/WEB-INF/jsp/system/user/error.jsp</result>
 			<result name="action2action" type="redirectAction">plateAction_listPlateForAdmin.action</result>
 		</action>

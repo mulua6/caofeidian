@@ -1,10 +1,13 @@
 package com.mulua.action;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import com.mulua.domain.Attention;
+import com.mulua.domain.IndexPlate;
 import com.mulua.domain.Plate;
 import com.mulua.domain.Process;
 import com.mulua.service.PlateService;
@@ -20,7 +23,11 @@ public class PlateAction extends BaseAction<Plate> {
 	public Set<Attention> attentions;
 	public Set<Process> processes;
 	public List<Plate> childrenPlates;
+	public Map<Integer,List<Plate>> indexMap;
 	public PlateService plateService;
+	
+	public List<IndexPlate> indexPlates;
+	public IndexPlate indexPlate;
 	public int plateId;
 	public int state;
 	public int stateId;
@@ -33,6 +40,72 @@ public class PlateAction extends BaseAction<Plate> {
 	public String[] processDescribe;
 	public int[] attentionIds;
 	public String[] attentionContent;
+	
+	
+	
+	/*前台服务*/
+	
+	/**
+	 * 首页的板块以及子版块的信息
+	 * @return
+	 */
+	public String index(){
+		
+		List<Plate> mainPlates = plateService.findPlateByLevel(1);
+		indexPlates = new ArrayList<IndexPlate>();
+		for(Plate p:mainPlates){
+			IndexPlate indexPlate = new IndexPlate();
+			indexPlate.setId(p.getId());
+			indexPlate.setName(p.getName());
+			indexPlate.setDescribe(p.getDescribe());
+			List<Plate> childList = plateService.findPlateByFid(p.getId());
+			indexPlate.setChilds(childList);
+			
+			indexPlates.add(indexPlate);
+		}
+		return "index";
+	}
+	
+	
+	/**
+	 * 查看单个板块
+	 * @return
+	 */
+	public String findPlateForView(){
+		//二级板块
+		plate = plateService.findPlateById(plateId);
+		
+		//右侧列表
+		
+		Plate fplate = plateService.findFPlate(plateId);
+		indexPlate = new IndexPlate();
+		indexPlate.setId(fplate.getId());
+		indexPlate.setName(fplate.getName());
+		indexPlate.setDescribe(fplate.getDescribe());
+		List<Plate> childList = plateService.findPlateByFid(fplate.getId());
+		indexPlate.setChilds(childList);
+		return "view";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*后台服务*/
 	/**
 	 * 新增
 	 * @return
@@ -288,6 +361,32 @@ public class PlateAction extends BaseAction<Plate> {
 
 	public void setStateId(int stateId) {
 		this.stateId = stateId;
+	}
+
+	public Map<Integer, List<Plate>> getIndexMap() {
+		return indexMap;
+	}
+
+	public void setIndexMap(Map<Integer, List<Plate>> indexMap) {
+		this.indexMap = indexMap;
+	}
+
+	public List<IndexPlate> getIndexPlates() {
+		return indexPlates;
+	}
+
+	public void setIndexPlates(List<IndexPlate> indexPlates) {
+		this.indexPlates = indexPlates;
+	}
+
+
+	public IndexPlate getIndexPlate() {
+		return indexPlate;
+	}
+
+
+	public void setIndexPlate(IndexPlate indexPlate) {
+		this.indexPlate = indexPlate;
 	}
 	
 	

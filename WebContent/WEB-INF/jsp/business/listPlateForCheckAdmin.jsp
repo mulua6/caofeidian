@@ -36,6 +36,14 @@
 		                <td align="center" nowrap = "nowrap"><s:property value ="%{#s.count}"/></td >
 		                 <td align="center" nowrap = "nowrap">
 		                	<s:if test="fid==1">船舶代理</s:if>
+		                	<s:if test="fid==2">仓储</s:if>
+		                	<s:if test="fid==3">汽车运输</s:if>
+		                	<s:if test="fid==4">集装箱业务</s:if>
+		                	<s:if test="fid==5">燃油供应</s:if>
+		                	<s:if test="fid==6">商品配送中心</s:if>
+		                	<s:if test="fid==7">设备维保</s:if>
+		                	<s:if test="fid==8">物流信息平台</s:if>
+		                	<s:if test="fid==9">散货养护</s:if>
 		                </td>
 		                <td align="center" nowrap = "nowrap">
 		                <s:a action="plateAction_lookForCheck?plateId=%{id}">${name}&nbsp;</s:a>

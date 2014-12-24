@@ -35,8 +35,9 @@ public class LoginIntercepetor
 		User user = (User)ServletActionContext.getRequest().getSession().getAttribute("user");
 		if (user == null)
 		{
-			ActionContext.getContext().put("login", "您还没有登录，请登录");
-			return "login";
+//			ActionContext.getContext().put("login", "您还没有登录，请登录");
+//			return "login";
+			return invocation.invoke();
 		} else
 		{
 			return invocation.invoke();

@@ -100,5 +100,20 @@ public class PlateServiceImpl
 	public void check(int plateId,int state) {
 		pdao.checkPlate(plateId,state);
 	}
-	
+
+	@Override
+	public List<Plate> findPlateByLevel(int level) {
+		return pdao.findPlateByLevel(level);
+	}
+
+	@Override
+	public List<Plate> findPlateByFid(int fid) {
+		return pdao.findPlateByFid(fid);
+	}
+
+	@Override
+	public Plate findFPlate(int plateId) {
+		return pdao.findFPlate(plateId);
+	}
+
 }

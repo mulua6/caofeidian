@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ include file="/WEB-INF/jsp/common/common.jsp"%>
+    <%@ include file="/kefu.html"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -126,7 +128,24 @@
                         <a href="${pageContext.request.contextPath}/TransService.html" class="nav_wlfw">物流服务</a>
                         <div class="sub">
                             <div class="row sub_wlfw">
-                                <ul>
+                            
+                            	<s:iterator value="indexPlates">
+                            		 <ul>
+	                                    <li>
+	                                        <h2><s:a >${name}</s:a></h2>
+	                                    </li>
+	                                    <s:iterator value="indexPlates.childs">
+	                                    	<li><s:a action="?plateId=%{id}">${name}</s:a></li>
+	                                    </s:iterator>
+                                	</ul>
+                            	</s:iterator>
+                            
+                            
+                            
+                            
+                            
+                            
+                               <%--  <ul>
                                     <li>
                                         <h2><a href="${pageContext.request.contextPath}/TransService/JcGP/">船舶代理</a></h2>
                                     </li>
@@ -179,7 +198,7 @@
                                     <li><a href="${pageContext.request.contextPath}/TransService/Detail/whsf.html">外汇收付</a></li>
                                     <li><a href="${pageContext.request.contextPath}/TransService/Detail/hybx.html">货运保险</a></li>
                                     <li><a href="${pageContext.request.contextPath}/TransService/Detail/wldk.html">物流融资</a></li>
-                                </ul>
+                                </ul> --%>
                             </div>
                         </div>
                     </li>
@@ -260,7 +279,52 @@
      </div>
  </div>
  <div class="wrapper">
-
+ 	<s:iterator value="indexPlates" var="ip" status="s">
+ 	
+	 	<s:if test="#s.count!=9">
+	       <s:if test="#s.count%2==0">
+	       		<div id="wlfwbox" style="margin-right: 15px;">
+	 		</s:if>
+	 		<s:if test="#s.count%2==1">
+	       			<div id="wlfwbox">
+	 		</s:if>
+	         <div class="pic">
+	             <img src="${pageContext.request.contextPath}/images/wlfw<s:property value="%{#s.count}"/>.png" width="523" height="164"></div>
+	         <h2>${name}</h2>
+	         <h4>${describe}</h4>
+	         <ul>
+	         	<s:iterator value="childs" var="ipc">
+	             	<li><s:a action="plateAction_findPlateForView?plateId=%{id}" target="_blank">${name}</s:a></li>
+	         	</s:iterator>
+	         </ul>
+	         <div class="more">
+	             <!--<a href="wlfw-d.shtml">查看海运详情>></a>-->
+	         </div>		
+	 	</s:if>
+	 	<s:if test="#s.count==9">
+	     <div id="wlfwbox" style="width: 1138px;">
+	         <div class="pic l">
+	             <img src="${pageContext.request.contextPath}/images/wlfw<s:property value="%{#s.count}"/>.png" width="523" height="164"></div>
+	         <div class="l" style="width: 550px; margin-left: 25px;">
+	             <h2>${name}</h2>
+	             <h4>${describe} </h4>
+	             <ul>
+	                 <s:iterator value="childs" var="ipc">
+	             	 <li><s:a action="plateAction_findPlateForView?plateId=%{id}" target="_blank">${name}</s:a></li>
+	         	</s:iterator>
+	             </ul>
+	         </div>
+	     </div>
+	 	
+	 	</s:if>
+     </div>
+    		 <s:if test="#s.count%2==0">
+	       			 <div class="c">&nbsp;</div>
+	 		</s:if>
+    </s:iterator>
+ 
+ 
+ <%--
      <!--[if !IE]>海运主体开始<![endif]-->
      <div id="wlfwbox" style="margin-right: 15px;">
          <div class="pic">
@@ -435,7 +499,7 @@
              </ul>
          </div>
      </div>
-     <!--[if !IE]>国仓储结束<![endif]-->
+     <!--[if !IE]>国仓储结束<![endif]--> --%>
  </div>
  <div class="c">&nbsp;</div>
 

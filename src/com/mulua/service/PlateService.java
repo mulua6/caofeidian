@@ -52,4 +52,22 @@ public interface PlateService {
 	 * @return
 	 */
 	public void check(int plateId, int state);
+	/**
+	 * 根据级别查找板块
+	 * @param i 
+	 */
+	public List<Plate> findPlateByLevel(int i);
+	
+	/**
+	 * 根据fid 查找板块
+	 * @param id
+	 * @return
+	 */
+	public List<Plate> findPlateByFid(int id);
+	/**
+	 * 查找父板块
+	 * @param plateId
+	 * @return
+	 */
+	public Plate findFPlate(int plateId);
 }

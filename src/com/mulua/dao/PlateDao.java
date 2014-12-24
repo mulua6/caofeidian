@@ -23,4 +23,10 @@ public interface PlateDao extends BaseDao<Plate> {
 
 	public List<Plate> listPlateForCheckAdmin();
 
+	public List<Plate> findPlateByLevel(int level);
+
+	public List<Plate> findPlateByFid(int fid);
+
+	public Plate findFPlate(int plateId);
+
 }

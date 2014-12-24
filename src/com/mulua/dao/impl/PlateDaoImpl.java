@@ -3,6 +3,10 @@ package com.mulua.dao.impl;
 import java.io.Serializable;
 import java.util.List;
 
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
 import com.mulua.dao.PlateDao;
 import com.mulua.domain.Plate;
 
@@ -10,8 +14,24 @@ public class PlateDaoImpl extends BaseDaoImpl<Plate> implements PlateDao {
 
 	
 	@Override
-	public void checkPlate(int id) {
+	public void checkPlate(int id,int state) {
 		
+//		Session session = this.getSessionFactory().getCurrentSession();
+//		session.beginTransaction();
+//		Query query = session.createQuery("update Plate p set p.state = "+state+" where id = "+id);
+//		query.executeUpdate();
+//		getSession().getTransaction().commit();	
+//		
+	
+	
+		Session session = this.getSessionFactory().openSession();
+	      Transaction transaction = session.beginTransaction();
+	       //首先提取数据，然后进行修改，最后更新
+	      Plate plate = (Plate)session.get(Plate. class,id);
+	      plate.setState(state);
+	      session.update(plate);
+	      transaction.commit();
+	      session.close();
 	}
 
 	@Override

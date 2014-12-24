@@ -36,8 +36,6 @@
 		                <td align="center" nowrap = "nowrap"><s:property value ="%{#s.count}"/></td >
 		                 <td align="center" nowrap = "nowrap">
 		                	<s:if test="fid==1">船舶代理</s:if>
-		                	<s:if test="state==1">审核未通过</s:if>
-		                	<s:if test="state==2">审核通过</s:if>
 		                </td>
 		                <td align="center" nowrap = "nowrap">
 		                <s:a action="plateAction_lookForCheck?plateId=%{id}">${name}&nbsp;</s:a>
@@ -49,20 +47,14 @@
 		                </td>
 		                
 		                
-		                <td align="center"><s:a onClick="return delConfirm()" action="plateAction_delete.action?plateId=%{id}">删除</s:a>
-		                  	<s:a action="plateAction_updateUI?plateId=%{id}">修改</s:a>
+		                <td align="center"><s:a  action="plateAction_check?plateId=%{id}&stateId=2">通过</s:a>&nbsp;|
+		                  	<s:a action="plateAction_check?plateId=%{id}&stateId=1">不通过</s:a>
 		                </td>
 		            </tr>
              </s:iterator>
         </tbody>
     </table>
     
-     <div id="TableTail">
-        <div id="TableTail_inside">
-            <a href="plateAction_saveUI.action"><img src="${pageContext.request.contextPath}/style/images/createNew.png" /></a>
-        </div>
-    </div>
-
 </body>
 </html>
 

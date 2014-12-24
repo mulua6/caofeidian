@@ -22,6 +22,8 @@ public class PlateAction extends BaseAction<Plate> {
 	public List<Plate> childrenPlates;
 	public PlateService plateService;
 	public int plateId;
+	public int state;
+	public int stateId;
 	public Plate plate;
 	public int fplateId;
 	
@@ -173,6 +175,15 @@ public class PlateAction extends BaseAction<Plate> {
 		plate = plateService.findPlateById(plateId);
 		return "checkUI";
 	}
+	/**
+	 * 审核  改变状态
+	 * @return
+	 */
+	public String check(){
+		
+		plateService.check(plateId,stateId);
+		return "listPlateForCheckAdmin";
+	}
 	public String updateUI(){
 		
 		plate = plateService.findPlateById(plateId);
@@ -261,6 +272,22 @@ public class PlateAction extends BaseAction<Plate> {
 
 	public void setAttentionIds(int[] attentionIds) {
 		this.attentionIds = attentionIds;
+	}
+
+	public int getState() {
+		return state;
+	}
+
+	public void setState(int state) {
+		this.state = state;
+	}
+
+	public int getStateId() {
+		return stateId;
+	}
+
+	public void setStateId(int stateId) {
+		this.stateId = stateId;
 	}
 	
 	

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/common/common.jsp"%>
+	
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -124,7 +126,12 @@
 
 					<!--[if !IE]>内容结束<![endif]-->
 				</div>
-				<div class="c">&nbsp;</div>
+				<div class="c" align="center" >&nbsp;
+					<font size="5"><s:a  action="plateAction_check?plateId=%{plateId}&stateId=2">通过</s:a>&nbsp;&nbsp;
+					<s:a  action="plateAction_check?plateId=%{plateId }&stateId=1">不通过</s:a></font>
+			    </div>
+	
+	</div>
 	</div>
 </body>
 </html>

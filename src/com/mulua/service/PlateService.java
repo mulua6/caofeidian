@@ -45,4 +45,11 @@ public interface PlateService {
 	 * @return
 	 */
 	public List<Plate> listPlateForCheckAdmin();
+	/**
+	 * 审核
+	 * @param plateId
+	 * @param state 
+	 * @return
+	 */
+	public void check(int plateId, int state);
 }

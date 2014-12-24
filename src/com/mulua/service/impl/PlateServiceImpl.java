@@ -75,7 +75,7 @@ public class PlateServiceImpl
 
 	@Override
 	public void checkPlate(int id) {
-		pdao.checkPlate(id);
+		pdao.checkPlate(id, id);
 	}
 
 	@Override
@@ -94,6 +94,11 @@ public class PlateServiceImpl
 	@Override
 	public List<Plate> listPlateForCheckAdmin() {
 		return pdao.listPlateForCheckAdmin();
+	}
+
+	@Override
+	public void check(int plateId,int state) {
+		pdao.checkPlate(plateId,state);
 	}
 	
 }

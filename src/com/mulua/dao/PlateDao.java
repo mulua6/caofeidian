@@ -17,7 +17,7 @@ public interface PlateDao extends BaseDao<Plate> {
 
 	public Plate findPlateById(Serializable rid);
 
-	public void checkPlate(int id);
+	public void checkPlate(int id, int state);
 
 	public List<Plate> findChildrenPlates(int id);
 

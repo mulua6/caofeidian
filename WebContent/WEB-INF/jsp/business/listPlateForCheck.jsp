@@ -52,12 +52,6 @@
         </tbody>
     </table>
     
-     <div id="TableTail">
-        <div id="TableTail_inside">
-            <a href="plateAction_saveUI.action"><img src="${pageContext.request.contextPath}/style/images/createNew.png" /></a>
-        </div>
-    </div>
-
 </body>
 </html>
 

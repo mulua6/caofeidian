@@ -294,7 +294,7 @@
 	         <h4>${describe}</h4>
 	         <ul>
 	         	<s:iterator value="childs" var="ipc">
-	             	<li><s:a action="plateAction_findPlateForView?plateId=%{id}" target="_blank">${name}</s:a></li>
+	             	<li><s:a action="plateAction_findPlateForView?plateId=%{id}" >${name}</s:a></li>
 	         	</s:iterator>
 	         </ul>
 	         <div class="more">
@@ -310,7 +310,7 @@
 	             <h4>${describe} </h4>
 	             <ul>
 	                 <s:iterator value="childs" var="ipc">
-	             	 <li><s:a action="plateAction_findPlateForView?plateId=%{id}" target="_blank">${name}</s:a></li>
+	             	 <li><s:a action="plateAction_findPlateForView?plateId=%{id}" >${name}</s:a></li>
 	         	</s:iterator>
 	             </ul>
 	         </div>

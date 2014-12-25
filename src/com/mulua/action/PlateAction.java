@@ -255,7 +255,7 @@ public class PlateAction extends BaseAction<Plate> {
 	public String check(){
 		
 		plateService.check(plateId,stateId);
-		return "listPlateForCheckAdmin";
+		return "action2checkAdmin";
 	}
 	public String updateUI(){
 		

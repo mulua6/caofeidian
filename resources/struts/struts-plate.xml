@@ -15,6 +15,7 @@
 			<result name="view">/TransService/Detail/plate.jsp</result>
 			<result name="input">/WEB-INF/jsp/system/user/error.jsp</result>
 			<result name="action2action" type="redirectAction">plateAction_listPlateForAdmin.action</result>
+			<result name="action2checkAdmin" type="redirectAction">plateAction_listPlateForCheckAdmin.action</result>
 		</action>
 	</package>
 </struts>
